@@ -1,19 +1,29 @@
-import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from 'react';
 import "./App.css";
+import Welcome from './scenes/Welcome'
+import Background from './scenes/Background'
+import Office from './scenes/Office'
+import Bookshelf from './scenes/Bookshelf'
+import Painting from './scenes/Painting'
+import Desk from './scenes/Desk'
+import Safe from './scenes/Safe'
+import Navbar from './components/Navbar'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+function App() {
+
+  return (
+    <Router>
+      <Navbar />
+        <Route exact path="/" component={Welcome} />
+        <Route exact path="/background" component={Background} />
+        <Route exact path="/office" component={Office} />
+        <Route exact path="/bookshelf" component={Bookshelf} />
+        <Route exact path="/painting" component={Painting} />
+        <Route exact path="/desk" component={Desk} />
+        <Route exact path="/safe" component={Safe} />
+    </Router>
+  );
 }
 
 export default App;
