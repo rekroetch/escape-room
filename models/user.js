@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 // Requiring bcrypt for password hashing. Using the bcryptjs version as the regular bcrypt module sometimes causes errors on Windows machines
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 
 const userSchema = new Schema({
   firstName: { type: String, required: true },
@@ -10,21 +10,27 @@ const userSchema = new Schema({
   password: { type: String, required: true },
 });
 
-const User = mongoose.model("User", userSchema);
 
-// // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
-// User.prototype.validPassword = function (password) {
-//   return bcrypt.compareSync(password, this.password);
-// };
-// // Hooks are automatic methods that run during various phases of the User Model lifecycle
-// // In this case, before a User is created, we will automatically hash their password
-// User.addHook("beforeCreate", user => {
-//   user.password = bcrypt.hashSync(
-//     user.password,
-//     bcrypt.genSaltSync(10),
-//     null
-//   );
-// });
 
+userSchema.pre(
+  'save',
+  async function(next) {
+    const user = this;
+    const hash = await bcrypt.hash(this.password, 10);
+    
+    this.password = hash;
+    next();
+  }
+);
+  
+  
+  userSchema.methods.isValidPassword = async function(password) {
+    const user = this;
+    const compare = await bcrypt.compare(password, user.password);
+    
+    return compare;
+  }
+  
+  const User = mongoose.model("user", userSchema);
 
 module.exports = User;
