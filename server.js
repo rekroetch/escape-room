@@ -6,9 +6,11 @@ const mongoose = require("mongoose");
 const passport = require('passport');
 const routes = require("./routes");
 const secureRoute = require('./routes/secureRoutes');
-
+const jsonwebtoken = require('jsonwebtoken');
+const jwt = require('express-jwt');
+const cors = require('cors');
+const cookieParser = require('cookie-parser')
 const User = require('./models');
-
 require('./auth/auth');
 
 // Define middleware here
@@ -20,7 +22,18 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+app.use(cors());
+
 app.use('/', routes);
+
+app.use(cookieParser());
+app.use(
+  jwt({
+    secret: 'TOP_SECRET',
+    algorithms: ['HS256'],
+    getToken: req => req.cookies.token
+  })
+);
 
 // Plug in the JWT strategy as a middleware so only verified users can access this route.
 app.use('/user', passport.authenticate('jwt', { session: false }), secureRoute);

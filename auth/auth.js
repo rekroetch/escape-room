@@ -1,6 +1,6 @@
 const passport = require('passport');
 const localStrategy = require('passport-local').Strategy;
-const User = require('../models');
+const db = require('../models');
 const JWTstrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
 
@@ -27,6 +27,7 @@ passport.use(
 
 // This code finds one user associated with the email provided.
 passport.use(
+    // login vs local here ?
     'login',
     new localStrategy(
       {
@@ -34,8 +35,9 @@ passport.use(
         passwordField: 'password'
       },
       async (email, password, done) => {
+          console.log(email, password)
         try {
-          const user = await User.findOne({ email });
+          const user = await db.User.findOne({ email });
   
           if (!user) {
             return done(null, false, { message: 'User not found' });
@@ -62,6 +64,7 @@ passport.use(
       jwtFromRequest: ExtractJWT.fromUrlQueryParameter('secret_token')
     },
     async (token, done) => {
+        console.log(token)
       try {
         return done(null, token.user);
       } catch (error) {
@@ -70,3 +73,5 @@ passport.use(
     }
   )
 );
+
+module.exports = passport;
