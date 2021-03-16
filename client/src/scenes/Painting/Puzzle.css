@@ -1,0 +1,74 @@
+
+body {
+    background-color: black;
+    display: flexbox;
+}
+
+.jigsaw {
+    text-align: center;
+}
+
+.jigsaw__solved-board {
+    position: relative;
+    background-size: cover;
+}
+
+.jigsaw__solved-board:before {
+    content: '';
+    background-color: rgba(255, 255, 255, 0.6);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.jigsaw__solved-board,
+.jigsaw__shuffled-board {
+    margin: 20px auto;
+    width: 200px;
+    list-style-type: none;
+    padding: 0;
+    font-size: 0;
+    border: 1px solid #DDD;
+    border-width: 1px 0 0 1px;
+}
+
+.jigsaw li {
+    position: relative;
+    text-align: left;
+    display: inline-block;
+    width: 49px;
+    height: 49px;
+    border: 0px solid #DDD;
+    border-width: 0 1px 1px 0;
+}
+
+.jigsaw li:empty:hover:before {
+    opacity: 1;
+}
+
+.jigsaw li img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    cursor: grab;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.jigsaw li img:hover {
+    z-index: 2;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rbga(0, 0, 0, 0.8);
+}
+
+
+.head {
+    display: flexbox;
+}
+
+.head-components {
+    width: 100px;
+    height: 100px;
+}
