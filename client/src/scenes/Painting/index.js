@@ -1,10 +1,8 @@
-
 import React, {Component} from "react";
 import originalImage from "./images/rasterFoxResize.png";
 import "./Puzzle.css";
 
 class Painting extends Component {
-
 
 /*     import React, { useEffect, useState } from 'react'
     function Painting (props) {
@@ -37,11 +35,11 @@ class Painting extends Component {
         };
 
         this.shuffledPieces = this.shuffledPieces.bind(this);
-
         this.renderPieceContainer = this.renderPieceContainer.bind(this);
 
     }
 
+    // drop images into array
     componentDidMount() {
         const pieces = [...Array(12)].map((_, i) => ({
             img: `image_part_${("00" + (i + 1)).substr(-3)}.jpg`,
@@ -65,6 +63,7 @@ class Painting extends Component {
         return shuffled;
     }
 
+    // make element draggable, render piece based on picked up or put down
     renderPieceContainer(piece, index, boardName) {
         return (
             <li key = {index} onDragOver = {e => e.preventDefault()}
@@ -212,7 +211,6 @@ function Painting (props) {
         });
     }
 
-    
 
   const shuffledPieces = (pieces) => {
         const shuffled = [...pieces];
