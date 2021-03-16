@@ -1,43 +1,42 @@
 
-import React, { useState } from "react";
-import API from "../../utils/API";
+import React from "react";
 import Form from '../../components/Form';
 import Card from '../../components/Card';
 import './style.css'
 
-function Welcome () {
-    // Setting our component's initial state
-    const [formObject, setFormObject] = useState({})
-
-    // Handles updating component state when the user types into the input field
-    function handleInputChange(event) {
-        const { name, value } = event.target;
-        setFormObject({...formObject, [name]: value})
-    };
-
-    // When the form is submitted, use the API.saveUser method to save the User data
-    function handleFormSubmit(event) {
-        event.preventDefault();
-        API.saveUser({
-            firstName: formObject.firstName,
-            lastName: formObject.lastName,
-            email: formObject.email,
-            password: formObject.password
-        })
-        .then(console.log(formObject))
-        .catch(err => console.log(err));
-    };
-
+function Welcome (props) {
+    
     return(
         <div>
             <header>
-                <h1>Welcome</h1>
+                <h1>Welcome {props.user ? props.user.email : "not logged in"}</h1>
             </header>
             <Card>
                 <Form
-                    onChange={handleInputChange}
-                    onClick={handleFormSubmit}
+                    onChange={props.handleInputChange}
+                    onClick={props.handleSignUpSubmit}
                 />
+            </Card>
+            <Card>
+                <form>
+                    <div className="form-group"> Log In
+
+                        <div className="input-group mb-3">
+                            <input onChange={props.handleInputChange} name="email" type="text" className="form-control" placeholder="Email" aria-label="Email"/>
+                        </div>
+
+                        <div className="input-group mb-3">
+                            <input onChange={props.handleInputChange} name="password" type="text" className="form-control" placeholder="Password" aria-label="Password"/>
+                        </div>
+                        <button
+                            type="submit"
+                            onClick={props.handleLogInSubmit}
+                            className="btn btn-warning"
+                        >
+                            Log In
+                        </button>
+                    </div>
+                </form>
             </Card>
         </div>
     );

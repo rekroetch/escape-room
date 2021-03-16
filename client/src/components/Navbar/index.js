@@ -38,8 +38,8 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-        <span class="navbar-item">
-          <Link>Logout</Link>
+        <span className="navbar-item">
+          <Link to="/" className={"nav-link"}>Logout</Link>
         </span>
       </div>
     </nav>
