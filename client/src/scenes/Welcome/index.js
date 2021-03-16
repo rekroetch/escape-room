@@ -35,16 +35,6 @@ function Welcome (props) {
                         >
                             Log In
                         </button>
-                        {/* <button 
-                            type="submit" 
-                            onClick={() => {
-                                auth.login(() => {
-                                    props.history.push("/background")
-                                })
-                            }} 
-                            className="btn btn-warning">
-                            Log In
-                        </button> */}
                     </div>
                 </form>
             </Card>

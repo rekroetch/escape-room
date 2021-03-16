@@ -4,19 +4,22 @@ const passport = require('passport')
       
 // Matches with "/api/user"
 router.route("/")
+  // dont think we use this
   .get(userController.findAll)
-  // .post(userController.create);
 
 // Matches "/api/user/login" 
 router.route("/login")
   .post(userController.login)
 
+// "/api/user/signup"
 router.route("/signup")
   .post(userController.signup)
 
+// "/api/user/logout"
 router.route("/logout")
   .get(userController.logout)
 
+// "/api/user/validate"
 router.route("/validate")
   .get(passport.authenticate("jwt", {session: false}),(req, res) => {
     if (req.user) {

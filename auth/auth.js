@@ -27,7 +27,6 @@ passport.use(
 
 // This code finds one user associated with the email provided.
 passport.use(
-    // login vs local here ?
     'login',
     new localStrategy(
       {
