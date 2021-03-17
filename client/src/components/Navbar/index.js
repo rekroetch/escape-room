@@ -16,6 +16,7 @@ function Navbar(props) {
           <li className="nav-item">
             <Link
               to="/background"
+              exact="true"
               className={
                 window.location.pathname === "/background"
                   ? "nav-link active"
@@ -25,9 +26,51 @@ function Navbar(props) {
               Game Info
             </Link>
           </li>
+          {/* added for the purpose of testing protected routes only */}
+          <li className="nav-item">
+            <Link
+              to="/office"
+              exact="true"
+              className={
+                window.location.pathname === "/office"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Office
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/painting"
+              exact="true"
+              className={
+                window.location.pathname === "/painting"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Painting
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/desk"
+              exact="true"
+              className={
+                window.location.pathname === "/desk"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Desk
+            </Link>
+          </li>
+          {/* links above are temporary */}
           <li className="nav-item">
             <Link
               to="/scoreBoard"
+              exact="true"
               className={
                 window.location.pathname === "/scoreBoard"
                   ? "nav-link active"
@@ -38,8 +81,8 @@ function Navbar(props) {
             </Link>
           </li>
         </ul>
-        <span className="navbar-item">
-          <Link to="/" className="nav-link" onClick={props.logout}>Logout</Link>
+        <span className="navbar-nav nav-item">
+          <Link to="/" exact="true" className="nav-link" onClick={props.logout}>Logout</Link>
         </span>
       </div>
     </nav>

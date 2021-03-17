@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-import ProtectedRoute from "./components/ProtectedRoute"
 import React, { useState, useEffect }from 'react';
 import API from "./utils/API";
 import "./App.css";
@@ -14,12 +13,11 @@ import ScoreBoard from './scenes/ScoreBoard'
 import Navbar from './components/Navbar'
 
 
-function App(props) {
+function App() {
     const storedJwt = localStorage.getItem('token');
     const [jwt, setJwt] = useState(storedJwt || null);
     const [formObject, setFormObject] = useState({})
     const [user, setUser] = useState()
-    const [scene, setScene] = useState({})
 
     useEffect(() => {
         jwt && API.validateUser(jwt)
@@ -68,7 +66,6 @@ function App(props) {
 
     function logout(event) {
       event.preventDefault();
-      console.log("logout")
       API.logout({
       })
       .then(setUser(''))
@@ -80,41 +77,39 @@ function App(props) {
     <Router>
       <Navbar logout={logout}/>
         <Switch>
-          <Route exact path="/" 
-            render={(props) => (
-            <Welcome {...props} 
-            user={user} 
+          <Route exact path="/" render={(props) => (
+            <Welcome {...props} user={user} 
             handleInputChange={handleInputChange} 
             handleLogInSubmit={handleLogInSubmit} 
             handleSignUpSubmit={handleSignUpSubmit}
             />)} 
           />
-          <Route exact path="/background" render={() => (
-            user ? (<Background />) : (<Redirect to="/" />)
+          <Route exact path="/background" render={(props) => (
+            user ? (<Background {...props} user={user} />) : (<Redirect to="/" />)
           )}>
           </Route>
-          <Route exact path="/office" render={() => (
-            user ? (<Office />) : (<Redirect to="/" />)
+          <Route exact path="/office" render={(props) => (
+            user ? (<Office {...props} user={user} />) : (<Redirect to="/" />)
           )}>
           </Route>
-          <Route exact path="/bookshelf" render={() => (
-            user ? (<Bookshelf />) : (<Redirect to="/" />)
+          <Route exact path="/bookshelf" render={(props) => (
+            user ? (<Bookshelf {...props} user={user}  />) : (<Redirect to="/" />)
           )}>
           </Route>
-          <Route exact path="/painting" render={() => (
-            user ? (<Painting />) : (<Redirect to="/" />)
+          <Route exact path="/painting" render={(props) => (
+            user ? (<Painting {...props} user={user}  />) : (<Redirect to="/" />)
           )}>
           </Route>
-          <Route exact path="/desk" render={() => (
-            user ? (<Desk />) : (<Redirect to="/" />)
+          <Route exact path="/desk" render={(props) => (
+            user ? (<Desk {...props} user={user}  />) : (<Redirect to="/" />)
           )}>
           </Route>
-          <Route exact path="/safe" render={() => (
-            user ? (<Safe />) : (<Redirect to="/" />)
+          <Route exact path="/safe" render={(props) => (
+            user ? (<Safe {...props} user={user}  />) : (<Redirect to="/" />)
           )}>
           </Route>
-          <Route exact path="/scoreBoard" render={() => (
-            user ? (<ScoreBoard />) : (<Redirect to="/" />)
+          <Route exact path="/scoreBoard" render={(props) => (
+            user ? (<ScoreBoard {...props} user={user}  />) : (<Redirect to="/" />)
           )}>
           </Route>
         </Switch>
