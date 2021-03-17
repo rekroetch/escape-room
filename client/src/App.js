@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import ProtectedRoute from "./components/ProtectedRoute"
 import React, { useState, useEffect }from 'react';
 import API from "./utils/API";
-// import auth from "./auth"
 import "./App.css";
 import Welcome from './scenes/Welcome'
 import Background from './scenes/Background'
@@ -67,13 +66,6 @@ function App(props) {
         .catch(err => console.log(err));
     };
 
-    // function renderComp() {
-    //   if (user) {
-    //     setScene(scene === "background")
-    //   }
-    //   return <Background />
-    // }
-
     function logout(event) {
       event.preventDefault();
       console.log("logout")
@@ -125,12 +117,6 @@ function App(props) {
             user ? (<ScoreBoard />) : (<Redirect to="/" />)
           )}>
           </Route>
-          {/* <ProtectedRoute exact path="/office" component={Office} />
-          <ProtectedRoute exact path="/bookshelf" component={Bookshelf} />
-          <ProtectedRoute exact path="/painting" component={Painting} />
-          <ProtectedRoute exact path="/desk" component={Desk} />
-          <ProtectedRoute exact path="/safe" component={Safe} />
-          <ProtectedRoute exact path="/scoreBoard" component={ScoreBoard} /> */}
         </Switch>
     </Router>
   );

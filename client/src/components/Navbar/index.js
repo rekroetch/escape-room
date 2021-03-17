@@ -22,7 +22,7 @@ function Navbar(props) {
                   : "nav-link"
               }
             >
-              Main Room
+              Game Info
             </Link>
           </li>
           <li className="nav-item">
