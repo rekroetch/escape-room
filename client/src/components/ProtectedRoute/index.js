@@ -3,12 +3,12 @@ import { Route, Redirect } from "react-router-dom"
 import auth from "../../auth.js"
 
 // if user is logged in, the component specified will render, otherwise they are redirected to login
-function ProtectedRoute ({  component: Component, ...rest }) {
+function ProtectedRoute ({  component: Component, user, ...rest }) {
     return (
         <Route
             {...rest}
             render={props => {
-                if (auth.isAuthenticated()) {
+                if (user) {
                     return <Component {...props} />
                 }
                 else {

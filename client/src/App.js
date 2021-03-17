@@ -1,8 +1,8 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute"
 import React, { useState, useEffect }from 'react';
 import API from "./utils/API";
-import auth from "./auth"
+// import auth from "./auth"
 import "./App.css";
 import Welcome from './scenes/Welcome'
 import Background from './scenes/Background'
@@ -13,15 +13,14 @@ import Desk from './scenes/Desk'
 import Safe from './scenes/Safe'
 import ScoreBoard from './scenes/ScoreBoard'
 import Navbar from './components/Navbar'
-// import auth from "./auth"
 
 
 function App(props) {
-  const storedJwt = localStorage.getItem('token');
+    const storedJwt = localStorage.getItem('token');
     const [jwt, setJwt] = useState(storedJwt || null);
-    // Setting our component's initial state
     const [formObject, setFormObject] = useState({})
     const [user, setUser] = useState()
+    const [scene, setScene] = useState({})
 
     useEffect(() => {
         jwt && API.validateUser(jwt)
@@ -56,7 +55,6 @@ function App(props) {
         .catch(err => console.log(err));
     };
 
-    // doesnt actually work, can put in anything you want and be "logged in"
     function handleLogInSubmit(event) {
         event.preventDefault();
         API.checkUser({
@@ -69,9 +67,26 @@ function App(props) {
         .catch(err => console.log(err));
     };
 
+    // function renderComp() {
+    //   if (user) {
+    //     setScene(scene === "background")
+    //   }
+    //   return <Background />
+    // }
+
+    function logout(event) {
+      event.preventDefault();
+      console.log("logout")
+      API.logout({
+      })
+      .then(setUser(''))
+      .catch(err => console.log(err));
+    }
+
+
   return (
     <Router>
-      <Navbar />
+      <Navbar logout={logout}/>
         <Switch>
           <Route exact path="/" 
             render={(props) => (
@@ -80,14 +95,42 @@ function App(props) {
             handleInputChange={handleInputChange} 
             handleLogInSubmit={handleLogInSubmit} 
             handleSignUpSubmit={handleSignUpSubmit}
-            />)} />
-          <ProtectedRoute exact path="/background" component={Background} />
-          <ProtectedRoute exact path="/office" component={Office} />
+            />)} 
+          />
+          <Route exact path="/background" render={() => (
+            user ? (<Background />) : (<Redirect to="/" />)
+          )}>
+          </Route>
+          <Route exact path="/office" render={() => (
+            user ? (<Office />) : (<Redirect to="/" />)
+          )}>
+          </Route>
+          <Route exact path="/bookshelf" render={() => (
+            user ? (<Bookshelf />) : (<Redirect to="/" />)
+          )}>
+          </Route>
+          <Route exact path="/painting" render={() => (
+            user ? (<Painting />) : (<Redirect to="/" />)
+          )}>
+          </Route>
+          <Route exact path="/desk" render={() => (
+            user ? (<Desk />) : (<Redirect to="/" />)
+          )}>
+          </Route>
+          <Route exact path="/safe" render={() => (
+            user ? (<Safe />) : (<Redirect to="/" />)
+          )}>
+          </Route>
+          <Route exact path="/scoreBoard" render={() => (
+            user ? (<ScoreBoard />) : (<Redirect to="/" />)
+          )}>
+          </Route>
+          {/* <ProtectedRoute exact path="/office" component={Office} />
           <ProtectedRoute exact path="/bookshelf" component={Bookshelf} />
           <ProtectedRoute exact path="/painting" component={Painting} />
           <ProtectedRoute exact path="/desk" component={Desk} />
           <ProtectedRoute exact path="/safe" component={Safe} />
-          <ProtectedRoute exact path="/scoreBoard" component={ScoreBoard} />
+          <ProtectedRoute exact path="/scoreBoard" component={ScoreBoard} /> */}
         </Switch>
     </Router>
   );

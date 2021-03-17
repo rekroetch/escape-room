@@ -12,5 +12,9 @@ export default {
 
   validateUser: function(userData) {
     return axios.get(`/api/user/validate?secret_token=${userData}`)
+  },
+
+  logout: function(userData) {
+    return axios.post("/api/user/logout", userData);
   }
 };
