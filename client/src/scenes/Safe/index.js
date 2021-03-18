@@ -1,13 +1,15 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Row from "../../components/Row"
 import API from '../../utils/API'
 import "./style.css"
 
-function Safe () {
-    // const [code, setCode] = useState()
-    const winCondition = 1219
-
+function Safe (props) {
+    const safePuzzle = props.puzzle[0]
+    console.log(safePuzzle)
+    const id = safePuzzle._id
+    
     let pick = []
+
     function pickNumber(event) {
         event.preventDefault()
         pick.push(event.target.value)
@@ -17,13 +19,12 @@ function Safe () {
 
     function enterCode(event) {
         event.preventDefault();
-        const picked = parseInt(pick.join(''))
-        // setCode(picked)
-        if (picked === winCondition) {
-            console.log("picked: " + picked)
+        const picked = pick.join('')
+        console.log("picked: " + picked)
+        console.log("winCond: " + safePuzzle.winCondition)
+        if (picked === safePuzzle.winCondition) {
             console.log("correct!")
             safeCracked()
-            // console.log("code: " + code)
         } else {
             console.log("wrong code")
         }
@@ -36,9 +37,10 @@ function Safe () {
     }
 
     function safeCracked() {
-        API.safeCracked({
-            
-        })
+        console.log("running API")
+        API.solved(id)
+        .then(console.log("worked"))
+        .catch(err => console.log(err));
     }
 
 
@@ -69,6 +71,11 @@ function Safe () {
                     <button className="num" onClick={pickNumber} value="0">0</button>
                     <button className="enter" onClick={enterCode} type="submit">Enter</button>
                 </Row>
+            </div>
+            <div>
+                <h2>
+                    Description: {props.puzzle ? safePuzzle.description : "failed"}
+                </h2>
             </div>
             <div className="note">
                 <div className="postIt">Dad</div>

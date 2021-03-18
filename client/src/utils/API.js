@@ -18,7 +18,15 @@ export default {
     return axios.post("/api/user/logout", userData);
   },
 
-  safeCracked: function(safeData) {
-    return axios.put("/api/puzzle/:id", safeData)
+  getAllPuzzles: function(puzzleData) {
+    return axios.get("/api/puzzle", puzzleData)
+  },
+
+  getPuzzle: function(id) {
+    return axios.get("/api/puzzle/" + id)
+  },
+
+  solved: function(id) {
+    return axios.put("/api/puzzle/" + id)
   }
 };
