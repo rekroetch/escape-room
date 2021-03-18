@@ -1,28 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Row from "../../components/Row"
+import Col from "../../components/Col"
 
 function StartPage() {
   return (
     <div className="container">
-      <div className="row">
-        <div className="col-md">
+      <Row>
+        <Col size="md-12">
           <h1>Welcome to the Escape Room</h1>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md">
+        </Col>
+      </Row>
+      <Row>
+        <Col size="md-12">
           <Link
-            to="/background"
+            to="/office"
             className={
-              window.location.pathname === "/background"
+              window.location.pathname === "/office"
                 ? "button"
                 : "btn btn-danger"
             }
           >
             Start Game
           </Link>
-        </div>
-      </div>
+        </Col>
+      </Row>
       <div className="progress">
         <div
           className="progress-bar"

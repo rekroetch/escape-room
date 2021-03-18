@@ -15,10 +15,10 @@ function Navbar(props) {
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link
-              to="/background"
+              to="/startPage"
               exact="true"
               className={
-                window.location.pathname === "/background"
+                window.location.pathname === "/startPage"
                   ? "nav-link active"
                   : "nav-link"
               }

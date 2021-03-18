@@ -101,8 +101,8 @@ function App() {
             handleSignUpSubmit={handleSignUpSubmit}
             />)} 
           />
-          <Route exact path="/background" render={(props) => (
-            user ? (<Background {...props} user={user} />) : (<Redirect to="/" />)
+          <Route exact path="/startPage" render={(props) => (
+            user ? (<StartPage {...props} user={user} />) : (<Redirect to="/" />)
           )}>
           </Route>
           <Route exact path="/office" render={(props) => (
