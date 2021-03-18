@@ -8,6 +8,7 @@ function Office () {
         <div className="page">
             <h1>Office</h1>
             <Row>
+                {/* need to add condition that user has the key from bookshelf puzzle */}
                 <div className="desk">
                     <Link
                         to="/desk"
@@ -16,6 +17,7 @@ function Office () {
                         Desk
                     </Link>
                 </div>
+                {/* need to add reroute to safe if painting is already solved */}
                 <div className="painting">
                     <Link
                         to="/painting"

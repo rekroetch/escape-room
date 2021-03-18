@@ -2,24 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Row from "../../components/Row"
 import Col from "../../components/Col"
+import "./style.css"
 
 function StartPage() {
   return (
     <div className="container">
       <Row>
-        <Col size="md-12">
+        <div className="header">
           <h1>Welcome to the Escape Room</h1>
-        </Col>
+        </div>
       </Row>
       <Row>
-        <Col size="md-12">
+        <Col size="md-4"></Col>
+        <Col size="md-4">
           <Link
             to="/office"
-            className={
-              window.location.pathname === "/office"
-                ? "button"
-                : "btn btn-danger"
-            }
+            className="btn btn-danger start"
           >
             Start Game
           </Link>
@@ -37,9 +35,9 @@ function StartPage() {
           25%
         </div>
       </div>
-      <div className="card text-white bg-dark mb-3 justify-content-center">
+      <div className="card text-white bg-dark justify-content-center info">
         <div className="card-body">
-          <h5 className="card-title">Background Story</h5>
+          <h5 className="card-title title">Background Story</h5>
           <p className="card-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aliquid
             voluptate voluptatibus sequi autem pariatur natus tempora veritatis

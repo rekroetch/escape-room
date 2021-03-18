@@ -1,0 +1,27 @@
+.container {
+    margin: 20px;
+}
+
+.header {
+    background:teal;
+    width: 100%;
+    font-size: 100px;
+    color: whitesmoke;
+    padding: 50px;
+    text-align: center;
+}
+
+.start {
+    margin: 20px;
+    height: 50px;
+    width: 200px;
+}
+
+.title {
+    text-align: center;
+}
+
+.info {
+    width: 100%;
+    margin-top: 30px;
+}
