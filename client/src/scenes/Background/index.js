@@ -1,7 +1,11 @@
 import React from "react";
-function Background () {
+
+function Background (props) {
     return (
-        <h1>Background</h1>
+        <header>
+            <h1>Background</h1>
+            <h2>Welcome {props.user ? props.user.email : "not logged in"}</h2>
+        </header>
     )
 }
 

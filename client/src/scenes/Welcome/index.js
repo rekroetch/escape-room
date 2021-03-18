@@ -18,6 +18,7 @@ function Welcome (props) {
                 />
             </Card>
             <Card>
+                {/* rework the form components so that it can be used for both sign up and log in */}
                 <form>
                     <div className="form-group"> Log In
 
