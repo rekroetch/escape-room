@@ -10,6 +10,7 @@ import Desk from './scenes/Desk'
 import Safe from './scenes/Safe'
 import ScoreBoard from './scenes/ScoreBoard'
 import Navbar from './components/Navbar'
+import StartPage from "./scenes/StartPage";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/desk" component={Desk} />
         <Route exact path="/safe" component={Safe} />
         <Route exact path="/scoreBoard" component={ScoreBoard} />
+        <Route exact path="/startPage" component={StartPage} />
     </Router>
   );
 }
