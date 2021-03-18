@@ -66,6 +66,20 @@ function Navbar(props) {
               Desk
             </Link>
           </li>
+          {/* added for the purpose of testing protected routes only */}
+          <li className="nav-item">
+            <Link
+              to="/bookshelf"
+              exact="true"
+              className={
+                window.location.pathname === "/bookshelf"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Bookshelf
+            </Link>
+            </li>
           {/* links above are temporary */}
           <li className="nav-item">
             <Link
