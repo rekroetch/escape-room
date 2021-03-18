@@ -16,5 +16,9 @@ export default {
 
   logout: function(userData) {
     return axios.post("/api/user/logout", userData);
+  },
+
+  safeCracked: function(safeData) {
+    return axios.put("/api/puzzle/:id", safeData)
   }
 };

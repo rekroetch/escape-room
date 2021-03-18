@@ -3,13 +3,24 @@
     margin: 20px;
     padding: 20px;
     border: 5px solid black;
-    height: 900px;
+    height: 1000px;
     width: 1000px;
     background: rgb(201, 199, 199)
 }
 
+.screen {
+    margin: 20px 20px;
+    border: 2px solid black;
+    height: 50px;
+    width: 484px;
+    background: #333;
+    color: white;
+    padding-left: 20px;
+    font-size: 45px;
+}
+
 .numPad {
-    margin: 20px;
+    margin: 0 20px;
     padding: 30px;
     border: 2px solid black;
     float: left;
@@ -17,11 +28,28 @@
 }
 
 .num {
-    width: 200px;
-    height: 200px;
-    border-radius: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
     border-style: ridge;
-    font-size: 50px
+    font-size: 50px;
+}
+
+.enter {
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+    border-style: ridge;
+    font-size: 50px;
+    background:rgb(201, 199, 199)
+}
+
+.num:hover {
+    background: rgb(255, 109, 109)
+}
+
+.enter:hover {
+    background: rgb(109, 255, 116)
 }
 
 .note {
