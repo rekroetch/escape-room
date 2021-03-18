@@ -2,7 +2,7 @@ import React from 'react';
 
 function Form(props) {
     return (
-      <form className="search">
+      <form>
         <div className="form-group"> Sign Up
             <div className="input-group mb-3">
               <input onChange={props.onChange} name="firstName" type="text" className="form-control" placeholder="First Name" aria-label="First Name"/>
