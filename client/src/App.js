@@ -19,11 +19,27 @@ function App() {
     const [jwt, setJwt] = useState(storedJwt || null);
     const [formObject, setFormObject] = useState({})
     const [user, setUser] = useState()
+    const [puzzles, setPuzzles] = useState()
 
     useEffect(() => {
+        loadPuzzles()
         jwt && API.validateUser(jwt)
         .then(res => setUser(res.data))
     }, [jwt])
+
+    // // Load all puzzles and store them with setPuzzles
+    // useEffect(() => {
+    //   loadPuzzles()
+    // }, [])
+
+    // Loads all puzzles and sets them to puzzles
+    function loadPuzzles() {
+      API.getAllPuzzles()
+        .then(res => 
+          setPuzzles(res.data)
+        )
+        .catch(err => console.log(err));
+    };
 
     // Handles updating component state when the user types into the input field
     function handleInputChange(event) {
@@ -106,7 +122,7 @@ function App() {
           )}>
           </Route>
           <Route exact path="/safe" render={(props) => (
-            user ? (<Safe {...props} user={user}  />) : (<Redirect to="/" />)
+            user ? (<Safe {...props} user={user} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
           </Route>
           <Route exact path="/scoreBoard" render={(props) => (
