@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import Draggable from 'react-draggable';
+import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
 
 class Bookshelf extends React.Component {
 
@@ -28,14 +29,17 @@ eventLogger = (e: MouseEvent, data: Object) => {
   console.log(e, data)
   
 
-  if(this.position == [8,9]) {
-
-  }
 }
 
   render() {
     return (
-        <div>
+      <div>
+      <DragDropContainer targetKey="foo" >
+    <div>Drag This to Shelf</div>
+</DragDropContainer>
+<DropTarget targetKey="foo" >
+    <img src={require('./images/bookshelf.jpg')}></img>
+</DropTarget>
         <Draggable
         axis="both"
         handle=".handle"
