@@ -11,6 +11,7 @@ import Desk from './scenes/Desk'
 import Safe from './scenes/Safe'
 import ScoreBoard from './scenes/ScoreBoard'
 import Navbar from './components/Navbar'
+import StartPage from "./scenes/StartPage";
 
 
 function App() {
