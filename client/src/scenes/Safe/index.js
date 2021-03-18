@@ -72,11 +72,6 @@ function Safe (props) {
                     <button className="enter" onClick={enterCode} type="submit">Enter</button>
                 </Row>
             </div>
-            <div>
-                <h2>
-                    Description: {props.puzzle ? safePuzzle.description : "failed"}
-                </h2>
-            </div>
             <div className="note">
                 <div className="postIt">Dad</div>
             </div>
