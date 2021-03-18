@@ -1,0 +1,42 @@
+
+.box {
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid black;
+    height: 900px;
+    width: 1000px;
+    background: rgb(201, 199, 199)
+}
+
+.numPad {
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid black;
+    float: left;
+    background:rgb(158, 156, 156)
+}
+
+.num {
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    border-style: ridge;
+    font-size: 50px
+}
+
+.note {
+    float: left;
+}
+
+.postIt {
+    background-color: greenyellow;
+    font-size: 40px;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 2px solid grey;
+    border-left: 2px solid grey;
+}

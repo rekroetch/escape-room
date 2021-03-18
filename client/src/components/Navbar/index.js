@@ -66,6 +66,32 @@ function Navbar(props) {
               Desk
             </Link>
           </li>
+          <li className="nav-item">
+            <Link
+              to="/safe"
+              exact="true"
+              className={
+                window.location.pathname === "/safe"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Safe
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/bookshelf"
+              exact="true"
+              className={
+                window.location.pathname === "/bookshelf"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Bookshelf
+            </Link>
+          </li>
           {/* links above are temporary */}
           <li className="nav-item">
             <Link
