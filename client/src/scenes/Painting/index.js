@@ -31,7 +31,8 @@ class Painting extends Component {
             pieces: [],
             shuffled: [],
             solved: [],
-            reply: ""
+            reply: "",
+            winCondition: false
         };
 
         this.shuffledPieces = this.shuffledPieces.bind(this);
@@ -128,7 +129,8 @@ class Painting extends Component {
             }
             } else {
                 this.setState({
-                    reply: "Not quite!!"
+                    reply: "Not quite!!",
+                    winCondition: false
                 })
             }
         }
