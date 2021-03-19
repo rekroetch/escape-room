@@ -24,6 +24,7 @@ function App() {
         <Route exact path="/desk" component={Desk} />
         <Route exact path="/safe" component={Safe} />
         <Route exact path="/scoreBoard" component={ScoreBoard} />
+        
     </Router>
   );
 }

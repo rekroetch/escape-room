@@ -4,6 +4,8 @@ import API from "../../utils/API";
 import Form from '../../components/Form';
 import Card from '../../components/Card';
 import './style.css'
+//import { ESRCH } from "node:constants";
+//import { Redirect } from "react-router";
 
 function Welcome () {
     // Setting our component's initial state
@@ -25,8 +27,9 @@ function Welcome () {
             password: formObject.password
         })
         .then(console.log(formObject))
-        .catch(err => console.log(err));
-    };
+        .catch(err => console.log(err))
+    }
+    
 
     return(
         <div>

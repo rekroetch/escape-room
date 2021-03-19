@@ -1,113 +1,33 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
 import Draggable from 'react-draggable';
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+import  Shelf  from './dropShelf'
+import  Book  from './books'
 
-class Bookshelf extends React.Component {
 
-    constructor() {
-
-      //  imgSrc = ".images/dayBook.png"
-
-    super();
-}
-
-    
-eventLogger = (e: MouseEvent, data: Object) => {
-    console.log('Event: ', e);
-    console.log('Data: ', data);
-  };
-
- handleDrag = (e, data) => {
-  e.preventDefault()
-  console.log(e, data)
-
-  }
-
- handleStop = (e, data) => {
-
-  console.log(e, data)
-  
-
-}
-
+export default class BookShelf extends React.Component {
   render() {
+
+    // we will use this as a custom drag element
+
     return (
-      <div>
-      <DragDropContainer targetKey="foo" >
-    <div>Drag This to Shelf</div>
-</DragDropContainer>
-<DropTarget targetKey="foo" >
-    <img src={require('./images/bookshelf.jpg')}></img>
-</DropTarget>
-        <Draggable
-        axis="both"
-        handle=".handle"
-        defaultPosition={{x: 0, y: 0}}
-        position={null}
-        grid={[25, 25]}
-        scale={1}
-        onStart={this.handleStart}
-        onDrag={this.handleDrag}
-        onStop={this.handleStop}>
-        <div>
-          {/* <div className="handle">Drag from here</div> */}
-          <img className="handle" src={require('./images/dayBookSmall.png')}></img>
+      <div className='drag_books_to_shelf'>
+        <h2>Solve the riddle by dragging the correct books to the bookshelf</h2>
+        <div className="books">
+          <Book targetKey="DayAndNight" draggable="true" image="images/nightBookSmall.png"/>
+          <Book targetKey="DayAndNight"  image="images/dayBookSmall.png"/>
+          <Book targetKey="random" image="images/blueBookSmall.png"/>
+          <Book targetKey="random" image="images/redBookSmall.png"/>
         </div>
-      </Draggable>
-
-      <Draggable
-        axis="both"
-        handle=".handle"
-        defaultPosition={{x: 0, y: 0}}
-        position={null}
-        grid={[25, 25]}
-        scale={1}
-        onStart={this.handleStart}
-        onDrag={this.handleDrag}
-        onStop={this.handleStop}>
-        <div>
-          {/* <div className="handle">Drag from here</div> */}
-          <img className="handle" src={require('./images/nightBookSmall.png')}></img>
-        </div>
-      </Draggable>
-
-      <Draggable
-        axis="both"
-        handle=".handle"
-        defaultPosition={{x: 0, y: 0}}
-        position={null}
-        grid={[25, 25]}
-        scale={1}
-        onStart={this.handleStart}
-        onDrag={this.handleDrag}
-        onStop={this.handleStop}>
-        <div>
-          {/* <div className="handle">Drag from here</div> */}
-          <img className="handle" src={require('./images/redBookSmall.png')}></img>
-        </div>
-      </Draggable>
-
-      <Draggable
-        axis="both"
-        handle=".handle"
-        defaultPosition={{x: 0, y: 0}}
-        position={null}
-        grid={[25, 25]}
-        scale={1}
-        onStart={this.handleStart}
-        onDrag={this.handleDrag}
-        onStop={this.handleStop}>
-        <div>
-          {/* <div className="handle">Drag from here</div> */}
-          <img className="handle" src={require('./images/blueBookSmall.png')}></img>
-        </div>
-      </Draggable>
-        <h1>Bookshelf</h1>
-        </div>
+        <div className="bookshelf">
+            <Shelf targetKey="DayAndNight">
+              <img src="images/bookshelf.jpg" width="600"/>
+              <h5>Put Riddle here</h5>
+            </Shelf>
+          </div>
+          </div>
     )
+  }
 }
 
-}
 
-export default Bookshelf

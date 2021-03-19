@@ -1,71 +1,46 @@
 import React from 'react';
-var shortid = require('shortid');
-import { DragDropContainer, DropTarget } from '../../src';
-import BoxItem from './BoxItem';
+import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
 
-export default class Box extends React.Component {
+
+
+ class Shelf extends React.Component {
     constructor(props) {
-      super(props);
-      this.state = {
-        items: []
-      };
+        super(props);
+        this.state = {
+          message: '',
+          howManyBooks: 0,
+          solved: false};
+
     }
-  
-    handleDrop = (e) => {
-      let items = this.state.items.slice();
-      items.push({label: e.dragData.label, uid: shortid.generate()});
-      this.setState({items: items});
-      e.containerElem.style.visibility="hidden";
+
+    dropped = (e) => {
+        e.containerElem.style.visibility="hidden";
+        this.setState({ howManyBooks: this.howManyBooks+1})
+
+        console.log({'book hit target':e});
+        if(this.howManyBooks > 1)
+        {
+        this.setState({message: "You solved the riddle!",
+      solved:true})
+        
+        }
     };
-  
-    swap = (fromIndex, toIndex, dragData) => {
-      let items = this.state.items.slice();
-      const item = {label: dragData.label, uid: shortid.generate()};
-      items.splice(toIndex, 0, item);
-      this.setState({items: items});
-    };
-  
-    kill = (uid) => {
-      let items = this.state.items.slice();
-      const index = items.findIndex((item) => {
-        return item.uid == uid
-      });
-      if (index !== -1) {
-        items.splice(index, 1);
-      }
-      this.setState({items: items});
-    };
-  
+
     render() {
-      /*
-          Note the two layers of DropTarget. 
-          This enables it to handle dropped items from 
-          outside AND items dragged between boxes.
-      */
-      return (
-        <div className="component_box">
-            <DropTarget
-              onHit={this.handleDrop}
-              targetKey={this.props.targetKey}
-              dropData={{name: this.props.name}}
-            >
-              <DropTarget
-                onHit={this.handleDrop}
-                targetKey="boxItem"
-                dropData={{name: this.props.name}}
-              >
-                <div className="box">
-                  {this.state.items.map((item, index) => {
-                    return (
-                      <BoxItem key={item.uid} uid={item.uid} kill={this.kill} index={index} swap={this.swap}>
-                        {item.label}
-                      </BoxItem>
-                    )
-                  })}
+        return (
+        <DropTarget
+            onHit={this.dropped}
+            targetKey={this.props.targetKey}
+            dropData={{name: this.props.name}}
+        >
+            <div className='bookshelf'>
+            <img src= "images/bookshelf.jpg"></img>
+                    {this.state.message}
                 </div>
-              </DropTarget>
-            </DropTarget>
-        </div>
-      );
+                {this.props.children}
+            
+        </DropTarget>
+        );
     }
-  }
+}
+export default Shelf;
