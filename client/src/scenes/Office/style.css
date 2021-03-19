@@ -11,7 +11,7 @@
     width: 500px;    
     border: 2px solid black;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     float: left;
 }
@@ -19,6 +19,10 @@
 .desk:hover {
     height: 300px;
     width: 550px;
+}
+
+.noKey:hover {
+    color: red
 }
 
 .word {
@@ -34,7 +38,7 @@
     background:red;
     height: 200px;
     width: 400px;    
-    border: 2px solid black;
+    border: 10px solid rgb(250, 177, 40);
     text-align: center;
     padding: 20px;
     margin: 10px;
