@@ -4,7 +4,20 @@ import Row from "../../components/Row"
 import Col from "../../components/Col"
 import "./style.css"
 
-function StartPage(props) {
+function StartPage (props) {
+
+  let count = 0
+
+  for (var i = 0; i < props.puzzle.length; i++) {
+    if (props.puzzle[i].isSolved) {
+      count += 1
+    }
+  }
+
+  const progress = (count/4)*100 +"%"
+  console.log(`count: ${count}, progress: ${progress}`)
+
+
   return (
     <div className="background">
       <header>
@@ -14,12 +27,12 @@ function StartPage(props) {
         <div
           className="progress-bar"
           role="progressbar"
-          style={{ width: "25%" }}
+          style={{ width: `${progress}` }}
           aria-valuenow="25"
           aria-valuemin="0"
           aria-valuemax="100"
         >
-          25%
+          {progress}
         </div>
       </div>
       <Row>

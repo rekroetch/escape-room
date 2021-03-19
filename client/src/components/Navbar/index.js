@@ -6,7 +6,7 @@ function Navbar(props) {
   return (
     <nav
       className="navbar navbar-expand-lg navbar navbar-light"
-      style={{ backgroundColor: "pink", borderBottom: "inset"}}
+      style={{ backgroundColor: "orange", borderBottom: "inset"}}
     >
       <Link className="navbar-brand" to="/" style={{ fontSize: "25px" }}>
         Escape Game
