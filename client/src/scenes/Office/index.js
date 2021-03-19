@@ -1,30 +1,49 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import Row from "../../components/Row"
 import "./style.css"
 
-function Office () {
+function Office (props) {
     return (
         <div className="page">
             <h1>Office</h1>
             <Row>
-                {/* need to add condition that user has the key from bookshelf puzzle */}
                 <div className="desk">
-                    <Link
-                        to="/desk"
-                        className="nav-link word"
-                    >
-                        Desk
-                    </Link>
+                    <Route render={() => (
+                        props.puzzle[1].isSolved ? (
+                            <Link
+                                to="/desk"
+                                className="nav-link word"
+                            >
+                                Desk (unlocked)
+                            </Link>
+                        ) : (
+                            <Link
+                                to="/office"
+                                className="nav-link word noKey"
+                            >
+                                Desk (locked)
+                            </Link>)
+                    )}/>
                 </div>
-                {/* need to add reroute to safe if painting is already solved */}
                 <div className="painting">
-                    <Link
-                        to="/painting"
-                        className="nav-link word"
-                    >
-                        Painting
-                    </Link>
+                    <Route render={() => (
+                        props.puzzle[2].isSolved ? (
+                            <Link
+                                to="/safe"
+                                className="nav-link word"
+                            >
+                                Safe
+                            </Link>
+                        ) : (
+                            <Link
+                                to="/painting"
+                                className="nav-link word"
+                            >
+                                Painting
+                            </Link>
+                        )
+                    )}/>
                 </div>
                 <div className="bookshelf">
                     <Link
