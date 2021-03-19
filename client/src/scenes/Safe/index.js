@@ -39,7 +39,7 @@ function Safe (props) {
     function safeCracked() {
         console.log("running API")
         API.solved(id)
-        .then(console.log("worked"))
+        .then(alert("Congrats! You won!"))
         .catch(err => console.log(err));
     }
 
@@ -48,7 +48,7 @@ function Safe (props) {
     return (
         <div className="box">
             <h1>Crack the safe with a 4 digit code!</h1>
-            {/* make a screen to show what theyve entered */}
+            {/* might need to make pick a state so that it rerenders each time its updated */}
             <div className="screen">****</div>
             <div className="numPad">
                 <Row>

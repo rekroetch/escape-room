@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Row from "../../components/Row"
 import "./style.css"
 
@@ -10,27 +10,29 @@ function Office () {
             <Row>
                 {/* need to add condition that user has the key from bookshelf puzzle */}
                 <div className="desk">
-                    <Route render={({ history}) => (
-                        <Link className="nav-link word" onClick={() => { history.push('/desk') }}>
-                            Desk
-                        </Link>
-                    )} />
- 
+                    <Link
+                        to="/desk"
+                        className="nav-link word"
+                    >
+                        Desk
+                    </Link>
                 </div>
                 {/* need to add reroute to safe if painting is already solved */}
                 <div className="painting">
-                    <Route render={({ history}) => (
-                        <Link className="nav-link word" onClick={() => { history.push('/painting') }}>
-                            Painting
-                        </Link>
-                    )} />
+                    <Link
+                        to="/painting"
+                        className="nav-link word"
+                    >
+                        Painting
+                    </Link>
                 </div>
                 <div className="bookshelf">
-                <Route render={({ history}) => (
-                    <Link className="nav-link word" onClick={() => { history.push('/bookshelf') }}>
+                    <Link
+                        to="/bookshelf"
+                        className="nav-link word"
+                    >
                         Bookshelf
                     </Link>
-                )} />
                 </div>    
             </Row>
         </div>
