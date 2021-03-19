@@ -3,7 +3,6 @@ import React, { useState, useEffect }from 'react';
 import API from "./utils/API";
 import "./App.css";
 import Welcome from './scenes/Welcome'
-import Background from './scenes/Background'
 import Office from './scenes/Office'
 import Bookshelf from './scenes/Bookshelf'
 import Painting from './scenes/Painting'

@@ -1,27 +1,52 @@
-.container {
+/* .container {
     margin: 20px;
+} */
+.background {
+    /* background: rgb(106, 187, 187); */
+    background: rgb(255, 235, 216);
+    height: 1000px
 }
 
-.header {
-    background:teal;
+/* .header {
+    background:rgb(255, 219, 219);
     width: 100%;
-    font-size: 100px;
-    color: whitesmoke;
+    font-size: 70px;
+    color: black;
     padding: 50px;
     text-align: center;
+    border-bottom: 5px ridge;
+} */
+
+.progress {
+    margin-top: 10px;
+}
+
+.startBtn {
+    margin: 50px;
 }
 
 .start {
-    margin: 20px;
+    padding: 10px;
     height: 50px;
     width: 200px;
+    font-size: 70px;
+    background: rgb(247, 136, 136);
+    border-radius: 30px;
+    color: black
+
 }
+
+.start:hover {
+    color: black;
+    border: 1px solid grey
+}
+
 
 .title {
     text-align: center;
 }
 
 .info {
-    width: 100%;
+    width: 90%;
     margin-top: 30px;
 }
