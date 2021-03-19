@@ -6,7 +6,7 @@ function Navbar(props) {
   return (
     <nav
       className="navbar navbar-expand-lg navbar navbar-light"
-      style={{ backgroundColor: "pink" }}
+      style={{ backgroundColor: "orange", borderBottom: "inset"}}
     >
       <Link className="navbar-brand" to="/" style={{ fontSize: "25px" }}>
         Escape Game
@@ -15,10 +15,10 @@ function Navbar(props) {
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link
-              to="/background"
+              to="/startPage"
               exact="true"
               className={
-                window.location.pathname === "/background"
+                window.location.pathname === "/startPage"
                   ? "nav-link active"
                   : "nav-link"
               }
