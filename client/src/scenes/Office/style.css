@@ -1,0 +1,63 @@
+.page {
+    background: rgb(255, 232, 201);
+    height: 1000px;
+    padding: 50px;
+    border: 5px ridge rgb(165, 101, 42);
+}
+
+.desk {
+    background: rgb(102, 57, 27);
+    height: 250px;
+    width: 500px;    
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    float: left;
+}
+
+.desk:hover {
+    height: 300px;
+    width: 550px;
+}
+
+.word {
+    color: white;
+    font-size: 80px;
+}
+
+.word:hover {
+    color: black;
+}
+
+.painting {
+    background:red;
+    height: 200px;
+    width: 400px;    
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    float: left;
+}
+
+.painting:hover {
+    height: 250px;
+    width: 450px;  
+}
+
+.bookshelf {
+    background:tan;
+    height: 400px;
+    width: 600px;    
+    border: 2px solid black;
+    text-align: center;
+    padding: 70px 20px;
+    margin: 10px;
+    float: left;
+}
+
+.bookshelf:hover {
+    height: 450px;
+    width: 650px;  
+}

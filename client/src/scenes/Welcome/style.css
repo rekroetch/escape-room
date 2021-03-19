@@ -1,5 +1,14 @@
 header {
+    /* background:rgb(255, 219, 219); */
+    background:rgb(16, 34, 61);
+    width: 100%;
+    font-size: 70px;
+    color: white;
     padding: 50px;
-    background: #333;
-    color: yellow;
+    text-align: center;
+    border-bottom: 5px ridge;
+}
+
+.container {
+    padding: 20px 80px;
 }

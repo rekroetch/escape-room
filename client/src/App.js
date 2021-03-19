@@ -3,7 +3,6 @@ import React, { useState, useEffect }from 'react';
 import API from "./utils/API";
 import "./App.css";
 import Welcome from './scenes/Welcome'
-import Background from './scenes/Background'
 import Office from './scenes/Office'
 import Bookshelf from './scenes/Bookshelf'
 import Painting from './scenes/Painting'
@@ -101,24 +100,24 @@ function App() {
             handleSignUpSubmit={handleSignUpSubmit}
             />)} 
           />
-          <Route exact path="/background" render={(props) => (
-            user ? (<Background {...props} user={user} />) : (<Redirect to="/" />)
+          <Route exact path="/startPage" render={(props) => (
+            user ? (<StartPage {...props} user={user} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
           </Route>
           <Route exact path="/office" render={(props) => (
-            user ? (<Office {...props} user={user} />) : (<Redirect to="/" />)
+            user ? (<Office {...props} user={user} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
           </Route>
           <Route exact path="/bookshelf" render={(props) => (
-            user ? (<Bookshelf {...props} user={user}  />) : (<Redirect to="/" />)
+            user ? (<Bookshelf {...props} user={user} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
           </Route>
           <Route exact path="/painting" render={(props) => (
-            user ? (<Painting {...props} user={user}  />) : (<Redirect to="/" />)
+            user ? (<Painting {...props} user={user} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
           </Route>
           <Route exact path="/desk" render={(props) => (
-            user ? (<Desk {...props} user={user}  />) : (<Redirect to="/" />)
+            user ? (<Desk {...props} user={user} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
           </Route>
           <Route exact path="/safe" render={(props) => (
@@ -126,7 +125,7 @@ function App() {
           )}>
           </Route>
           <Route exact path="/scoreBoard" render={(props) => (
-            user ? (<ScoreBoard {...props} user={user}  />) : (<Redirect to="/" />)
+            user ? (<ScoreBoard {...props} user={user} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
           </Route>
         </Switch>

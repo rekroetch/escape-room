@@ -1,0 +1,39 @@
+
+.background {
+    /* background: rgb(106, 187, 187); */
+    background: rgb(255, 235, 216);
+    height: 1000px
+}
+
+.progress {
+    margin-top: 10px;
+}
+
+.startBtn {
+    margin: 50px;
+}
+
+.start {
+    padding: 10px;
+    height: 50px;
+    width: 200px;
+    font-size: 70px;
+    background: rgb(95, 255, 74);
+    border-radius: 30px;
+    color: black
+
+}
+
+.start:hover {
+    color: black;
+    border: 1px solid grey
+}
+
+.title {
+    text-align: center;
+}
+
+.info {
+    width: 90%;
+    margin-top: 30px;
+}
