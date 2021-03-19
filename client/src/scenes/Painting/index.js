@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import originalImage from "./images/rasterFoxResize.png";
 import "./Puzzle.css";
+import axios from "axios"
 
 class Painting extends Component {
 
@@ -28,6 +29,7 @@ class Painting extends Component {
     constructor() {
         super();
         this.state = {
+            data: [],
             pieces: [],
             shuffled: [],
             solved: [],
