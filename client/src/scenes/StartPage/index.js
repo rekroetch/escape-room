@@ -14,7 +14,7 @@ function StartPage (props) {
     }
   }
 
-  const progress = (count/4)*100 +"%"
+  const progress = Math.floor((count/3)*100) +"%"
   console.log(`count: ${count}, progress: ${progress}`)
 
 
@@ -36,7 +36,7 @@ function StartPage (props) {
         </div>
       </div>
       <Row>
-        <Col size="md-6">
+        <Col size="md-4">
           <div className="startBtn">
             <Link
               to="/office"
@@ -46,7 +46,7 @@ function StartPage (props) {
             </Link>
           </div>
         </Col>
-        <Col size="md-6">
+        <Col size="md-8">
           <div className="card text-white bg-dark justify-content-center info">
             <div className="card-body">
               <h5 className="card-title title">Background Story</h5>
