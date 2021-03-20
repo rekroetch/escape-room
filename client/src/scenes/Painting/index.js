@@ -25,7 +25,6 @@ class Painting extends Component {
 
         */
 
-
     constructor() {
         super();
         this.state = {
