@@ -27,7 +27,7 @@ module.exports = {
             async (error) => {
               if (error) return next(error);
               
-              const body = { _id: user._id, email: user.email };
+              const body = { _id: user._id, email: user.email, puzzles: user.puzzles };
               const token = jwt.sign({ user: body }, 'TOP_SECRET');
               
               return res.json({ token });
@@ -46,12 +46,14 @@ module.exports = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      puzzles: req.body.puzzles
   })
       .then(() => {
           res.redirect(307, "/api/user/login");
       })
       .catch(err => {
+          console.log(err);
           res.status(401).json(err);
       });
   },
@@ -59,6 +61,21 @@ module.exports = {
   logout: function(req,res) {
     req.logout();
     res.redirect("/");
-  }
+  },
+
+  update: function(req, res) {
+    console.log("update route " , req.body)
+    db.User
+      .findOneAndUpdate(
+        { 
+          _id: req.params.id, 
+          puzzles: { $elemMatch: { title: req.body.puzzleTitle } }
+        }, 
+        { 
+          $set: { "puzzles.$.isSolved": true }
+        })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
 
 };

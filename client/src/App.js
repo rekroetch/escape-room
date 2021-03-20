@@ -19,21 +19,36 @@ function App() {
     const [formObject, setFormObject] = useState({})
     const [user, setUser] = useState()
     const [puzzles, setPuzzles] = useState()
+    const puzzleSeed = [
+      {
+        title: "Safe",
+        description: "Enter a 4 digit code to crack the safe and win the game.",
+        winCondition: '1219',
+        isSolved: false
+      },
+      {
+        title: "Bookshelf",
+        description: "Solve the riddle then select the books that correspond to the answer.",
+        winCondition: "day and night",
+        isSolved: false
+      },
+      {
+        title: "Painting",
+        description: "Complete the puzzle to put the painting back together",
+        winCondition: "fkajf",
+        isSolved: false
+      }
+    ];
 
     useEffect(() => {
-        loadPuzzles()
         jwt && API.validateUser(jwt)
-        .then(res => setUser(res.data))
+        .then(res => {
+          setUser({
+            email: res.data.email, 
+            id: res.data._id})
+          setPuzzles(res.data.puzzles)
+        })
     }, [jwt])
-
-    // Loads all puzzles and sets them to puzzles
-    function loadPuzzles() {
-      API.getAllPuzzles()
-        .then(res => 
-          setPuzzles(res.data)
-        )
-        .catch(err => console.log(err));
-    };
 
     // Handles updating component state when the user types into the input field
     function handleInputChange(event) {
@@ -44,11 +59,13 @@ function App() {
     // When the form is submitted, use the API.saveUser method to save the User data
     function handleSignUpSubmit(event) {
         event.preventDefault();
+        console.log(puzzleSeed);
         API.createUser({
             firstName: formObject.firstName,
             lastName: formObject.lastName,
             email: formObject.email,
-            password: formObject.password
+            password: formObject.password,
+            puzzles: puzzleSeed
         })
         .then(() => {
           API.checkUser({

@@ -18,15 +18,7 @@ export default {
     return axios.post("/api/user/logout", userData);
   },
 
-  getAllPuzzles: function(puzzleData) {
-    return axios.get("/api/puzzle", puzzleData)
-  },
-
-  getPuzzle: function(id) {
-    return axios.get("/api/puzzle/" + id)
-  },
-
-  solved: function(id) {
-    return axios.put("/api/puzzle/" + id)
+  solved: function(userId, puzzleTitle) {
+    return axios.put("/api/user/update/" + userId, puzzleTitle)
   }
 };
