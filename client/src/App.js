@@ -88,7 +88,7 @@ function App() {
     <Router>
       <Navbar logout={logout}/>
         <Switch>
-          <Route exact path="/" render={(props) => (
+          <Route exact path="/" render={(props) => user ? (<StartPage {...props} user={user} puzzle={puzzles} />) : (
             <Welcome {...props} user={user} 
             handleInputChange={handleInputChange} 
             handleLogInSubmit={handleLogInSubmit} 

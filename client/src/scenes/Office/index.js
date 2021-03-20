@@ -20,7 +20,7 @@ function Office (props) {
                         ) : (
                             <Link
                                 to="/office"
-                                className="nav-link word noKey"
+                                className="nav-link word"
                             >
                                 Desk (locked)
                             </Link>)

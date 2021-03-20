@@ -17,12 +17,8 @@
 }
 
 .desk:hover {
-    height: 300px;
-    width: 550px;
-}
-
-.noKey:hover {
-    color: red
+    height: 275px;
+    width: 525px;
 }
 
 .word {
@@ -46,8 +42,8 @@
 }
 
 .painting:hover {
-    height: 250px;
-    width: 450px;  
+    height: 225px;
+    width: 425px;  
 }
 
 .bookshelf {
@@ -62,6 +58,6 @@
 }
 
 .bookshelf:hover {
-    height: 450px;
-    width: 650px;  
+    height: 425px;
+    width: 625px;  
 }
