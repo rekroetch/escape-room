@@ -5,9 +5,6 @@ import Card from '../../components/Card';
 import Row from '../../components/Row';
 import Col from '../../components/Col';
 import './style.css'
-//import { ESRCH } from "node:constants";
-//import { Redirect } from "react-router";
-
 
 function Welcome (props) {
     
@@ -53,7 +50,6 @@ function Welcome (props) {
                     </Col>
                 </Row>
             </div>
-           
         </div>
     );
 }

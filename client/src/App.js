@@ -26,11 +26,6 @@ function App() {
         .then(res => setUser(res.data))
     }, [jwt])
 
-    // // Load all puzzles and store them with setPuzzles
-    // useEffect(() => {
-    //   loadPuzzles()
-    // }, [])
-
     // Loads all puzzles and sets them to puzzles
     function loadPuzzles() {
       API.getAllPuzzles()
