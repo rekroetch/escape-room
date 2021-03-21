@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar(props) {
@@ -103,12 +103,17 @@ function Navbar(props) {
                   : "nav-link"
               }
             >
-              Score Board
+              Leader Board
             </Link>
           </li>
         </ul>
         <span className="navbar-nav nav-item">
-          <Link to="/" exact="true" className="nav-link" onClick={props.logout}>Logout</Link>
+          <Route render={() => (
+            props.user ? (
+              <Link to="/" exact="true" className="nav-link" onClick={props.logout}>Logout</Link>
+            ) : ""
+          )}/>
+          
         </span>
       </div>
     </nav>
