@@ -1,5 +1,5 @@
 import React from 'react';
-import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+import { DropTarget } from 'react-drag-drop-container';
 
 var howManyBooks = 0
 
@@ -18,7 +18,7 @@ var howManyBooks = 0
         this.setState({ howManyBooks: this.howManyBooks+1})
 
         howManyBooks++
-        
+
         console.log({'book hit target':e});
         if(howManyBooks > 1)
         {

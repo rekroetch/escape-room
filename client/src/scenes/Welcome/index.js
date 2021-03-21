@@ -38,7 +38,7 @@ function Welcome (props) {
                                     </div>
 
                                     <div className="input-group mb-3">
-                                        <input onChange={props.handleInputChange} name="password" type="text" className="form-control" placeholder="Password" aria-label="Password"/>
+                                        <input onChange={props.handleInputChange} name="password" type="password" className="form-control" placeholder="Password" aria-label="Password"/>
                                     </div>
                                     <button
                                         type="submit"

@@ -2,7 +2,7 @@ import React from 'react'
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
 import Draggable from 'react-draggable';
 import  Shelf  from './dropShelf'
-import  Book  from './books'
+
 
 
 export default class BookShelf extends React.Component {
