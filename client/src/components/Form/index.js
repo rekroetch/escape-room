@@ -17,7 +17,7 @@ function Form(props) {
             </div>
 
             <div className="input-group mb-3">
-              <input onChange={props.onChange} name="password" type="text" className="form-control" placeholder="Password" aria-label="Password"/>
+              <input onChange={props.onChange} name="password" type="password" className="form-control" placeholder="Password" aria-label="Password"/>
             </div>
           <button type="submit" onClick={props.onClick} className="btn btn-warning">
             Submit

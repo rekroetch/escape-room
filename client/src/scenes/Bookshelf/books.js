@@ -1,5 +1,5 @@
 import React from 'react';
-import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+import { DragDropContainer} from 'react-drag-drop-container';
 
 
 
@@ -17,7 +17,7 @@ export default class Book extends React.Component {
           customDragElement={this.props.customDragElement}
           onDrop={this.landedOn}
           render = {() => {
-            return <img src={this.props.image} height="250" />
+            return <img src={this.props.image} alt="Book to drop on shelf" height="250" />
           }}
         />
           

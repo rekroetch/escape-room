@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import originalImage from "./images/rasterFoxResize.png";
 import "./Puzzle.css";
-import axios from "axios"
+
 
 class Painting extends Component {
 
@@ -113,11 +113,9 @@ class Painting extends Component {
             console.log(this.state.solved[index]);
             console.log(index)
 
-           
-          //  console.log(this.state.pieces)
           if(this.state.solved[index])
           {
-            if (this.state.solved[index].order == index) {
+            if (this.state.solved[index].order === index) {
                
                 i++
                 if(i >= 11)
@@ -167,7 +165,7 @@ class Painting extends Component {
 export default Painting;
 
 
-{/* 
+/* 
 
     import React, { useEffect, useState } from 'react'
 function Painting (props) {
@@ -305,4 +303,4 @@ function Painting (props) {
 
 
 export default Painting
-*/}
+*/
