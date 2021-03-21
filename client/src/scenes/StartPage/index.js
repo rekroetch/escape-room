@@ -51,14 +51,13 @@ function StartPage (props) {
             <div className="card-body">
               <h5 className="card-title title">Background Story</h5>
               <p className="card-text">
-                This story is about a family of four, mom and dad with there 2 twin boys. The twins were the bestest friends throughout there youth but as time came they would eventrually meet new friends...
+                This story is about a newly wed couple who just got there first house! Couple months go by and the couple starts to act very distant...
               </p>
               <p className="card-text">
-                The first twin was named Steve and the other was named Lucas. Steve was always so close to Lucas until Highschool came around. Then Lucas started to bring a new friend named Lewis around the house all the time and with a glipms of an eye you can see the malice/envy in Steves face. A year goes by and Steve has had enough of this new guy taking his place so he plans the perfect murder. Steve tells Lucas that his Aunt Nancy needs him to come over to pick up a Chicken for dinner and Lewis can stay here while he waits. As soon as Lucas came back he discovers the whole house trashed, Lewis's body on the couch and his brother knocked out.
-                The police floods the house with detectives but yet no leads were found for the death of Lewis. As days pass Steve cofronts his brother in the hospital about what has happended, but all he got was deadends. With suspicion Lucas can tell something was up with is brother. 
+                Ponnie and Blyde were the couples names, ever since they moved in together everything changed between them. Arguments every night and tension when ever theyre next to each other. Blyde would often just stay in his office for countless hours at night then head to work in the moring. One day Blyde gets off work a hour early and sees a car leave the house. The first thing that comes to his mind is that Pommie is having an affair. This angered Blyde greatly, as soon as he entered the house he confronted her and things get heated. A couple weeks later Pommies mom shows up to the house because Pommie hasnt been picking up her phone calls. As her mom enters the house it was completely quiet, she moves her way toward Blydes office as she notices a bloody footprint. There Pommie lies pale with a puddle of blood with Blyde no where to be found. Immediately her mom calls the police...
               </p>
               <p className="card-text">
-                Within this game you play as the Lucas investigating Steve to solve the murder of your good friend Lewis.
+                Within this game you play as the detective that solves this tragic love story.
               </p>
             </div>
           </div>
