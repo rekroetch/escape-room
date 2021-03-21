@@ -103,7 +103,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar logout={logout}/>
+      <Navbar logout={logout} user={user} />
         <Switch>
           <Route exact path="/" render={(props) => user ? (<StartPage {...props} user={user} puzzle={puzzles} />) : (
             <Welcome {...props} user={user} 

@@ -5,11 +5,8 @@ import "./style.css"
 
 function Safe (props) {
     const safePuzzle = props.puzzle[0]
-    console.log(safePuzzle)
-    console.log(props.user)
     const userId = props.user.id
     const puzzleTitle = safePuzzle.title
-    console.log(`userId: ${userId} | puzzleTitle: ${puzzleTitle}`)
 
     
     let pick = []
