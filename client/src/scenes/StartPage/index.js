@@ -53,22 +53,13 @@ function StartPage (props) {
             <div className="card-body">
               <h5 className="card-title title">Background Story</h5>
               <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aliquid
-                voluptate voluptatibus sequi autem pariatur natus tempora veritatis
-                explicabo sapiente quia magnam ipsum, enim ipsam fugit, dolorem quam
-                impedit non.
+                This story is about a newly wed couple who just got there first house! Couple months go by and the couple starts to act very distant...
               </p>
               <p className="card-text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Reprehenderit est beatae expedita eveniet? Deserunt obcaecati
-                recusandae ratione, et, minus pariatur eveniet impedit, ad esse vel
-                sequi laboriosam dolorem quam facilis?
+                Ponnie and Blyde were the couples names, ever since they moved in together everything changed between them. Arguments every night and tension when ever theyre next to each other. Blyde would often just stay in his office for countless hours at night then head to work in the moring. One day Blyde gets off work a hour early and sees a car leave the house. The first thing that comes to his mind is that Pommie is having an affair. This angered Blyde greatly, as soon as he entered the house he confronted her and things get heated. A couple weeks later Pommies mom shows up to the house because Pommie hasnt been picking up her phone calls. As her mom enters the house it was completely quiet, she moves her way toward Blydes office as she notices a bloody footprint. There Pommie lies pale with a puddle of blood with Blyde no where to be found. Immediately her mom calls the police...
               </p>
               <p className="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-                laborum doloribus perspiciatis vitae sapiente repellendus quas
-                debitis reiciendis dicta, ullam libero, aperiam illum delectus,
-                temporibus animi ea laboriosam veniam neque?
+                Within this game you play as the detective that solves this tragic love story.
               </p>
             </div>
           </div>
