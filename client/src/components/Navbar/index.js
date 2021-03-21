@@ -103,7 +103,7 @@ function Navbar(props) {
                   : "nav-link"
               }
             >
-              Score Board
+              Leader Board
             </Link>
           </li>
         </ul>

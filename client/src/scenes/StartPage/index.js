@@ -44,7 +44,7 @@ function StartPage (props) {
               to="/office"
               className="start"
             >
-              Start Game
+              {progress > 0+"%" ? "Resume" : "Start Game"}
             </Link>
           </div>
         </Col>
