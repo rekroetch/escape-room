@@ -3,6 +3,18 @@ import { Link } from "react-router-dom";
 import Row from "../../components/Row"
 import Col from "../../components/Col"
 import "./style.css"
+import styled from "styled-components"
+
+const Button = styled.button`
+background-color: #ff6699;
+font-size: 75px;
+font-family: courier;
+text-transform: uppercase;
+border-radius: 5px;
+margin: 10px 0px;
+cursor: pointer;
+box-shadow: 0px 20px 20px lightblue;
+`;
 
 function StartPage (props) {
 
@@ -40,12 +52,14 @@ function StartPage (props) {
       <Row>
         <Col size="md-4">
           <div className="startBtn">
+            <Button>
             <Link
               to="/office"
               className="start"
             >
               {progress > 0+"%" ? "Resume" : "Start Game"}
             </Link>
+            </Button>
           </div>
         </Col>
         <Col size="md-8">
