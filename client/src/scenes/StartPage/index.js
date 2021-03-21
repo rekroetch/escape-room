@@ -8,9 +8,11 @@ function StartPage (props) {
 
   let count = 0
 
-  for (var i = 0; i < props.puzzle.length; i++) {
-    if (props.puzzle[i].isSolved) {
-      count += 1
+  if(props.puzzle && props.puzzle.length) {
+    for (var i = 0; i < props.puzzle.length; i++) {
+      if (props.puzzle[i].isSolved) {
+        count += 1
+      }
     }
   }
 

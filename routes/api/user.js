@@ -2,10 +2,12 @@ const router = require("express").Router();
 const userController = require("../../controllers/userController");
 const passport = require('passport')
       
-// Matches with "/api/user"
+// Matches with "/api/user/"
 router.route("/")
-  // dont think we use this
   .get(userController.findAll)
+
+// router.route("/:id")
+//   .get(userController.findById)
 
 // Matches "/api/user/login" 
 router.route("/login")
@@ -23,11 +25,13 @@ router.route("/logout")
 router.route("/validate")
   .get(passport.authenticate("jwt", {session: false}),(req, res) => {
     if (req.user) {
-      res.json({email: req.user.email})
+      res.json(req.user)
     } else {
       res.json({email: "no user"})
     }
   }) 
 
+router.route("/update/:id")
+  .put(userController.update)
 
 module.exports = router;

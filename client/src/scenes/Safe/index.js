@@ -6,7 +6,11 @@ import "./style.css"
 function Safe (props) {
     const safePuzzle = props.puzzle[0]
     console.log(safePuzzle)
-    const id = safePuzzle._id
+    console.log(props.user)
+    const userId = props.user.id
+    const puzzleTitle = safePuzzle.title
+    console.log(`userId: ${userId} | puzzleTitle: ${puzzleTitle}`)
+
     
     let pick = []
 
@@ -38,7 +42,7 @@ function Safe (props) {
 
     function safeCracked() {
         console.log("running API")
-        API.solved(id)
+        API.solved(userId, {puzzleTitle})
         .then(alert("Congrats! You won!"))
         .catch(err => console.log(err));
     }
