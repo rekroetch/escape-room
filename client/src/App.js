@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import React, { useState, useEffect }from 'react';
 import API from "./utils/API";
-import "./App.css";
 import Welcome from './scenes/Welcome'
 import Office from './scenes/Office'
 import Bookshelf from './scenes/Bookshelf'
@@ -11,6 +10,7 @@ import Safe from './scenes/Safe'
 import ScoreBoard from './scenes/ScoreBoard'
 import Navbar from './components/Navbar'
 import StartPage from "./scenes/StartPage";
+import "./App.css";
 
 
 function App() {

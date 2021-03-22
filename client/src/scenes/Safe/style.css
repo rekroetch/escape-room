@@ -1,22 +1,29 @@
 
+.safe {
+    background-image: url('../../images/safe.png');
+    background-size: cover;
+    height: 1175px;
+    width: 1024px;
+}
 .box {
     margin: 20px;
     padding: 20px;
-    border: 5px solid black;
-    height: 1000px;
-    width: 1000px;
+    height: 375px;
+    width: 455px;
+    left: 245px;
+    bottom: 425px;
     background: rgb(201, 199, 199)
 }
 
 .screen {
-    margin: 20px 20px;
+    margin: 5px 20px;
     border: 2px solid black;
-    height: 50px;
-    width: 484px;
+    height: 43px;
+    width: 184px;
     background: #333;
     color: white;
-    padding-left: 20px;
-    font-size: 45px;
+    padding-left: 63px;
+    font-size: 35px;
 }
 
 .numPad {
@@ -28,19 +35,19 @@
 }
 
 .num {
-    width: 150px;
-    height: 150px;
-    border-radius: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
     border-style: ridge;
-    font-size: 50px;
+    font-size: 25px;
 }
 
 .enter {
-    width: 150px;
-    height: 150px;
-    border-radius: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
     border-style: ridge;
-    font-size: 50px;
+    font-size: 10px;
     background:rgb(201, 199, 199)
 }
 
