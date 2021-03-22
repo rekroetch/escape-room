@@ -1,14 +1,41 @@
 header {
     /* background:rgb(255, 219, 219); */
-    background:rgb(16, 34, 61);
+    background:rgb(66, 120, 202);
     width: 100%;
-    font-size: 70px;
+    height: 8%;
+    font-size: 100px;
     color: white;
     padding: 50px;
-    text-align: center;
+    text-align: left;
     border-bottom: 5px ridge;
+    font-family:'Courier New', Courier, monospace
 }
+
+.greeting {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px;
+    font-weight: bolder;
+}
+
+
 
 .container {
     padding: 20px 80px;
 }
+
+.welcome {
+    font-size:30px;
+}
+
+.login{
+    font-size: 20px;
+}
+
+/* .log-in{
+
+}
+
+.signup{
+
+} */

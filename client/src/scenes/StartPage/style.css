@@ -5,22 +5,30 @@
     height: 1000px
 }
 
-.progress {
+.progress{
     margin-top: 10px;
+    background-color:rgb(74, 197, 74);
+}
+
+.progress-bar{
+    background-color:rgb(74, 197, 74);
 }
 
 /* .startBtn {
-    margin: 50px;
-} */
+    margin: 20px;
+    height:75px;
+    width: 100px;
+}  */
 
 .start {
-    padding: 10px;
-    height: 200px;
-    width: 200px;
-    /* font-size: 70px;
-    background: rgb(95, 255, 74); */
-    /* border-radius: 30px;
-    color: black */
+    /* height: 20px;
+    width: 20px; */
+    font-size: 75px;
+    text-align: center;
+    /* background: rgb(95, 255, 74); */
+    border-radius: 30px;
+    color: black;
+    font-family:courier;
 
 }
 
