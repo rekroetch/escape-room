@@ -1,12 +1,11 @@
 import React from 'react';
-import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+import { DragDropContainer} from 'react-drag-drop-container';
 
 
 
 export default class Book extends React.Component {
     landedOn(e) {
       console.log('I was dropped on ' + e.dropData.name)
-      console.log({'onDrop event passed back to Food': e});
     }
   
     render() {
@@ -14,11 +13,11 @@ export default class Book extends React.Component {
       return (
         <DragDropContainer
           targetKey={this.props.targetKey}
-          dragClone={this.props.dragClone || false}
-          dragData={{label: this.props.label, solved: this.props.solved}}
+          dragData={{label: this.props.label}}
+          customDragElement={this.props.customDragElement}
           onDrop={this.landedOn}
           render = {() => {
-            return <img src={this.props.image} height="600" style={{ marginLeft: 40}}/>
+            return <img src={this.props.image} alt="Book to drop on shelf" height="250" />
           }}
         />
           

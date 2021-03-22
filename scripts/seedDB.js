@@ -26,13 +26,29 @@ const puzzleSeed = [
     description: "Complete the puzzle to put the painting back together",
     winCondition: "",
     isSolved: false
-  },
-
+  }
 ];
 
-db.Puzzle
+const userSeed = [
+  {
+    firstName: "Bob",
+    lastName: "Test",
+    email: "bob@test.com",
+    password: "password",
+    puzzles: puzzleSeed
+  },
+  {
+    firstName: "Charlie",
+    lastName: "Test",
+    email: "charlie@test.com",
+    password: "password",
+    puzzles: puzzleSeed
+  },
+]
+
+db.User
   .remove({})
-  .then(() => db.Puzzle.collection.insertMany(puzzleSeed))
+  .then(() => db.User.collection.insertMany(userSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

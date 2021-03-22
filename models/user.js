@@ -8,8 +8,15 @@ const userSchema = new Schema({
   lastName: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
+  puzzles: [
+    {
+      title: { type: String, required: true },
+      description: { type: String, required: true },
+      winCondition: { type: String, required: true },
+      isSolved: { type: Boolean, default: false },
+    }   
+  ]
 });
-
 
 
 userSchema.pre(

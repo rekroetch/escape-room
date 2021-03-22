@@ -1,33 +1,90 @@
 import React from 'react'
-import Draggable from 'react-draggable';
 import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+import Draggable from 'react-draggable';
 import  Shelf  from './dropShelf'
-import  Book  from './books'
+
 
 
 export default class BookShelf extends React.Component {
   render() {
 
-    // we will use this as a custom drag element
 
-    return (
-      <div className='drag_books_to_shelf'>
-        <h2>Solve the riddle by dragging the correct books to the bookshelf</h2>
-        <div className="books">
-          <Book targetKey="DayAndNight" draggable="true" image="images/nightBookSmall.png"/>
-          <Book targetKey="DayAndNight"  image="images/dayBookSmall.png"/>
-          <Book targetKey="random" image="images/blueBookSmall.png"/>
-          <Book targetKey="random" image="images/redBookSmall.png"/>
+return (
+  <div className="books">
+    <h2>What breaks yet never falls, and what falls yet never breaks?</h2>
+    <h3>Drag the correct books onto the shelf</h3>
+      <DragDropContainer
+      targetKey = "DayAndNight">
+  <Draggable
+  axis="both"
+  handle=".handle"
+  defaultPosition={{x: 0, y: 0}}
+  position={null}
+  scale={1}
+  onStart={this.handleStart}
+  onDrag={this.handleDrag}
+  onStop={this.handleStop}>
+    <div>
+    <img className="handle" src={require('./images/dayBookSmall.png')} alt="Book with day symbol"></img>
+    </div>
+</Draggable>
+</DragDropContainer>
+
+<DragDropContainer
+      targetKey = "DayAndNight">
+<Draggable
+  axis="both"
+  handle=".handle"
+  defaultPosition={{x: 10, y: 0}}
+  position={null}
+  scale={1}
+  onStart={this.handleStart}
+  onDrag={this.handleDrag}
+  onStop={this.handleStop}>
+  <div>
+    <img className="handle" src={require('./images/nightBookSmall.png')} alt="Book with night symbol"></img>
+  </div>
+</Draggable>
+</DragDropContainer>
+
+<Draggable
+  axis="both"
+  handle=".handle"
+  defaultPosition={{x: 0, y: 0}}
+  position={null}
+  scale={1}
+  onStart={this.handleStart}
+  onDrag={this.handleDrag}
+  onStop={this.handleStop}>
+  <div>
+    <img className="handle" src={require('./images/redBookSmall.png')} alt="Book with triangle symbol"></img>
+  </div>
+</Draggable>
+
+<Draggable
+  axis="both"
+  handle=".handle"
+  defaultPosition={{x: 30, y: 0}}
+  position={null}
+  scale={1}
+  onStart={this.handleStart}
+  onDrag={this.handleDrag}
+  onStop={this.handleStop}
+  >
+  <div>
+    <img className="handle" src={require('./images/blueBookSmall.png')}></img>
+  </div>
+</Draggable>
+
+<Shelf targetKey="DayAndNight" 
+    onHit={this.dropped}
+    onDragEnter={this.highlight}
+    onDragLeave={this.unHighlight}
+    >
+      <img className="handle" src={require('./images/bookshelf.jpg')} alt="Book with night symbol"></img>
+         </Shelf>
         </div>
-        <div className="bookshelf">
-            <Shelf targetKey="DayAndNight">
-              <img src="images/bookshelf.jpg" width="600"/>
-              <h5>Put Riddle here</h5>
-            </Shelf>
-          </div>
-          </div>
-    )
-  }
+
+)
 }
-
-
+}

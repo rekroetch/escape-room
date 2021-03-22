@@ -26,9 +26,9 @@ A virtual escape room where users will have to piece together clues and riddles 
 
 ## Tech
 
-##Questions
+## Questions
 
-##Credits
+## Credits
 
 [Rachel Kroetch](https://github.com/rekroetch)
 [Pirooz Wallace](https://github.com/attack-theoRy)
