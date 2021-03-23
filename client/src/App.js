@@ -19,7 +19,6 @@ function App() {
     const [formObject, setFormObject] = useState({})
     const [user, setUser] = useState()
     const [puzzles, setPuzzles] = useState()
-    const [solvedPuzzles, setSolvedPuzzles] =useState([])
     const puzzleSeed = [
       {
         title: "Safe",
@@ -51,7 +50,7 @@ function App() {
           setPuzzles(res.data.puzzles)
           console.log(res.data)
         })
-    }, [jwt, solvedPuzzles.length])
+    }, [jwt])
 
     // Handles updating component state when the user types into the input field
     function handleInputChange(event) {

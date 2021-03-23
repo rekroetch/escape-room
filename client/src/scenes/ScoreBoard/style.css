@@ -1,0 +1,14 @@
+.winner {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px;
+    color: white;
+}
+
+.userEmail {
+    font-size: 30px;
+    text-align: center;
+    color: rgb(252, 174, 111);
+    margin: 10px;
+}
