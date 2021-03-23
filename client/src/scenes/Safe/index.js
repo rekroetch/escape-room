@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Link } from "react-router-dom";
 import Row from "../../components/Row";
 import API from "../../utils/API";
 import "./style.css";
@@ -55,6 +56,13 @@ function Safe(props) {
       }}
     >
       <h1>Crack the safe with a 4 digit code!</h1>
+      <div>
+            <Route render={() => (
+                safePuzzle.isSolved ? (
+                <Link to="/scoreBoard" className="btn btn-success">You escaped! Now see how you stack up against other users!</Link>
+                ) : ""
+            )}/>
+            </div>
       <div
         className="box"
         style={{
