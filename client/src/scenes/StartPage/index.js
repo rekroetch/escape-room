@@ -99,12 +99,12 @@ function StartPage (props) {
               </p>
               <p className="card-text">
               <VFXSpan shader = {pixelateTransition}> 
-                Ponnie and Blyde were the couples names, ever since they moved in together everything changed between them. Arguments every night and tension when ever theyre next to each other. Blyde would often just stay in his office for countless hours at night then head to work in the moring. One day Blyde gets off work a hour early and sees a car leave the house. The first thing that comes to his mind is that Pommie is having an affair. This angered Blyde greatly, as soon as he entered the house he confronted her and things get heated. A couple weeks later Pommies mom shows up to the house because Pommie hasnt been picking up her phone calls. As her mom enters the house it was completely quiet, she moves her way toward Blydes office as she notices a bloody footprint. There Pommie lies pale with a puddle of blood with Blyde no where to be found. Immediately her mom calls the police...
+                Ponnie and Blyde were the couple's names, ever since they moved in together everything changed between them. Arguments every night and tension whenever they're next to each other. Blyde would often just stay in his office for countless hours at night then head to work in the morning. One day Blyde gets off work an hour early and sees a car leave the house. The first thing that comes to his mind is that Pommie is having an affair. This angered Blyde greatly, as soon as he entered the house he confronted her and things get heated. A couple of weeks later Pommies mom shows up at the house because Pommie hasn't been picking up her phone calls. As her mom enters the house it was completely quiet, she moves her way toward Blyde's office as she notices a bloody footprint. There Pommie lies pale with a puddle of blood with Blyde nowhere to be found. Immediately her mom calls the police...
               </VFXSpan>
               </p>
               <p className="card-text">
               <VFXSpan shader = {pixelateTransition}>
-                Within this game you play as the detective that solves this tragic love story.
+                As detectives were searching the room they started to hear a ticking. THEY TRIGGERED A BOMB!!! So with the limited time, they have to search the room before the room blows up!
               </VFXSpan>
               </p>
             </div>
