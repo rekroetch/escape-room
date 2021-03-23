@@ -1,5 +1,6 @@
 import React from 'react';
 import { DropTarget } from 'react-drag-drop-container';
+import API from "../../utils/API";
 
 var howManyBooks = 0
 
@@ -22,6 +23,13 @@ var howManyBooks = 0
         console.log({'book hit target':e});
         if(howManyBooks > 1)
         {
+            const bookShelfPuzzle = this.props.puzzle[1];
+            const userId = this.props.user.id;
+            const puzzleTitle = bookShelfPuzzle.title;
+                
+            API.solved(userId, {puzzleTitle}).then(alert("Day and Night!"))
+            .catch((err) => console.log(err));
+        
         this.setState({message: "You solved the riddle!"})
         
         }
@@ -29,7 +37,7 @@ var howManyBooks = 0
 
     render() {
         return (
-        <DropTarget
+        <DropTarget 
             onHit={this.dropped}
             targetKey={this.props.targetKey}
             dropData={{name: this.props.name}}
