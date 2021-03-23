@@ -5,6 +5,7 @@
 .background-login{
   height:1000px;
   background-color: deepskyblue;
+  z-index: 2;
 }
 header {
     background:rgb(79, 205, 255);
