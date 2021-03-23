@@ -1,4 +1,6 @@
-
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 .background {
     background: rgb(255, 235, 216);
     height: 1000px
