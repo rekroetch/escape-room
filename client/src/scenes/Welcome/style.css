@@ -2,9 +2,10 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 
-.background{
-    background: rgb(37, 35, 56);
-}
+/* .background-welcome{
+    background-color: rgb(37, 35, 56);
+    height:1000px;
+} */
 
 header {
     /* background:rgb(255, 219, 219); */
@@ -44,6 +45,10 @@ header {
 
 .intro {
     font-size: 30px;
+}
+
+.col-lg-4{
+    z-index:1;
 }
 
 /* moving background  */
