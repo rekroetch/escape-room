@@ -16,7 +16,12 @@ function Welcome (props) {
             </header>
             <div className="container">
                 <Row>
-                    <Col size="md-4">
+                    <Col size="lg-4">
+                        <Card>
+                            <p className="intro">Play as a detective trying to solve the murder of a young newlywed named Ponnie, whose body was discoved in her husband's office by her mother several weeks after her death.</p>
+                        </Card>
+                    </Col>
+                    <Col size="lg-4">
                         <Card>
                             <Form
                                 onChange={props.handleInputChange}
@@ -24,7 +29,7 @@ function Welcome (props) {
                             />
                         </Card>
                     </Col>
-                    <Col size="md-4">
+                    <Col size="lg-4">
                         <Card>
                             {/* rework the form components so that it can be used for both sign up and log in */}
                             <form>
@@ -46,11 +51,6 @@ function Welcome (props) {
                                     </button>
                                 </div>
                             </form>
-                        </Card>
-                    </Col>
-                    <Col size="md-4">
-                        <Card>
-                            <p className="intro">Play as a detective trying to solve the murder of a young newlywed named Ponnie, whose body was discoved in her husband's office by her mother several weeks after her death.</p>
                         </Card>
                     </Col>
                 </Row>

@@ -38,10 +38,12 @@ function Safe(props) {
   }
 
   function safeCracked() {
-    // const Swal = require("sweetalert2");
     console.log("running API");
     API.solved(userId, { puzzleTitle })
-      .then(Swal.fire("Congrats! You cracked the safe and escaped!"))
+      .then(() => {
+          Swal.fire("Congrats! You cracked the safe and escaped!")
+          props.handleSolvedPuzzle('0')
+      })
       .catch((err) => console.log(err));
   }
 

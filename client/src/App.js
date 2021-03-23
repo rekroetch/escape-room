@@ -19,6 +19,7 @@ function App() {
     const [formObject, setFormObject] = useState({})
     const [user, setUser] = useState()
     const [puzzles, setPuzzles] = useState()
+    const [solvedPuzzles, setSolvedPuzzles] =useState([])
     const puzzleSeed = [
       {
         title: "Safe",
@@ -45,16 +46,24 @@ function App() {
         .then(res => {
           setUser({
             email: res.data.email, 
-            id: res.data._id})
+            id: res.data._id,
+          })
           setPuzzles(res.data.puzzles)
+          console.log(res.data)
         })
-    }, [jwt])
+    }, [jwt, solvedPuzzles.length])
 
     // Handles updating component state when the user types into the input field
     function handleInputChange(event) {
         const { name, value } = event.target;
         setFormObject({...formObject, [name]: value})
     };
+
+    function handleSolvedPuzzle(puzzleName) {
+      const puzzleToUpdate = [...puzzles]
+      puzzleToUpdate[puzzleName].isSolved = true
+      setPuzzles(puzzleToUpdate)
+    }
 
     // When the form is submitted, use the API.saveUser method to save the User data
     function handleSignUpSubmit(event) {
@@ -121,11 +130,11 @@ function App() {
           )}>
           </Route>
           <Route exact path="/bookshelf" render={(props) => (
-            user ? (<Bookshelf {...props} user={user} puzzle={puzzles} />) : (<Redirect to="/" />)
+            user ? (<Bookshelf {...props} user={user} handleSolvedPuzzle={handleSolvedPuzzle} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
           </Route>
           <Route exact path="/painting" render={(props) => (
-            user ? (<Painting {...props} user={user} puzzle={puzzles} />) : (<Redirect to="/" />)
+            user ? (<Painting {...props} user={user} handleSolvedPuzzle={handleSolvedPuzzle} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
           </Route>
           <Route exact path="/desk" render={(props) => (
@@ -133,7 +142,7 @@ function App() {
           )}>
           </Route>
           <Route exact path="/safe" render={(props) => (
-            user ? (<Safe {...props} user={user} puzzle={puzzles} />) : (<Redirect to="/" />)
+            user ? (<Safe {...props} user={user} handleSolvedPuzzle={handleSolvedPuzzle} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
           </Route>
           <Route exact path="/scoreBoard" render={(props) => (
