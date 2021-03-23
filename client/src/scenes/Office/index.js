@@ -40,7 +40,7 @@ function Office(props) {
         render={() =>
           props.puzzle[2].isSolved ? (
             <Link to="/safe" 
-              className="safe"
+              className="safeImg"
               style={{
                 position: "absolute",
                 right: "0",
