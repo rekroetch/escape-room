@@ -1,6 +1,6 @@
 
 .safe {
-    background-image: url('../../images/safe.png');
+    background-image: url('../../images/vault.png');
     background-size: cover;
     height: 1175px;
     width: 1024px;
@@ -10,26 +10,26 @@
     padding: 20px;
     height: 375px;
     width: 455px;
-    left: 245px;
-    bottom: 425px;
-    background: rgb(201, 199, 199)
+    left: 270px;
+    bottom: 530px;
+    background: none
 }
 
 .screen {
-    margin: 5px 20px;
-    border: 2px solid black;
-    height: 43px;
-    width: 184px;
+    margin: 7px 20px;
+    border: 5px solid black;
+    height: 30px;
+    width: 176px;
     background: #333;
     color: white;
-    padding-left: 63px;
+    padding-left: 50px;
     font-size: 35px;
 }
 
 .numPad {
     margin: 0 20px;
-    padding: 30px;
-    border: 2px solid black;
+    padding: 23px;
+    border: 5px solid black;
     float: left;
     background:rgb(158, 156, 156)
 }
