@@ -1,7 +1,12 @@
 .card {
     margin: 10px;
-    width: 21rem;
-    padding: 15px;
+    padding: 0 10px;
+    background: transparent;
+    color: black;
+    border: transparent;
+}
+
+.card:hover {
     background: #333;
     color: white;
 }
