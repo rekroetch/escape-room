@@ -1,3 +1,11 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+
+.background{
+    background: rgb(37, 35, 56);
+}
+
 header {
     /* background:rgb(255, 219, 219); */
     background:rgb(66, 120, 202);
@@ -8,7 +16,8 @@ header {
     padding: 50px;
     text-align: left;
     border-bottom: 5px ridge;
-    font-family:'Courier New', Courier, monospace
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgb(65, 202, 197);
 }
 
 .greeting {
@@ -23,7 +32,10 @@ header {
 }
 
 .welcome {
-    font-size:30px;
+    font-size:42px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    
 }
 
 .login{
@@ -34,3 +46,184 @@ header {
     font-size: 30px;
 }
 
+/* moving background  */
+
+body {
+    background: #b8e7fd;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .forest {
+    top: 0;
+    height: 76%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  .bird-container {
+    animation: birdmoving 90s ease infinite backwards;
+    position: absolute;
+    top: 10%;
+    z-index: 0;
+  }
+  
+  .bird {
+    animation: bird-flying 0.9s steps(6) infinite;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/bird-sprite.png') 0 0 no-repeat;
+    display: block;
+    height: 100px;
+    width: 100px;  
+  }
+  
+  .sun {
+    animation: spin 1s linear infinite both;
+    animation-play-state: paused;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/sun.svg') 0 0 no-repeat;
+    height: 200px;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    width: 200px;
+    z-index: 0;
+  }
+  
+  .sun:hover {
+    animation-play-state: running;
+  }
+  
+  .tree01 {
+    animation: treesmoving 35s linear 2s infinite reverse backwards; 
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/pinetree1.svg') no-repeat;
+    bottom: 30px;
+    height: 292px;
+    position: absolute;
+    width: 263px;
+    z-index: 0;
+  }
+  
+  .tree02 {
+    animation: treesmoving 23s linear 6s infinite reverse backwards; 
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/traingletree.svg') no-repeat;
+    bottom: 24px;
+    height: 320px;
+    position: absolute;
+    width: 212px;
+    z-index: 0;
+  }
+  
+  .tree03 {
+    animation: treesmoving 18s linear 4s infinite reverse backwards; 
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/pinetree2.svg') no-repeat;
+    bottom: 10px;
+    height: 435px;
+    position: absolute;
+    width: 391px;
+    z-index: 0;
+  }
+  
+  .tree04 {
+    animation: treesmoving 30s linear infinite reverse; 
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/traingletree.svg') no-repeat;
+    bottom: 25px;
+    height: 278px;
+    position: absolute;
+    width: 184px;
+    z-index: 0;
+  }
+  
+  .forest-background {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/forest-background-opt.svg') no-repeat;
+    background-position: 0px 0px;
+      background-repeat: repeat-x;
+      animation: animatedBackground 12s linear infinite reverse;
+    bottom: 25%;
+    height: 330px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  .road {
+    background: #c39d7a;
+    bottom: 0;
+    height: 25%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  .combi-container {
+    height: 232px;
+    margin: 0 auto;
+    position: relative;
+    top: 75%;
+    width: 450px;
+    z-index: 0;
+  }
+  
+  .combi, .wheelshadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .combi {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/combi-b.svg') no-repeat;
+    height: 232px;
+    width: 450px;
+    z-index: 0;
+  }
+  
+  .wheelshadow {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/wheel-shadow-b.svg') no-repeat;
+    height: 232px;
+    width: 450px;
+    z-index: 0;
+  }
+  
+  .wheel {
+    animation: spin 1s linear infinite both;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/wheel-b.svg') no-repeat;
+    height: 67px;
+    position: absolute;
+    top: 165px;
+    width: 67px;
+    z-index: 0;
+  }
+  
+  .wheel01 {
+    left: 314px;
+  }
+  
+  .wheel02 {
+    left: 70px;
+  }
+  
+  @keyframes animatedBackground {
+      from { background-position: 0 0; }
+      to { background-position: 100% 0; }
+  }
+  
+  @keyframes bird-flying {
+    0% {background-position: 0 0;}
+    100% {background-position: -600px 0;}
+  }
+  
+  @keyframes treesmoving {
+    from {transform: translateX(-400px);}
+    to {transform: translateX(1450px);}
+  }
+  
+  @keyframes birdmoving {
+    from {transform: translateX(-100px);}
+    to {transform: translateX(1350px);}
+  }
+  
+  @keyframes spin {
+      100% { transform: rotate(360deg); }
+  }

@@ -55,6 +55,32 @@ function Welcome (props) {
                     </Col>
                 </Row>
             </div>
+            <div className="animated-background">
+                <div class="forest">
+  
+                    <div class="bird-container">
+                        <div class="bird"></div>
+                    </div>
+  
+                    <div class="sun"></div>
+                    <div class="tree01"></div>
+  	                <div class="tree02"></div>
+  	                <div class="tree03"></div>
+                    <div class="tree04"></div>
+  
+                    <div class="combi-container">
+                        <div class="combi"></div>
+                        <div class="wheelshadow"></div>
+                        <div class="wheel wheel01" ></div>
+                        <div class="wheel wheel02" ></div>
+                    </div>
+  {/* <!-- combi-container end --> */}
+  
+                </div>
+{/* <!-- forest end --> */}
+                <div class="forest-background"></div>
+                <div class="road"></div>
+            </div>
         </div>
     );
 }
