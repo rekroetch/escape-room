@@ -17,9 +17,12 @@ function Welcome (props) {
             <div className="container">
                 <Row>
                     <Col size="lg-4">
-                        <Card>
-                            <p className="intro">Play as a detective trying to solve the murder of a young newlywed named Ponnie, whose body was discoved in her husband's office by her mother several weeks after her death.</p>
-                        </Card>
+                        {/* <Card> */}
+                            <p className="intro"> You're out with friends, and you're about to have one of the greatest summers ever!</p>
+                            <br></br>
+                            <br></br>
+                            <p className="until">Until....</p>
+                        {/* </Card> */}
                     </Col>
                     <Col size="lg-4">
                         <Card>
