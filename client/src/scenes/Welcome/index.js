@@ -1,6 +1,5 @@
 
 import React from "react";
-import Form from '../../components/Form';
 import Card from '../../components/Card';
 import Row from '../../components/Row';
 import Col from '../../components/Col';
@@ -26,22 +25,36 @@ function Welcome (props) {
                     </Col>
                     <Col size="lg-4">
                         <Card>
-                            <Form
-                                onChange={props.handleInputChange}
-                                onClick={props.handleSignUpSubmit}
-                            />
+                            <form>
+                                <div className="form-group">
+                                    <div className="formTitle">Sign Up</div>
+                                    <div className="input-group mb-3">
+                                        <input onChange={props.handleInputChange} name="firstName" type="text" className="form-control" placeholder="First Name" aria-label="First Name"/>
+                                    </div>
+                                    <div className="input-group mb-3">
+                                        <input onChange={props.handleInputChange} name="lastName" type="text" className="form-control" placeholder="Last Name" aria-label="Last Name"/>
+                                    </div>
+                                    <div className="input-group mb-3">
+                                        <input onChange={props.handleInputChange} name="email" type="text" className="form-control" placeholder="Email" aria-label="Email"/>
+                                    </div>
+                                    <div className="input-group mb-3">
+                                        <input onChange={props.handleInputChange} name="password" type="password" className="form-control" placeholder="Password" aria-label="Password"/>
+                                    </div>
+                                    <button type="submit" onClick={props.handleSignUpSubmit} className="btn btn-warning">
+                                        Sign Up
+                                    </button>
+                                </div>
+                            </form>
                         </Card>
                     </Col>
                     <Col size="lg-4">
                         <Card>
-                            {/* rework the form components so that it can be used for both sign up and log in */}
                             <form>
-                                <div className="form-group"> Log In
-
+                                <div className="form-group">
+                                    <div className="formTitle">Log In</div>
                                     <div className="input-group mb-3">
                                         <input onChange={props.handleInputChange} name="email" type="text" className="form-control" placeholder="Email" aria-label="Email"/>
                                     </div>
-
                                     <div className="input-group mb-3">
                                         <input onChange={props.handleInputChange} name="password" type="password" className="form-control" placeholder="Password" aria-label="Password"/>
                                     </div>

@@ -1,8 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link, Route } from "react-router-dom";
 import "./navbar.css"
-// import styled from "styled-components";
-// import { ReactNavbar } from "react-responsive-animate-navbar";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar(props) {
@@ -10,7 +8,6 @@ function Navbar(props) {
     <div className="container-nav">
     <nav
       className="navbar navbar-expand-lg navbar navbar-light"
-      // style={{ backgroundColor: "orange", borderBottom: "inset"}}
     >
       <Link className="navbar-logo" to="/" style={{ fontSize: "25px" }}>
         <img className="navImg" src = {'https://png2.cleanpng.com/sh/bc1f6ba712856f2eb18ecda39dd510c0/L0KzQYm3VsI2N6VqjpH0aYP2gLBuTf9tcadqRdR7YX7meH7skBNieJYyitH4bT3og7TokPUufJlqReR4b32whrrrhf8ub5JyRdd8Y3HzdX75jB9uNWZnS6JtMXS5crLshfQ4NmQ9TqU6OEO0QYa5WckzPmI1SqkBNUexgLBu/kisspng-olive-branch-escape-room-escape-the-room-video-gam-escape-room-5b30d1d6baeed7.3863183115299261027657.png'} alt ="Logo"></img>
@@ -30,73 +27,23 @@ function Navbar(props) {
               Game Info
             </Link>
           </li>
-          {/* added for the purpose of testing protected routes only */}
           <li className="nav-item">
-            <Link
-              to="/office"
-              exact="true"
-              className={
-                window.location.pathname === "/office"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Office
-            </Link>
+            <Route render={() => (
+              window.location.pathname === "/office" ? "" : (
+                <Link
+                to="/office"
+                exact="true"
+                className={
+                  window.location.pathname === "/office"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                Back to Office
+              </Link>
+              )
+            )}/>
           </li>
-          <li className="nav-item">
-            <Link
-              to="/painting"
-              exact="true"
-              className={
-                window.location.pathname === "/painting"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Painting
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/desk"
-              exact="true"
-              className={
-                window.location.pathname === "/desk"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Desk
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/safe"
-              exact="true"
-              className={
-                window.location.pathname === "/safe"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Safe
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/bookshelf"
-              exact="true"
-              className={
-                window.location.pathname === "/bookshelf"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Bookshelf
-            </Link>
-          </li>
-          {/* links above are temporary */}
           <li className="nav-item">
             <Link
               to="/scoreBoard"
