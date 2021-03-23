@@ -8,7 +8,7 @@ import './style.css'
 function Welcome (props) {
     
     return(
-        <div className="background">
+        <div className="background-login">
             <header className="welcome">
                 Welcome to the Escape Room!
                 <h2 className="login">{props.user ? props.user.email : "Log In or Sign Up"}</h2>

@@ -10,12 +10,12 @@ const Button = styled.button`
 background-color: #FF6760;
 font-family: courier;
 text-transform: uppercase;
-border-radius: 48px;
-margin: 10px 20px;
+border-radius: 18px;
+margin: 218px 20px;
 cursor: pointer;
 box-shadow: 0px 20px 20px lightblue;
-height:70px;
-width:232px;
+height:80px;
+width:320px;
 `;
 
 export const pixelateTransition = `
@@ -53,7 +53,7 @@ function StartPage (props) {
 
 
   return (
-    <div className="background">
+    <div className="background-startpage">
       <header className="greeting">
         Try to escape, {props.user ? props.user.email : "not logged in"}!
       </header>
@@ -78,9 +78,11 @@ function StartPage (props) {
               to="/office"
               className="start"
             >
-              <VFXSpan shader = {pixelateTransition}>
+              {/* <VFXSpan shader = {pixelateTransition}> */}
+              <div className="resume-start">
               {progress > 0+"%" ? "RESUME" : "START GAME"}
-              </VFXSpan>
+              </div>
+              {/* </VFXSpan> */}
             </Link>
             </Button>
             </VFXProvider>
@@ -88,30 +90,30 @@ function StartPage (props) {
         </Col>
         <Col size="md-8">
           <VFXProvider>
-            <div className="card text-white bg-dark justify-content-center info">
+            <div className="info-card">
               <div className="card-body">
-                <h5 className="card-title title">Background Story</h5>
+                <h5 className="card-title title">You've been captured!</h5>
                 <p className="card-text">
                 <VFXSpan shader = {pixelateTransition}>
-                  This story is about the newly wed couple, Ponnie and Blyde, who just bought their first house! Unfortunately, a couple of months later the relationship became very strained and distant...
+                  The killer has knocked you unconscious while you're away from your friends. He drags you through the woods..
                 </VFXSpan>  
                 </p>
                 <br></br>
                 <p className="card-text">
                 <VFXSpan shader = {pixelateTransition}> 
-                  Arguments every night and tension whenever they were next to each other. Blyde would often stay in his office for countless hours at night, then head to work in the morning. One day Blyde got off work an hour early and saw a car leave the house. The first thing that came to mind was that Ponnie was having an affair. This angered Blyde greatly, and as soon as he entered the house he confronted her and things got heated... 
+                  You wake up, and you're tied up in the killer's office. He's about to deliver the killing blow, until he hears noise outside. It's your friends. This is your chance..
                 </VFXSpan>
                 </p>
                 <br></br>
                 <p className="card-text">
                 <VFXSpan shader = {pixelateTransition}> 
-                  Several weeks later Ponnie's mom showed up at the house because Ponnie hadn't been picking up her phone calls. When she entered the house she was hit with a horrible stench and an eerie silence. She made her way toward Blyde's office and noticed a bloody footprint. Fearing the worst, she opened the door to the office and screamed when she saw Ponnie's pale body crumbled on the floor, surrounded by a puddle of dried blood and Blyde nowhere to be found...
+                  You are left all alone, and you have untied yourself. Your objective is to look around the office. It's up to you to get out, get your friends, and...
                 </VFXSpan>
                 </p>
                 <br></br>
                 <p className="card-text">
                 <VFXSpan shader = {pixelateTransition}>
-                  Your role as the lead detective is to search the room and find evidence tying Blyde to the murder of his wife. However, as you are searching, you start to hear a ticking. YOU TRIGGERED A BOMB!!! With the limited time, you must search the room before it blows up and all evidence is lost! Good luck!
+                  ESCAPE! Before it's too late..
                 </VFXSpan>
                 </p>
               </div>
@@ -119,6 +121,7 @@ function StartPage (props) {
           </VFXProvider>
         </Col>
       </Row>
+    <div className="creepy-forest"></div>  
     </div>
   );
 }

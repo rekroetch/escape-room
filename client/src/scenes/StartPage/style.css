@@ -1,9 +1,15 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
-.background {
-    background: rgb(255, 235, 216);
-    height: 1000px
+.background-startpage {
+    background: rgba(43, 3, 88, 0.568);
+    height: 100%;
+    background: url('https://image.freepik.com/free-photo/old-deep-forest-scary-trees-mystic-grunge-background_8457-93.jpg') no-repeat;
+    /* background-position: 0px 0px; */
+    z-index:0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
 }
 
 .progress{
@@ -16,7 +22,7 @@
 }
 
 .start {
-    font-size: 75px;
+    font-size: 50px;
     text-align: center;
     border-radius: 30px;
     color: black;
@@ -32,3 +38,12 @@
     margin-top: 30px;
     height:fit-content;
 }
+.resume-start{
+    font-family: "Poppins", "sans-serif";
+}
+
+/* .creepy-forest{
+    background: url('https://image.freepik.com/free-photo/old-deep-forest-scary-trees-mystic-grunge-background_8457-93.jpg') no-repeat;
+    background-position: 0px 0px;
+    z-index:0;
+} */
