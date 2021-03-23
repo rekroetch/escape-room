@@ -108,6 +108,7 @@ class Painting extends Component {
 
     // what happens when you click submit
     onClickHandler = () => {
+        const Swal = require("sweetalert2");
 
         let i = 0
         this.state.solved.map((jigsaw, index) => {
@@ -126,7 +127,11 @@ class Painting extends Component {
                 const userId = this.props.user.id;
                 const puzzleTitle = safePuzzle.title;
                     
-                API.solved(userId, {puzzleTitle}).then(alert("The painting moved and a safe appeared"))
+                API.solved(userId, {puzzleTitle})
+                .then(() => {
+                    Swal.fire("The painting moved and a safe appeared")
+                    this.props.handleSolvedPuzzle('2')
+                })
                 .catch((err) => console.log(err));
                 console.log("hit the solution")
                 this.setState({
@@ -135,6 +140,7 @@ class Painting extends Component {
                 })
             }
             } else {
+                Swal.fire("Not quite!")
                 this.setState({
                     reply: "Not quite!!",
                     winCondition: false

@@ -19,6 +19,7 @@ var howManyBooks = 0
         this.setState({ howManyBooks: this.howManyBooks+1})
 
         howManyBooks++
+        const Swal = require("sweetalert2");
 
         console.log({'book hit target':e});
         if(howManyBooks > 1)
@@ -27,7 +28,10 @@ var howManyBooks = 0
             const userId = this.props.user.id;
             const puzzleTitle = bookShelfPuzzle.title;
                 
-            API.solved(userId, {puzzleTitle}).then(alert("Day and Night!"))
+            API.solved(userId, {puzzleTitle}).then(() => {
+                this.props.handleSolvedPuzzle('1')
+                Swal.fire("Day and Night!")
+            })
             .catch((err) => console.log(err));
         
         this.setState({message: "You solved the riddle!"})
