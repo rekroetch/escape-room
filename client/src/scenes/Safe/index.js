@@ -5,10 +5,10 @@ import "./style.css"
 
 function Safe (props) {
     const safePuzzle = props.puzzle[0]
-    const userId = props.user.id
-    const puzzleTitle = safePuzzle.title
-
-    console.log(props)
+    console.log(safePuzzle)
+    const id = safePuzzle._id
+    
+    let pick = []
 
     function pickNumber(event) {
         event.preventDefault()

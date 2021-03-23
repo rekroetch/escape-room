@@ -37,6 +37,9 @@ class Painting extends Component {
             winCondition: false
         };
 
+        console.log(this.props.puzzle[2].title)
+        console.log(this.props.user.id)
+
         this.shuffledPieces = this.shuffledPieces.bind(this);
         this.renderPieceContainer = this.renderPieceContainer.bind(this);
         this.onClickHandler = this.onClickHandler.bind(this);
@@ -123,12 +126,14 @@ class Painting extends Component {
                 if(i >= 11)
                 {
                     const userId = this.props.user.id
-                    const paintingPuzzle = this.props.puzzle[1]
-                    const paintingTitle = paintingPuzzle.title
-                    console.log(this.props.puzzle[2])
+                  ///  const paintingPuzzle = this.props.puzzle[1]
+                   // const paintingTitle = paintingPuzzle.title
+                    console.log(this.props.puzzle[2].title)
+                    console.log(this.props.user.id)
 
-                    API.solved(userId, {paintingTitle}).then(alert("The painting just moved and a safe appears behind it"))
-                    .catch(err => console.log(err));
+
+                 //   API.solved(userId, {paintingTitle}).then(alert("The painting just moved and a safe appears behind it"))
+                 //  .catch(err => console.log(err));
                 
                     console.log("hit the solution")
                 this.setState({
