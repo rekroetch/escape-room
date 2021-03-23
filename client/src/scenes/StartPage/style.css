@@ -1,6 +1,5 @@
 
 .background {
-    /* background: rgb(106, 187, 187); */
     background: rgb(255, 235, 216);
     height: 1000px
 }
@@ -14,28 +13,13 @@
     background-color:rgb(74, 197, 74);
 }
 
-/* .startBtn {
-    margin: 20px;
-    height:75px;
-    width: 100px;
-}  */
-
 .start {
-    /* height: 20px;
-    width: 20px; */
     font-size: 75px;
     text-align: center;
-    /* background: rgb(95, 255, 74); */
     border-radius: 30px;
     color: black;
     font-family:courier;
-
 }
-
-/* .start:hover {
-    color: black;
-    border: 1px solid grey;
-} */
 
 .title {
     text-align: center;
@@ -44,4 +28,5 @@
 .info {
     width: 90%;
     margin-top: 30px;
+    height:fit-content;
 }

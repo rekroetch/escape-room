@@ -88,27 +88,34 @@ function StartPage (props) {
         </Col>
         <Col size="md-8">
           <VFXProvider>
-          
-          <div className="card text-white bg-dark justify-content-center info">
-            <div className="card-body">
-              <h5 className="card-title title">Background Story</h5>
-              <p className="card-text">
-              <VFXSpan shader = {pixelateTransition}>
-                This story is about a newly wed couple who just got there first house! Couple months go by and the couple starts to act very distant...
-              </VFXSpan>  
-              </p>
-              <p className="card-text">
-              <VFXSpan shader = {pixelateTransition}> 
-                Ponnie and Blyde were the couple's names, ever since they moved in together everything changed between them. Arguments every night and tension whenever they're next to each other. Blyde would often just stay in his office for countless hours at night then head to work in the morning. One day Blyde gets off work an hour early and sees a car leave the house. The first thing that comes to his mind is that Pommie is having an affair. This angered Blyde greatly, as soon as he entered the house he confronted her and things get heated. A couple of weeks later Pommies mom shows up at the house because Pommie hasn't been picking up her phone calls. As her mom enters the house it was completely quiet, she moves her way toward Blyde's office as she notices a bloody footprint. There Pommie lies pale with a puddle of blood with Blyde nowhere to be found. Immediately her mom calls the police...
-              </VFXSpan>
-              </p>
-              <p className="card-text">
-              <VFXSpan shader = {pixelateTransition}>
-                As detectives were searching the room they started to hear a ticking. THEY TRIGGERED A BOMB!!! So with the limited time, they have to search the room before the room blows up!
-              </VFXSpan>
-              </p>
+            <div className="card text-white bg-dark justify-content-center info">
+              <div className="card-body">
+                <h5 className="card-title title">Background Story</h5>
+                <p className="card-text">
+                <VFXSpan shader = {pixelateTransition}>
+                  This story is about the newly wed couple, Ponnie and Blyde, who just bought their first house! Unfortunately, a couple of months later the relationship became very strained and distant...
+                </VFXSpan>  
+                </p>
+                <br></br>
+                <p className="card-text">
+                <VFXSpan shader = {pixelateTransition}> 
+                  Arguments every night and tension whenever they were next to each other. Blyde would often stay in his office for countless hours at night, then head to work in the morning. One day Blyde got off work an hour early and saw a car leave the house. The first thing that came to mind was that Ponnie was having an affair. This angered Blyde greatly, and as soon as he entered the house he confronted her and things got heated... 
+                </VFXSpan>
+                </p>
+                <br></br>
+                <p className="card-text">
+                <VFXSpan shader = {pixelateTransition}> 
+                  Several weeks later Ponnie's mom showed up at the house because Ponnie hadn't been picking up her phone calls. When she entered the house she was hit with a horrible stench and an eerie silence. She made her way toward Blyde's office and noticed a bloody footprint. Fearing the worst, she opened the door to the office and screamed when she saw Ponnie's pale body crumbled on the floor, surrounded by a puddle of dried blood and Blyde nowhere to be found...
+                </VFXSpan>
+                </p>
+                <br></br>
+                <p className="card-text">
+                <VFXSpan shader = {pixelateTransition}>
+                  Your role as the lead detective is to search the room and find evidence tying Blyde to the murder of his wife. However, as you are searching, you start to hear a ticking. YOU TRIGGERED A BOMB!!! With the limited time, you must search the room before it blows up and all evidence is lost! Good luck!
+                </VFXSpan>
+                </p>
+              </div>
             </div>
-          </div>
           </VFXProvider>
         </Col>
       </Row>
