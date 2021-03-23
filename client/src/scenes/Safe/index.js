@@ -108,7 +108,12 @@ function Safe(props) {
             </button>
           </Row>
         </div>
-        <div className="note">
+        <div className="note"
+         style={{
+          position: "absolute",
+          right: 0,
+        }}
+        >
           <div className="postIt">Dad</div>
         </div>
       </div>

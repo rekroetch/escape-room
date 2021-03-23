@@ -1,36 +1,29 @@
-.tableTop {
-    margin: 20px;
-    padding: 20px;
-    background: rgb(165, 101, 42);
-    height: 700px;
-    width: 1300px;
-    border: 5px ridge rgb(131, 81, 34);
+.deskPage {
+    background-image: url('../../images/desktop.jpg');
+    background-size: cover;
+    height: 850px;
+    width: 1024px;
+    border: 5px ridge rgb(165, 101, 42);
+    margin: auto;
 }
 
 .deskTitle {
     font-size: 40px;
-    color: white;
+    color: black;
     padding: 20px;
 }
 
-.calendarBox {
-    border-right: 10px ridge grey;
-    border-bottom: 10px ridge grey;
-    border-top: 5px grey;
-    border-left: 5px grey;
-    height: 300px;
-    width: 300px;
-    margin: 40px;
-    padding:  20px 30px;
-    background: white;
-    float: left;
-
+.calendar {
+    background-image: url('../../images/calendar.png');
+    background-size: 100% 100%;
+    height: 400px;
+    width: 500px; 
 }
 
 .december {
-    font-size: 50px;
+    font-size: 45px;
     font-family: 'Courier New', Courier, monospace;
-    line-height: 0.75;
+    color: black;
 }
 
 .dates {
@@ -39,30 +32,43 @@
 }
 
 .dad {
-    color: rgb(43, 192, 50);
-    float: right;
-    
+    font-size: 11px;
+    color: black;    
 }
 
-.book {
-    float: left;
-    background: rgb(0, 0, 70);
-    color: white;
-    text-align: center;
-    padding: 30px 10px;
-    margin: 130px 40px 40px 40px;
-    height: 175px;
-    width: 115px;
-    border-left: 10px ridge white;
+.title {
+    font-size: 18px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
 }
 
 .cup {
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    border: 5px solid white;
-    background: rgb(171, 210, 255);
-    float: left;
-    margin: 70px;
+    background-image: url('../../images/coffee.png');
+    background-size: 100% 100%;
+    height: 175px;
+    width: 250px;
+}
+
+.book {
+    background-image: url('../../images/book.png');
+    background-size: 100% 100%;
+    height: 375px;
+    width: 325px; 
+}
+
+.stapler {
+    background-image: url('../../images/stapler.png');
+    background-size: 100% 100%;
+    height: 200px;
+    width: 275px; 
+}
+
+.dentist {
+    font-size: 11px;
+    color: black;    
+}
+
+.important {
+    font-size: 11px;
+    color: black;    
 }
