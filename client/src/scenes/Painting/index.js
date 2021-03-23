@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import API from "../../utils/API";
 import originalImage from "./images/rasterFoxResize.png";
 import "./Puzzle.css";
-
+import { Link, Route } from "react-router-dom";
 
 class Painting extends Component {
 
@@ -135,7 +135,7 @@ class Painting extends Component {
                 .catch((err) => console.log(err));
                 console.log("hit the solution")
                 this.setState({
-                  
+                    winCondition: true,
                     reply: "Good job!!"
                 })
             }
@@ -153,6 +153,13 @@ class Painting extends Component {
     render() {
         return (
             <div className = "jigsaw" >
+                <div>
+                <Route render={() => (
+                    this.state.winCondition ? (
+                    <Link to="/safe" className="btn btn-success">Check out the safe</Link>
+                    ) : ""
+                )}/>
+                </div>
                 <ul className = "jigsaw__shuffled-board" >
                     {
                         this.state.shuffled.map((piece, i) => this.renderPieceContainer(piece, i, "shuffled"))
