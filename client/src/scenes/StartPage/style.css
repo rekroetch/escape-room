@@ -13,12 +13,16 @@
 }
 
 .progress{
-    margin-top: 10px;
-    background-color:rgb(167, 253, 167);
+    background-color:rgb(252, 152, 105);
+    height: 30px;
+    border-radius: 30px;
+    border: 1px solid black
 }
 
 .progress-bar{
-    background-color:rgb(74, 197, 74);
+    background-color:rgb(255, 101, 29);
+    font-size: 20px;
+    border-right: 1px dotted black;
 }
 
 .start {
@@ -33,11 +37,11 @@
     text-align: center;
 }
 
-.info {
+/* .info {
     width: 90%;
     margin-top: 30px;
     height:fit-content;
-}
+} */
 .resume-start{
     font-family: "Poppins", "sans-serif";
 }
