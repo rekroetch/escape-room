@@ -144,10 +144,15 @@ function App() {
             user ? (<Safe {...props} user={user} handleSolvedPuzzle={handleSolvedPuzzle} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
           </Route>
-          <Route exact path="/scoreBoard" render={(props) => (
+          {/* <Route exact path="/scoreBoard" render={(props) => (
             user ? (<ScoreBoard {...props} user={user} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
-          </Route>
+          </Route> */}
+          {/* <Route exact path="/scoreBoard" render={() => <ScoreBoard />} /> */}
+            {/* // {...props} 
+            // user={user} 
+            // puzzle={puzzles} */}
+          <Route exact path="/scoreBoard" component={ScoreBoard} />  
         </Switch>
     </Router>
   );

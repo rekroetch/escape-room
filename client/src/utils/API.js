@@ -20,5 +20,9 @@ export default {
 
   solved: function(userId, puzzleTitle) {
     return axios.put("/api/user/update/" + userId, puzzleTitle)
+  },
+
+  findAll: function() {
+    return axios.get("/api/user")
   }
 };
