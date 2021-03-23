@@ -14,6 +14,7 @@ header {
     border-bottom: 5px ridge;
     font-family:'Courier New', Courier, monospace;
     background-color: rgb(65, 202, 197);
+    z-index:2;
 }
 
 .greeting {
@@ -31,6 +32,7 @@ header {
     font-size:42px;
     font-family: "Poppins", sans-serif;
     text-align: center;
+    z-index:2;
     padding-top: 8px;
 }
 
@@ -48,11 +50,24 @@ header {
     font-size: 30px;
 }
 
+.until{
+    font-size:30px;
+    font-weight:bolder;
+}
+
 .col-lg-4{
-    z-index:1;
+    z-index:2;
+}
+
+.card{
+    background: darkcyan;
+    font-family: "Poppins", sans-serif;
 }
 
 /* moving background  */
+.animated-background{
+    z-index:0;
+}
 
 body {
     background: #b8e7fd;
@@ -66,13 +81,13 @@ body {
     left: 0;
     position: absolute;
     width: 100%;
-    z-index: 0;
+    z-index: 1;
   }
   
   .bird-container {
     animation: birdmoving 90s ease infinite backwards;
     position: absolute;
-    top: 10%;
+    top: 58%;
     z-index: 0;
   }
   
@@ -90,10 +105,10 @@ body {
     background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/sun.svg') 0 0 no-repeat;
     height: 200px;
     position: absolute;
-    right: 3%;
-    top: 3%;
+    right: 0%;
+    top: 29%;
     width: 200px;
-    z-index: 0;
+    z-index: -1;
   }
   
   .sun:hover {
@@ -169,7 +184,7 @@ body {
     position: relative;
     top: 75%;
     width: 450px;
-    z-index: 0;
+    z-index: 1;
   }
   
   .combi, .wheelshadow {
@@ -182,14 +197,14 @@ body {
     background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/combi-b.svg') no-repeat;
     height: 232px;
     width: 450px;
-    z-index: 0;
+    z-index: 1;
   }
   
   .wheelshadow {
     background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/wheel-shadow-b.svg') no-repeat;
     height: 232px;
     width: 450px;
-    z-index: 0;
+    z-index: 1;
   }
   
   .wheel {
@@ -199,7 +214,7 @@ body {
     position: absolute;
     top: 165px;
     width: 67px;
-    z-index: 0;
+    z-index: 1;
   }
   
   .wheel01 {
