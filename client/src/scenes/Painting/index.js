@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import API from "../../utils/API";
 import originalImage from "./images/rasterFoxResize.png";
 import "./Puzzle.css";
 
@@ -25,8 +26,8 @@ class Painting extends Component {
 
         */
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             data: [],
             pieces: [],
@@ -56,7 +57,7 @@ class Painting extends Component {
     }
 
     // shuffle the pieces
-    shuffledPieces(pieces) {
+    shuffledPieces = (pieces) =>  {
         const shuffled = [...pieces];
         for (let i = shuffled.length - 1; i > 0; i--) {
             let j = Math.floor(Math.random() * (i + 1));
@@ -66,7 +67,7 @@ class Painting extends Component {
     }
 
     // make element draggable, render piece based on picked up or put down
-    renderPieceContainer(piece, index, boardName) {
+    renderPieceContainer = (piece, index, boardName) => {
         return (
             <li key = {index} onDragOver = {e => e.preventDefault()}
                 onDrop = {e => this.onDrop(e, index, boardName)}>
@@ -82,13 +83,13 @@ class Painting extends Component {
         );
     }
 
-    onDragStart(e, order) {
+    onDragStart = (e, order) => {
         e.dataTransfer.setData("text/plain", order);
     }
 
 
     // drop the puzzle piece
-    onDrop(e, index, targetName) {
+    onDrop = (e, index, targetName) => {
         let target = this.state[targetName];
         if (target[index]) return;
 
@@ -106,7 +107,7 @@ class Painting extends Component {
     }
 
     // what happens when you click submit
-    onClickHandler() {
+    onClickHandler = () => {
 
         let i = 0
         this.state.solved.map((jigsaw, index) => {
@@ -120,6 +121,13 @@ class Painting extends Component {
                 i++
                 if(i >= 11)
                 {
+
+                const safePuzzle = this.props.puzzle[2];
+                const userId = this.props.user.id;
+                const puzzleTitle = safePuzzle.title;
+                    
+                API.solved(userId, {puzzleTitle}).then(alert("The painting moved and a safe appeared"))
+                .catch((err) => console.log(err));
                 console.log("hit the solution")
                 this.setState({
                   

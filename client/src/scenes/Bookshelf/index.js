@@ -6,7 +6,14 @@ import  Shelf  from './dropShelf'
 
 
 export default class BookShelf extends React.Component {
+  
+  constructor(props) {
+  super(props)
+
+}
+
   render() {
+
 
 
 return (
@@ -80,6 +87,8 @@ return (
     onHit={this.dropped}
     onDragEnter={this.highlight}
     onDragLeave={this.unHighlight}
+    {...this.props}
+
     >
       <img className="handle" src={require('./images/bookshelf.jpg')} alt="Book with night symbol"></img>
          </Shelf>
