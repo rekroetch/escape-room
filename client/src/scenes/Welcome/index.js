@@ -48,6 +48,11 @@ function Welcome (props) {
                             </form>
                         </Card>
                     </Col>
+                    <Col size="md-4">
+                        <Card>
+                            <p className="intro">Play as a detective trying to solve the murder of a young newlywed named Ponnie, whose body was discoved in her husband's office by her mother several weeks after her death.</p>
+                        </Card>
+                    </Col>
                 </Row>
             </div>
         </div>
