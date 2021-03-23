@@ -10,28 +10,39 @@
 .desk {
     background-image: url('../../images/desk.png');
     background-size: 100% 100%;
-    height: 400px;
-    width: 500px;    
+    height: 365px;
+    width: 470px;    
 }
 
 .desk:hover {
-    height: 450px;
-    width: 500px;
+    height: 370px;
+    width: 475px;
 }
 
 .painting {
-    background-image: url('../../images/painting.jpeg');
+    background-image: url('../../images/painting.png');
     background-size: 100% 100%;
-    height: 150px;
-    width: 300px;    
-    border: 10px solid rgb(250, 177, 40);
-    padding: 20px;
-    margin: 10px;
+    height: 135px;
+    width: 120px;    
 }
 
 .painting:hover {
-    height: 175px;
-    width: 325px;  
+    height: 140px;
+    width: 125px;  
+}
+
+.painting2 {
+    background-image: url('../../images/painting2.png');
+    background-size: 100% 100%;
+    height: 145px;
+    width: 140px;    
+}
+
+.painting3 {
+    background-image: url('../../images/painting3.png');
+    background-size: 100% 100%;
+    height: 135px;
+    width: 120px;    
 }
 
 .safeImg {
@@ -51,13 +62,34 @@
 .bookshelf {
     background-image: url('../../images/bookshelf.png');
     background-size: 100% 100%;
-    height: 512px;
-    width: 512px;    
+    height: 500px;
+    width: 285px;    
     padding: 70px 20px;
     margin: 10px;
 }
 
 .bookshelf:hover {
-    height: 575px;
-    width: 575px;  
+    height: 505px;
+    width: 290px;  
+}
+
+.clock {
+    background-image: url('../../images/clock.png');
+    background-size: 100% 100%;
+    height: 135px;
+    width: 140px;    
+}
+
+.lamp {
+    background-image: url('../../images/lamp.png');
+    background-size: 100% 100%;
+    height: 455px;
+    width: 200px;    
+}
+
+.chair {
+    background-image: url('../../images/chair.png');
+    background-size: 100% 100%;
+    height: 325px;
+    width: 190px;    
 }

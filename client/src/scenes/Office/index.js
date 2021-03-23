@@ -3,7 +3,6 @@ import { Link, Route } from "react-router-dom";
 import "./style.css";
 
 function Office(props) {
-
   return (
     <div
       className="page"
@@ -14,23 +13,23 @@ function Office(props) {
       <Route
         render={() =>
           props.puzzle[1].isSolved ? (
-            <Link 
-              to="/desk" 
+            <Link
+              to="/desk"
               className="desk"
               style={{
                 position: "absolute",
                 bottom: "150px",
-                left: "500px"
+                right: "-12px",
               }}
-            >  
-            </Link>
+            ></Link>
           ) : (
-            <Link to="/office"
+            <Link
+              to="/office"
               className="desk"
               style={{
                 position: "absolute",
                 bottom: "150px",
-                left: "500px"
+                right: "-12px",
               }}
             ></Link>
           )
@@ -39,41 +38,76 @@ function Office(props) {
       <Route
         render={() =>
           props.puzzle[2].isSolved ? (
-            <Link to="/safe" 
+            <Link
+              to="/safe"
               className="safeImg"
               style={{
                 position: "absolute",
-                right: "0",
+                right: "70px",
+                bottom: "565px",
               }}
             ></Link>
           ) : (
-            <Link to="/painting" 
+            <Link
+              to="/painting"
               className="painting"
               style={{
                 position: "absolute",
-                right: "0",
+                right: "70px",
+                bottom: "565px",
               }}
             ></Link>
           )
         }
       />
       <div
+        className="painting2"
+        style={{
+          position: "absolute",
+          right: "215px",
+          bottom: "680px",
+        }}
+      ></div>
+      <div
+        className="painting3"
+        style={{
+          position: "absolute",
+          right: "253px",
+          bottom: "523px",
+        }}
+      ></div>
+      <div
         className="clock"
         style={{
           position: "absolute",
-          left: "10px",
+          right: "493px",
+          bottom: "650px",
         }}
       ></div>
-
+      <div
+        className="lamp"
+        style={{
+          position: "absolute",
+          right: "384px",
+          bottom: "187px",
+        }}
+      ></div>
+      <div
+        className="chair"
+        style={{
+          position: "absolute",
+          right: "520px",
+          bottom: "158px",
+        }}
+      ></div>
       <Link
         className="bookshelf"
         style={{
           position: "absolute",
-          bottom: "112px",
+          bottom: "177px",
         }}
-        to="/bookshelf" 
-      >
-      </Link>
+        to="/bookshelf"
+      ></Link>
     </div>
   );
 }
