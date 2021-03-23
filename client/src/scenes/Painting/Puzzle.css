@@ -1,19 +1,19 @@
 
-body {
+.paintingComponent body {
     background-color: black;
     display: flexbox;
 }
 
-.jigsaw {
+.paintingComponent .jigsaw {
     text-align: center;
 }
 
-.jigsaw__solved-board {
+.paintingComponent .jigsaw__solved-board {
     position: relative;
     background-size: cover;
 }
 
-.jigsaw__solved-board:before {
+.paintingComponent .jigsaw__solved-board:before {
     content: '';
     background-color: rgba(255, 255, 255, 0.6);
     display: block;
@@ -24,8 +24,8 @@ body {
     left: 0;
 }
 
-.jigsaw__solved-board,
-.jigsaw__shuffled-board {
+.paintingComponent .jigsaw__solved-board,
+.paintingComponent .jigsaw__shuffled-board {
     margin: 20px auto;
     width: 400px;
     list-style-type: none;
@@ -35,7 +35,7 @@ body {
     border-width: 1px 0 0 1px;
 }
 
-.jigsaw li {
+.paintingComponent .jigsaw li {
     position: relative;
     text-align: left;
     display: inline-block;
@@ -45,11 +45,11 @@ body {
     border-width: 0 1px 1px 0;
 }
 
-.jigsaw li:empty:hover:before {
+.paintingComponent .jigsaw li:empty:hover:before {
     opacity: 1;
 }
 
-.jigsaw li img {
+.paintingComponent .jigsaw li img {
     width: 100px;
     height: 100px;
     position: absolute;
@@ -57,18 +57,18 @@ body {
     transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
-.jigsaw li img:hover {
+.paintingComponent .jigsaw li img:hover {
     z-index: 2;
     transform: scale(1.1);
     box-shadow: 0 0 10px rbga(0, 0, 0, 0.8);
 }
 
 
-.head {
+.paintingComponent .head {
     display: flexbox;
 }
 
-.head-components {
+.paintingComponent .head-components {
     width: 100px;
     height: 100px;
 }

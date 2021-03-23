@@ -1,15 +1,19 @@
 import React from 'react';
 import { DropTarget } from 'react-drag-drop-container';
+import API from '../../utils/API';
 
 var howManyBooks = 0
 
  class Shelf extends React.Component {
     constructor(props) {
+
+        console.log(this.props)
         super(props);
         this.state = {
           message: '',
           howManyBooks: 0,
-          solved: false};
+          solved: false
+         };
 
     }
 
@@ -22,6 +26,14 @@ var howManyBooks = 0
         console.log({'book hit target':e});
         if(howManyBooks > 1)
         {
+            const userId = this.props.user.id
+            const paintingPuzzle = this.props.puzzle[1]
+            const paintingTitle = paintingPuzzle.title
+
+            console.log("bookshelf won")
+            API.solved(userId, {paintingTitle})
+        .then(alert("Day and Night! You got it"))
+        .catch(err => console.log(err));
         this.setState({message: "You solved the riddle!"})
         
         }
