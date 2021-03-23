@@ -5,7 +5,7 @@
    Responsive images and box padding
    ========================================================================== */
 
-img,
+.navImg,
 object {
   display: block;
   border: 0;

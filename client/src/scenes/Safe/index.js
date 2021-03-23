@@ -7,6 +7,7 @@ function Safe(props) {
   const safePuzzle = props.puzzle[0];
   const userId = props.user.id;
   const puzzleTitle = safePuzzle.title;
+  const Swal = require("sweetalert2");
 
   let pick = [];
 
@@ -25,7 +26,8 @@ function Safe(props) {
       console.log("correct!");
       safeCracked();
     } else {
-      console.log("wrong code");
+      pick = []
+      Swal.fire("Wrong code, try again!")
     }
   }
 
@@ -36,7 +38,7 @@ function Safe(props) {
   }
 
   function safeCracked() {
-    const Swal = require("sweetalert2");
+    // const Swal = require("sweetalert2");
     console.log("running API");
     API.solved(userId, { puzzleTitle })
       .then(Swal.fire("Congrats! You cracked the safe and escaped!"))
@@ -95,7 +97,7 @@ function Safe(props) {
             </button>
           </Row>
           <Row>
-            <button className="num" onClick={reset}>
+            <button className="enter" onClick={reset}>
               Reset
             </button>
             <button className="num" onClick={pickNumber} value="0">

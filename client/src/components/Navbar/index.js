@@ -13,7 +13,7 @@ function Navbar(props) {
       // style={{ backgroundColor: "orange", borderBottom: "inset"}}
     >
       <Link className="navbar-logo" to="/" style={{ fontSize: "25px" }}>
-        <img src = {'https://icon-library.net/images/escape-icon/escape-icon-2.jpg'} alt ="Logo"></img>
+        <img className="navImg" src = {'https://icon-library.net/images/escape-icon/escape-icon-2.jpg'} alt ="Logo"></img>
       </Link>
       <div className="container-fluid collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
