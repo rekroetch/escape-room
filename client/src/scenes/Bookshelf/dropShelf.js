@@ -35,7 +35,6 @@ var howManyBooks = 0
             .catch((err) => console.log(err));
         
         this.setState({message: "You solved the riddle!"})
-        
         }
     };
 
@@ -44,8 +43,7 @@ var howManyBooks = 0
         <DropTarget 
             onHit={this.dropped}
             targetKey={this.props.targetKey}
-            dropData={{name: this.props.name}}
-            
+            dropData={{name: this.props.name}}    
         >
             <img src="bookshelf.jpg" alt="bookshelf"></img>
             <div className='bookshelfPuzzle'>
