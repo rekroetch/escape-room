@@ -3,12 +3,10 @@ import Row from "../../components/Row";
 import API from "../../utils/API";
 import "./style.css";
 
-
-function Safe (props) {
-    const safePuzzle = props.puzzle[0]
-    const userId = props.user.id
-    const puzzleTitle = safePuzzle.title
-
+function Safe(props) {
+  const safePuzzle = props.puzzle[0];
+  const userId = props.user.id;
+  const puzzleTitle = safePuzzle.title;
 
   let pick = [];
 
@@ -37,13 +35,13 @@ function Safe (props) {
     console.log("reset");
   }
 
-    function safeCracked() {
-        console.log("running API")
-        API.solved(userId, {puzzleTitle})
-        .then(alert("Congrats! You won!"))
-        .catch(err => console.log(err));
-    }
-
+  function safeCracked() {
+    const Swal = require("sweetalert2");
+    console.log("running API");
+    API.solved(userId, { puzzleTitle })
+      .then(Swal.fire("Congrats! You cracked the safe and escaped!"))
+      .catch((err) => console.log(err));
+  }
 
   return (
     <div

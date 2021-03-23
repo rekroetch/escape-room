@@ -33,7 +33,8 @@
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
+    "react-bootstrap": "^1.5.2",
     "react-drag-drop-container": "^6.1.1",
-    "react-bootstrap": "^1.5.2"
+    "sweetalert2": "^10.15.6"
   }
 }
