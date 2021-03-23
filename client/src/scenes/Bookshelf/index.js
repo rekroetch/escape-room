@@ -14,8 +14,6 @@ export default class BookShelf extends React.Component {
 
   render() {
 
-
-
 return (
   <div className="books">
     <h2>What breaks yet never falls, and what falls yet never breaks?</h2>
@@ -25,7 +23,7 @@ return (
   <Draggable
   axis="both"
   handle=".handle"
-  defaultPosition={{x: 0, y: 0}}
+  defaultPosition={{x: 20, y: 0}}
   position={null}
   scale={1}
   onStart={this.handleStart}
@@ -57,7 +55,7 @@ return (
 <Draggable
   axis="both"
   handle=".handle"
-  defaultPosition={{x: 0, y: 0}}
+  defaultPosition={{x: 30, y: 10}}
   position={null}
   scale={1}
   onStart={this.handleStart}
@@ -71,7 +69,7 @@ return (
 <Draggable
   axis="both"
   handle=".handle"
-  defaultPosition={{x: 30, y: 0}}
+  defaultPosition={{x: 40, y: 10}}
   position={null}
   scale={1}
   onStart={this.handleStart}
