@@ -1,5 +1,5 @@
 .deskPage {
-    background-image: url('../../images/desktop.jpg');
+    background-image: url('../../images/desktop2.jpg');
     background-size: cover;
     height: 850px;
     width: 1024px;
@@ -9,19 +9,19 @@
 
 .deskTitle {
     font-size: 40px;
-    color: black;
+    color: white;
     padding: 20px;
 }
 
 .calendar {
     background-image: url('../../images/calendar.png');
     background-size: 100% 100%;
-    height: 400px;
-    width: 500px; 
+    height: 500px;
+    width: 600px; 
 }
 
 .december {
-    font-size: 45px;
+    font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
     color: black;
 }
@@ -32,12 +32,12 @@
 }
 
 .dad {
-    font-size: 11px;
+    font-size: 13px;
     color: black;    
 }
 
 .title {
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
 }
@@ -45,22 +45,22 @@
 .cup {
     background-image: url('../../images/coffee.png');
     background-size: 100% 100%;
-    height: 175px;
-    width: 250px;
+    height: 166px;
+    width: 195px;
 }
 
 .book {
     background-image: url('../../images/book.png');
     background-size: 100% 100%;
-    height: 375px;
-    width: 325px; 
+    height: 260px;
+    width: 195px; 
 }
 
 .stapler {
     background-image: url('../../images/stapler.png');
     background-size: 100% 100%;
-    height: 200px;
-    width: 275px; 
+    height: 170px;
+    width: 230px; 
 }
 
 .dentist {
@@ -69,6 +69,30 @@
 }
 
 .important {
+    font-size: 14px;
+    color: black;    
+}
+
+.pin {
+    font-size: 14px;
+    color: black;    
+}
+
+.code {
     font-size: 11px;
     color: black;    
+}
+
+.pen {
+    background-image: url('../../images/pen.png');
+    background-size: 100% 100%;
+    height: 170px;
+    width: 275px;   
+}
+
+.glass {
+    background-image: url('../../images/glass.png');
+    background-size: 100% 100%;
+    height: 170px;
+    width: 230px;   
 }
