@@ -51,8 +51,6 @@ function StartPage (props) {
   }
 
   const progress = Math.floor((count/3)*100) +"%"
-  console.log(`count: ${count}, progress: ${progress}`)
-
 
   return (
     <div className="background-startpage">

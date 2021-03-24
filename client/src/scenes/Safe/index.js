@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Route, Link } from "react-router-dom";
 import Row from "../../components/Row";
 import API from "../../utils/API";
@@ -9,30 +9,28 @@ function Safe(props) {
   const userId = props.user.id;
   const puzzleTitle = safePuzzle.title;
   const Swal = require("sweetalert2");
+  const [code, setCode] = useState([])
 
-  let pick = [];
 
   function pickNumber(event) {
     event.preventDefault();
-    pick.push(event.target.value);
-    console.log(event.target.value);
-  }
+    setCode([...code, event.target.value])
+  };
 
   function enterCode(event) {
     event.preventDefault();
-    const picked = pick.join("");
-    if (picked === safePuzzle.winCondition) {
+    if (code.join('') === safePuzzle.winCondition) {
       safeCracked();
     } else {
-      pick = [];
+    setCode([])
       Swal.fire("Wrong code, try again!");
     }
-  }
+  };
 
   function reset(event) {
     event.preventDefault();
-    pick = [];
-  }
+    setCode([])
+  };
 
   function safeCracked() {
     API.solved(userId, { puzzleTitle })
@@ -43,7 +41,7 @@ function Safe(props) {
         props.handleSolvedPuzzle("0");
       })
       .catch((err) => console.log(err));
-  }
+  };
 
   return (
     <div
@@ -82,8 +80,7 @@ function Safe(props) {
           right: 0,
         }}
       >
-        {/* might need to make pick a state so that it rerenders each time its updated */}
-        <div className="screen">****</div>
+        <div className="screen">{code}</div>
         <div className="numPad">
           <Row>
             <button className="num" onClick={pickNumber} value="1">
