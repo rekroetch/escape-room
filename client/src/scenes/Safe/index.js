@@ -42,7 +42,7 @@ function Safe(props) {
     console.log("running API");
     API.solved(userId, { puzzleTitle })
       .then(() => {
-          Swal.fire("Congrats! You cracked the safe and escaped!")
+          Swal.fire("Congrats! You've managed to escape with the keys found in the safe!")
           props.handleSolvedPuzzle('0')
       })
       .catch((err) => console.log(err));
