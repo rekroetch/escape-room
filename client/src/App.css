@@ -24,5 +24,6 @@
 }
 
 body {
-  background-color: gray;
+  background-image: url("../../client/src/images/mountains.png");
+  background-size: cover;
 }

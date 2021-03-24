@@ -73,33 +73,4 @@ function Navbar(props) {
 
 export default Navbar;
 
-// class Nav extends Component {
-//   render() {
-//     return (
-//       <ReactNavbar
-//         color="rgb(25, 25, 25)"
-//         logo="https://cdn0.iconfinder.com/data/icons/octicons/1024/puzzle-512.png"
-//         menu={[
-//           { name: "HOME", to: "/" },
-//           { name: "GAME INFO", to: "/startPage" },
-//           { name: "OFFICE", to: "/office" },
-//           { name: "PAINTING", to: "/painting" },
-//           { name: "DESK", to: "/desk" },
-//           { name: "SAFE", to: "/safe" },
-//           { name: "BOOKSHELF", to: "/bookshelf" },
-//           { name: "LEADERBOARD", to: "/scoreBoard" }
-//         ]}
-//         social={[
-//           {
-//             name: "GitHub",
-//             url: "https://www.linkedin.com/in/nazeh-taha/",
-//             icon: ["fab", "fa-github"],
-//           }
-//         ]}
-//       />
-//     );
-//   }
-// }
-
-// export default Nav;
 

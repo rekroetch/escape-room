@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Route, Link } from "react-router-dom";
 import Row from "../../components/Row";
 import API from "../../utils/API";
@@ -9,44 +9,39 @@ function Safe(props) {
   const userId = props.user.id;
   const puzzleTitle = safePuzzle.title;
   const Swal = require("sweetalert2");
+  const [code, setCode] = useState([])
 
-  let pick = [];
 
   function pickNumber(event) {
     event.preventDefault();
-    pick.push(event.target.value);
-    console.log(event.target.value);
-  }
+    setCode([...code, event.target.value])
+  };
 
   function enterCode(event) {
     event.preventDefault();
-    const picked = pick.join("");
-    console.log("picked: " + picked);
-    console.log("winCond: " + safePuzzle.winCondition);
-    if (picked === safePuzzle.winCondition) {
-      console.log("correct!");
+    if (code.join('') === safePuzzle.winCondition) {
       safeCracked();
     } else {
-      pick = []
-      Swal.fire("Wrong code, try again!")
+    setCode([])
+      Swal.fire("Wrong code, try again!");
     }
-  }
+  };
 
   function reset(event) {
     event.preventDefault();
-    pick = [];
-    console.log("reset");
-  }
+    setCode([])
+  };
 
   function safeCracked() {
-    console.log("running API");
     API.solved(userId, { puzzleTitle })
       .then(() => {
-          Swal.fire("Congrats! You've managed to escape with the keys found in the safe!")
-          props.handleSolvedPuzzle('0')
+        Swal.fire(
+          "Congrats! You've managed to escape with the keys found in the safe!"
+        );
+        props.handleSolvedPuzzle("0");
       })
       .catch((err) => console.log(err));
-  }
+  };
 
   return (
     <div
@@ -55,14 +50,29 @@ function Safe(props) {
         position: "relative",
       }}
     >
-      <h1>Crack the safe with a 4 digit code!</h1>
+      <div
+        className="crack"
+        style={{
+          position: "absolute",
+          right: "150px",
+          bottom: "1015px"
+        }}
+      >
+        Crack the safe with a 4 digit code!
+      </div>
       <div>
-            <Route render={() => (
-                safePuzzle.isSolved ? (
-                <Link to="/scoreBoard" className="btn btn-success">You escaped! Now see how you stack up against other users!</Link>
-                ) : ""
-            )}/>
-            </div>
+        <Route
+          render={() =>
+            safePuzzle.isSolved ? (
+              <Link to="/scoreBoard" className="btn btn-success">
+                You escaped! Now see how you stack up against other users!
+              </Link>
+            ) : (
+              ""
+            )
+          }
+        />
+      </div>
       <div
         className="box"
         style={{
@@ -70,8 +80,7 @@ function Safe(props) {
           right: 0,
         }}
       >
-        {/* might need to make pick a state so that it rerenders each time its updated */}
-        <div className="screen">****</div>
+        <div className="screen">{code}</div>
         <div className="numPad">
           <Row>
             <button className="num" onClick={pickNumber} value="1">
@@ -118,13 +127,22 @@ function Safe(props) {
             </button>
           </Row>
         </div>
-        <div className="note"
-         style={{
-          position: "absolute",
-          right: 0,
-        }}
+        <div
+          className="note"
+          style={{
+            position: "absolute",
+            right: 0,
+          }}
         >
-          <div className="postIt">Dad</div>
+          <div
+            className="postIt"
+            style={{
+              position: "absolute",
+              right: "-76px",
+            }}
+          >
+            Dad
+          </div>
         </div>
       </div>
     </div>

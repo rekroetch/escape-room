@@ -3,6 +3,12 @@ import { Link, Route } from "react-router-dom";
 import "./style.css";
 
 function Office(props) {
+  function alertLocked(event) {
+    event.preventDefault();
+    const Swal = require("sweetalert2");
+    Swal.fire("Uh oh! The desk is locked! Try to find the key.");
+  }
+
   return (
     <div
       className="page"
@@ -31,6 +37,7 @@ function Office(props) {
                 bottom: "150px",
                 right: "-12px",
               }}
+              onClick={alertLocked}
             ></Link>
           )
         }
@@ -98,6 +105,14 @@ function Office(props) {
           position: "absolute",
           right: "520px",
           bottom: "158px",
+        }}
+      ></div>
+      <div
+        className="rug"
+        style={{
+          position: "absolute",
+          right: "292px",
+          bottom: "16px",
         }}
       ></div>
       <Link

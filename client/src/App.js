@@ -35,7 +35,7 @@ function App() {
       {
         title: "Painting",
         description: "Complete the puzzle to put the painting back together",
-        winCondition: "fkajf",
+        winCondition: "solved puzzle",
         isSolved: false
       }
     ];
@@ -48,7 +48,6 @@ function App() {
             id: res.data._id,
           })
           setPuzzles(res.data.puzzles)
-          console.log(res.data)
         })
     }, [jwt])
 
@@ -144,14 +143,6 @@ function App() {
             user ? (<Safe {...props} user={user} handleSolvedPuzzle={handleSolvedPuzzle} puzzle={puzzles} />) : (<Redirect to="/" />)
           )}>
           </Route>
-          {/* <Route exact path="/scoreBoard" render={(props) => (
-            user ? (<ScoreBoard {...props} user={user} puzzle={puzzles} />) : (<Redirect to="/" />)
-          )}>
-          </Route> */}
-          {/* <Route exact path="/scoreBoard" render={() => <ScoreBoard />} /> */}
-            {/* // {...props} 
-            // user={user} 
-            // puzzle={puzzles} */}
           <Route exact path="/scoreBoard" component={ScoreBoard} />  
         </Switch>
     </Router>
