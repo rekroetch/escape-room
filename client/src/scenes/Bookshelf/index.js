@@ -1,5 +1,5 @@
 import React from 'react'
-import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+import { DragDropContainer } from 'react-drag-drop-container';
 import Draggable from 'react-draggable';
 import  Shelf  from './dropShelf'
 
@@ -19,8 +19,8 @@ return (
     display: "flex", flexDirection: "column", alignItems: "center",
     margin: "15px"
   }}>
-    <h1 style={{ fontSize: "30px", margin: "15px" }}>What breaks yet never falls, and what falls yet never breaks?</h1>
-    <h3 style={{ margin: "15px" }}>Drag the correct books onto the shelf</h3>
+    <h1 style={{ fontSize: "30px", margin: "15px", color:"white" }}>What breaks yet never falls, and what falls yet never breaks?</h1>
+    <h3 style={{ margin: "15px", color:"white" }}>Drag the correct books onto the shelf</h3>
     <div className="droppableBooks" style={{ display: "flex" }}>
 
 
