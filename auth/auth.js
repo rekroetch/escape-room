@@ -34,7 +34,6 @@ passport.use(
         passwordField: 'password'
       },
       async (email, password, done) => {
-          console.log(email, password)
         try {
           const user = await db.User.findOne({ email });
   
@@ -43,7 +42,6 @@ passport.use(
           }
   
           const validate = await user.isValidPassword(password);
-          console.log(user)
   
           if (!validate) {
             return done(null, false, { message: 'Wrong Password' });
@@ -64,7 +62,6 @@ passport.use(
       jwtFromRequest: ExtractJWT.fromUrlQueryParameter('secret_token')
     },
     async (token, done) => {
-        console.log(token)
       try {
         return done(null, token.user);
       } catch (error) {

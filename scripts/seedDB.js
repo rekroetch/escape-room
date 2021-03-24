@@ -24,7 +24,7 @@ const puzzleSeed = [
   {
     title: "Painting",
     description: "Complete the puzzle to put the painting back together",
-    winCondition: "",
+    winCondition: "solved puzzle",
     isSolved: false
   }
 ];

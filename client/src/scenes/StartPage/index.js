@@ -4,7 +4,7 @@ import Row from "../../components/Row"
 import Col from "../../components/Col"
 import "./style.css"
 import styled from "styled-components"
-import { VFXProvider, VFXSpan, VFXVideo, VFXImg } from 'react-vfx';
+import { VFXProvider, VFXSpan} from 'react-vfx';
 
 const Button = styled.button`
 background-color: #FF6760;
@@ -72,9 +72,6 @@ function StartPage (props) {
         </div>
       </div>
       <Row>
-        {/* <Col size="md-4">
-          
-        </Col> */}
         <Col size="md-8">
           <VFXProvider>
             <div className="info-card">
