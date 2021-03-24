@@ -26,7 +26,9 @@ function ScoreBoard () {
     }
 
     return (
+
         <div className="leader-background">
+
         <div className="container">
             {/* Plan for future development: this page will show each user in order of the time it took for them to finish the game.*/}
             <div className="winner">
