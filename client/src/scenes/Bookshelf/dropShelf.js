@@ -21,7 +21,6 @@ var howManyBooks = 0
         howManyBooks++
         const Swal = require("sweetalert2");
 
-        console.log({'book hit target':e});
         if(howManyBooks > 1)
         {
             const bookShelfPuzzle = this.props.puzzle[1];
@@ -33,8 +32,6 @@ var howManyBooks = 0
                 Swal.fire("Day and Night!")
             })
             .catch((err) => console.log(err));
-        
-        this.setState({message: "You solved the riddle!"})
         }
     };
 
@@ -45,7 +42,7 @@ var howManyBooks = 0
             targetKey={this.props.targetKey}
             dropData={{name: this.props.name}}    
         >
-            <img src="bookshelf.jpg" alt="bookshelf"></img>
+
             <div className='bookshelfPuzzle'>
                     {this.state.message}
           

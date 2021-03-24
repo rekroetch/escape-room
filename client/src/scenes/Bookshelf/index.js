@@ -15,11 +15,14 @@ export default class BookShelf extends React.Component {
   render() {
 
 return (
-  <div className="books">
-    <h2>What breaks yet never falls, and what falls yet never breaks?</h2>
-    <h3>Drag the correct books onto the shelf</h3>
-      <DragDropContainer
+  <div className="books" style={{display:"flex", flexDirection:"column", alignItems:"center",
+  margin:"15px"}}>
+    <h1 style={{fontSize:"30px", margin:"15px"}}>What breaks yet never falls, and what falls yet never breaks?</h1>
+    <h3 style={{margin:"15px"}}>Drag the correct books onto the shelf</h3>
+    <div className="droppableBooks" style={{display:"flex"}}>
+  <DragDropContainer
       targetKey = "DayAndNight">
+
   <Draggable
   axis="both"
   handle=".handle"
@@ -80,6 +83,21 @@ return (
     <img className="handle" src={require('./images/blueBookSmall.png')}></img>
   </div>
 </Draggable>
+
+<Draggable
+  axis="both"
+  handle=".handle"
+  defaultPosition={{x: 30, y: 10}}
+  position={null}
+  scale={1}
+  onStart={this.handleStart}
+  onDrag={this.handleDrag}
+  onStop={this.handleStop}>
+  <div>
+    <img className="handle" src={require('./images/greenBookSmall.png')} alt="Book with triangle symbol"></img>
+  </div>
+</Draggable>
+</div>
 
 <Shelf targetKey="DayAndNight" 
     onHit={this.dropped}

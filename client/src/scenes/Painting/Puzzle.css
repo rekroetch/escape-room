@@ -15,7 +15,7 @@ body {
 
 .jigsaw__solved-board:before {
     content: '';
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 1);
     display: block;
     position: absolute;
     top: 0;
