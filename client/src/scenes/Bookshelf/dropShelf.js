@@ -4,6 +4,7 @@ import API from "../../utils/API";
 
 
  class Shelf extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -15,8 +16,9 @@ import API from "../../utils/API";
 
     dropped = (e) => {
         e.containerElem.style.visibility="hidden";
-     
+
         this.setState({ howManyBooks: this.state.howManyBooks+1})
+ 
 
         const Swal = require("sweetalert2");
 
@@ -43,7 +45,6 @@ import API from "../../utils/API";
         >
 
             <div className='bookshelfPuzzle'>
-                    {this.state.message}
           
                 {this.props.children}
                 </div>
