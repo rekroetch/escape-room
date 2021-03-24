@@ -21,10 +21,7 @@ function Safe(props) {
   function enterCode(event) {
     event.preventDefault();
     const picked = pick.join("");
-    console.log("picked: " + picked);
-    console.log("winCond: " + safePuzzle.winCondition);
     if (picked === safePuzzle.winCondition) {
-      console.log("correct!");
       safeCracked();
     } else {
       pick = []
@@ -35,11 +32,9 @@ function Safe(props) {
   function reset(event) {
     event.preventDefault();
     pick = [];
-    console.log("reset");
   }
 
   function safeCracked() {
-    console.log("running API");
     API.solved(userId, { puzzleTitle })
       .then(() => {
           Swal.fire("Congrats! You've managed to escape with the keys found in the safe!")
