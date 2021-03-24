@@ -17,16 +17,16 @@ function Desk() {
           className="calendar"
           style={{
             position: "absolute",
-            bottom: "25px",
-            left: "500px",
+            bottom: "20px",
+            left: "204px",
           }}
         ></div>
-                <div
+        <div
           className="december"
           style={{
             position: "absolute",
-            bottom: "341px",
-            right: "160px",
+            bottom: "417px",
+            right: "365px",
           }}
         >
           December
@@ -35,8 +35,8 @@ function Desk() {
           className="dad"
           style={{
             position: "absolute",
-            bottom: "180px",
-            right: "49px",
+            bottom: "199px",
+            right: "252px",
           }}
         >
           Dad's B-Day
@@ -45,29 +45,47 @@ function Desk() {
           className="dentist"
           style={{
             position: "absolute",
-            bottom: "115px",
-            right: "380px",
+            bottom: "204px",
+            right: "500px",
           }}
         >
           Dentist
-
         </div>
         <div
           className="important"
           style={{
             position: "absolute",
-            bottom: "230px",
-            right: "308px",
+            bottom: "351px",
+            right: "332px",
           }}
         >
           Important!
-
+        </div>
+        <div
+          className="pin"
+          style={{
+            position: "absolute",
+            bottom: "389px",
+            left: "314px",
+          }}
+        >
+          pin# 1234
+        </div>
+        <div
+          className="code"
+          style={{
+            position: "absolute",
+            bottom: "374px",
+            left: "311px",
+          }}
+        >
+          doorcode #2468
         </div>
         <div
           className="book"
           style={{
             position: "absolute",
-            bottom: "389px",
+            bottom: "512px",
             left: "20px",
           }}
         ></div>
@@ -75,8 +93,8 @@ function Desk() {
           className="title"
           style={{
             position: "absolute",
-            bottom: "657px",
-            left: "112px",
+            bottom: "698px",
+            left: "64px",
           }}
         >
           Sherlock Holmes
@@ -96,8 +114,24 @@ function Desk() {
           className="stapler"
           style={{
             position: "absolute",
-            bottom: "100px",
-            left: "20px",
+            bottom: "625px",
+            left: "570px",
+          }}
+        ></div>
+        <div
+          className="pen"
+          style={{
+            position: "absolute",
+            bottom: "465px",
+            left: "570px",
+          }}
+        ></div>
+                <div
+          className="glass"
+          style={{
+            position: "absolute",
+            bottom: "276px",
+            left: "287px",
           }}
         ></div>
       </div>
