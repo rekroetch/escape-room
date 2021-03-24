@@ -91,3 +91,10 @@
     height: 325px;
     width: 190px;    
 }
+
+.rug {
+    background-image: url('../../images/rug.png');
+    background-size: 100% 100%;
+    height: 145px;
+    width: 500px;    
+}

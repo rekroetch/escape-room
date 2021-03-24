@@ -70,30 +70,30 @@ function Welcome (props) {
                 </Row>
             </div>
             <div className="animated-background">
-                <div class="forest">
+                <div className="forest">
   
-                    <div class="bird-container">
-                        <div class="bird"></div>
+                    <div className="bird-container">
+                        <div className="bird"></div>
                     </div>
   
-                    <div class="sun"></div>
-                    <div class="tree01"></div>
-  	                <div class="tree02"></div>
-  	                <div class="tree03"></div>
-                    <div class="tree04"></div>
+                    <div className="sun"></div>
+                    <div className="tree01"></div>
+  	                <div className="tree02"></div>
+  	                <div className="tree03"></div>
+                    <div className="tree04"></div>
   
-                    <div class="combi-container">
-                        <div class="combi"></div>
-                        <div class="wheelshadow"></div>
-                        <div class="wheel wheel01" ></div>
-                        <div class="wheel wheel02" ></div>
+                    <div className="combi-container">
+                        <div className="combi"></div>
+                        <div className="wheelshadow"></div>
+                        <div className="wheel wheel01" ></div>
+                        <div className="wheel wheel02" ></div>
                     </div>
   {/* <!-- combi-container end --> */}
   
                 </div>
 {/* <!-- forest end --> */}
-                <div class="forest-background"></div>
-                <div class="road"></div>
+                <div className="forest-background"></div>
+                <div className="road"></div>
             </div>
         </div>
     );
