@@ -121,7 +121,20 @@ function StartPage (props) {
           </VFXProvider>
         </Col>
       </Row>
-    <div className="creepy-forest"></div>  
+      <div className="night-background">
+                <div class="forest-start">
+                    <div class="moon"></div>
+                    <div class="tree01-start"></div>
+  	                <div class="tree02-start"></div>
+  	                <div class="tree03-start"></div>
+                    <div class="tree04-start"></div>
+  {/* <!-- combi-container end --> */}
+  
+                </div>
+{/* <!-- forest end --> */}
+                <div class="forest-background-start"></div>
+                <div class="road"></div>
+            </div> 
     </div>
   );
 }
