@@ -61,12 +61,12 @@ function StartPage (props) {
         <div
           className="progress-bar"
           role="progressbar"
-          style={{ width: `${progress}` }}
+          style={{ width: `${progress}`}}
           aria-valuenow="25"
           aria-valuemin="0"
           aria-valuemax="100"
         >
-          {progress}
+          {progress} Completed
         </div>
       </div>
       <Row>
@@ -121,7 +121,20 @@ function StartPage (props) {
           </VFXProvider>
         </Col>
       </Row>
-    <div className="creepy-forest"></div>  
+      <div className="night-background">
+                <div class="forest-start">
+                    <div class="moon"></div>
+                    <div class="tree01-start"></div>
+  	                <div class="tree02-start"></div>
+  	                <div class="tree03-start"></div>
+                    <div class="tree04-start"></div>
+  {/* <!-- combi-container end --> */}
+  
+                </div>
+{/* <!-- forest end --> */}
+                <div class="forest-background-start"></div>
+                <div class="road"></div>
+            </div> 
     </div>
   );
 }
