@@ -8,22 +8,59 @@ import  Shelf  from './dropShelf'
 export default class BookShelf extends React.Component {
   
   constructor(props) {
-  super(props)
-
-}
-
+    super(props)
+  }
+  
   render() {
 
+
 return (
-  <div className="books">
-    <h2>What breaks yet never falls, and what falls yet never breaks?</h2>
-    <h3>Drag the correct books onto the shelf</h3>
-      <DragDropContainer
+  <div className="books" style={{
+    display: "flex", flexDirection: "column", alignItems: "center",
+    margin: "15px"
+  }}>
+    <h1 style={{ fontSize: "30px", margin: "15px" }}>What breaks yet never falls, and what falls yet never breaks?</h1>
+    <h3 style={{ margin: "15px" }}>Drag the correct books onto the shelf</h3>
+    <div className="droppableBooks" style={{ display: "flex" }}>
+
+
+      <DragDropContainer>
+<Draggable
+  axis="both"
+  handle=".handle"
+  defaultPosition={{x: 0, y: 0}}
+  position={null}
+  scale={1}
+  onStart={this.handleStart}
+  onDrag={this.handleDrag}
+  onStop={this.handleStop}>
+  <div>
+    <img className="handle" src={require('./images/redBookSmall.png')} alt="Book with triangle symbol"></img>
+  </div>
+</Draggable>
+</DragDropContainer>
+
+<Draggable
+  axis="both"
+  handle=".handle"
+  defaultPosition={{x: 0, y: 0}}
+  position={null}
+  scale={1}
+  onStart={this.handleStart}
+  onDrag={this.handleDrag}
+  onStop={this.handleStop}
+  >
+  <div>
+    <img className="handle" src={require('./images/blueBookSmall.png')}></img>
+  </div>
+</Draggable>
+
+<DragDropContainer
       targetKey = "DayAndNight">
   <Draggable
   axis="both"
   handle=".handle"
-  defaultPosition={{x: 20, y: 0}}
+  defaultPosition={{x: 0, y: 0}}
   position={null}
   scale={1}
   onStart={this.handleStart}
@@ -35,12 +72,40 @@ return (
 </Draggable>
 </DragDropContainer>
 
+<Draggable
+  axis="both"
+  handle=".handle"
+  defaultPosition={{x: 0, y: 0}}
+  position={null}
+  scale={1}
+  onStart={this.handleStart}
+  onDrag={this.handleDrag}
+  onStop={this.handleStop}>
+  <div>
+    <img className="handle" src={require('./images/greenBookSmall.png')} alt="Book with triangle symbol"></img>
+  </div>
+</Draggable>
+
+<Draggable
+  axis="both"
+  handle=".handle"
+  defaultPosition={{x: 0, y: 0}}
+  position={null}
+  scale={1}
+  onStart={this.handleStart}
+  onDrag={this.handleDrag}
+  onStop={this.handleStop}>
+  <div>
+    <img className="handle" src={require('./images/pinkBookSmall.png')} alt="Book with triangle symbol"></img>
+  </div>
+</Draggable>
+
 <DragDropContainer
       targetKey = "DayAndNight">
 <Draggable
   axis="both"
   handle=".handle"
-  defaultPosition={{x: 10, y: 0}}
+  defaultPosition={{x: 0, y: 0}}
   position={null}
   scale={1}
   onStart={this.handleStart}
@@ -55,31 +120,32 @@ return (
 <Draggable
   axis="both"
   handle=".handle"
-  defaultPosition={{x: 30, y: 10}}
+  defaultPosition={{x: 0, y: 0}}
   position={null}
   scale={1}
   onStart={this.handleStart}
   onDrag={this.handleDrag}
   onStop={this.handleStop}>
   <div>
-    <img className="handle" src={require('./images/redBookSmall.png')} alt="Book with triangle symbol"></img>
+    <img className="handle" src={require('./images/brownBookSmall.png')} alt="Book with triangle symbol"></img>
   </div>
 </Draggable>
 
 <Draggable
   axis="both"
   handle=".handle"
-  defaultPosition={{x: 40, y: 10}}
+  defaultPosition={{x: 0, y: 0}}
   position={null}
   scale={1}
   onStart={this.handleStart}
   onDrag={this.handleDrag}
-  onStop={this.handleStop}
-  >
+  onStop={this.handleStop}>
   <div>
-    <img className="handle" src={require('./images/blueBookSmall.png')}></img>
+    <img className="handle" src={require('./images/grayBookSmall.png')} alt="Book with triangle symbol"></img>
   </div>
 </Draggable>
+</div>
+
 
 <Shelf targetKey="DayAndNight" 
     onHit={this.dropped}
@@ -89,7 +155,7 @@ return (
 
     >
       <img className="handle" src={require('./images/bookshelf.jpg')} alt="Book with night symbol"></img>
-         </Shelf>
+        </Shelf>
         </div>
 
 )
