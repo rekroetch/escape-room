@@ -31,6 +31,7 @@ function ScoreBoard (props) {
     }
 
     return (
+        
         <div className="container">
             {/* <h1>Leader Board</h1> */}
             {/* <h2>This page will show each user in order of the time it took for them to finish the game.</h2>
