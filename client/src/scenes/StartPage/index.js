@@ -11,11 +11,11 @@ background-color: #FF6760;
 font-family: courier;
 text-transform: uppercase;
 border-radius: 18px;
-margin: 218px 20px;
+margin: 206px 20px;
 cursor: pointer;
 box-shadow: 0px 20px 20px lightblue;
-height:80px;
-width:320px;
+height:71px;
+width:309px;
 `;
 
 export const pixelateTransition = `
