@@ -3,7 +3,6 @@ import { DropTarget } from 'react-drag-drop-container';
 import API from "../../utils/API";
 
 
-
  class Shelf extends React.Component {
 
     constructor(props) {
@@ -30,7 +29,7 @@ import API from "../../utils/API";
                 
             API.solved(userId, {puzzleTitle}).then(() => {
                 this.props.handleSolvedPuzzle('1')
-                Swal.fire("Day and Night!")
+                Swal.fire("A: Day and Night\nYou found a key in one of the books!")
             })
             .catch((err) => console.log(err));
         }

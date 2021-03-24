@@ -12,3 +12,12 @@
     color: rgb(252, 136, 41);
     margin: 10px;
 }
+
+.leader-background{
+    background:url('https://cdn.dribbble.com/users/5031/screenshots/3713646/mikaelgustafsson_mklgustafsson.gif')no-repeat;
+    background-position: 0px 0px;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-size:100% 100%;
+}

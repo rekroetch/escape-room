@@ -4,18 +4,20 @@ import Row from "../../components/Row"
 import Col from "../../components/Col"
 import "./style.css"
 import styled from "styled-components"
-import { VFXProvider, VFXSpan, VFXVideo, VFXImg } from 'react-vfx';
+import { VFXProvider, VFXSpan} from 'react-vfx';
 
 const Button = styled.button`
 background-color: #FF6760;
 font-family: courier;
 text-transform: uppercase;
 border-radius: 18px;
-margin: 206px 20px;
+margin: 18px 20px;
 cursor: pointer;
 box-shadow: 0px 20px 20px lightblue;
-height:71px;
-width:309px;
+height:45px;
+width:244px;
+position: absolute;
+left:16%;
 `;
 
 export const pixelateTransition = `
@@ -70,24 +72,6 @@ function StartPage (props) {
         </div>
       </div>
       <Row>
-        <Col size="md-4">
-          <div className="startBtn">
-            <VFXProvider>    
-            <Button>
-            <Link
-              to="/office"
-              className="start"
-            >
-              {/* <VFXSpan shader = {pixelateTransition}> */}
-              <div className="resume-start">
-              {progress > 0+"%" ? "RESUME" : "START GAME"}
-              </div>
-              {/* </VFXSpan> */}
-            </Link>
-            </Button>
-            </VFXProvider>
-          </div>
-        </Col>
         <Col size="md-8">
           <VFXProvider>
             <div className="info-card">
@@ -116,6 +100,23 @@ function StartPage (props) {
                   ESCAPE! Before it's too late..
                 </VFXSpan>
                 </p>
+                <div className="startBtn">
+                  <VFXProvider>    
+                  <Button>
+                    <Link
+                        to="/office"
+                        className="start"
+                    >
+                      {/* <VFXSpan shader = {pixelateTransition}> */}
+                      <div className="resume-start">
+                      {progress > 0+"%" ? "RESUME" : "START GAME"}
+                      </div>
+                      {/* </VFXSpan> */}
+                    </Link>
+                  </Button>
+                  </VFXProvider>
+                </div>
+
               </div>
             </div>
           </VFXProvider>
@@ -124,10 +125,10 @@ function StartPage (props) {
       <div className="night-background">
                 <div class="forest-start">
                     <div class="moon"></div>
-                    <div class="tree01-start"></div>
+                    {/* <div class="tree01-start"></div>
   	                <div class="tree02-start"></div>
   	                <div class="tree03-start"></div>
-                    <div class="tree04-start"></div>
+                    <div class="tree04-start"></div> */}
   {/* <!-- combi-container end --> */}
   
                 </div>

@@ -65,13 +65,20 @@
 
 .postIt {
     background-color: greenyellow;
-    font-size: 40px;
+    font-size: 20px;
     margin: 10px;
-    width: 150px;
-    height: 150px;
+    width: 135px;
+    height: 135px;
     text-align: center;
     padding-top: 40px;
     font-family: 'Courier New', Courier, monospace;
     border-bottom: 2px solid grey;
     border-left: 2px solid grey;
+}
+
+.crack {
+    
+    font-size: 27px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }

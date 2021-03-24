@@ -25,7 +25,7 @@
 }
 
 .start {
-    font-size: 50px;
+    font-size: 20px;
     text-align: center;
     border-radius: 30px;
     color: black;
@@ -40,6 +40,7 @@
     width: 90%;
     margin-top: 30px;
     height:fit-content;
+
 }
 
 .info-card{
@@ -47,6 +48,9 @@
     border-radius:3%;
     width: 370px;
     height:360px;
+    left:50%;
+    right:50%;
+    position:absolute;
 }
 .resume-start{
     font-family: "Poppins", "sans-serif";
@@ -142,11 +146,11 @@ body {
       background-repeat: repeat-x;
       /* animation: animatedBackground 12s linear infinite reverse; */
     bottom: 25%;
-    height: 330px;
+    height: 310px;
     left: 0;
     position: absolute;
     width: 100%;
-    z-index: 0;
+    z-index: -1;
   }
   
   .road {

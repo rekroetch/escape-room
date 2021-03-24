@@ -21,29 +21,26 @@ function Safe(props) {
   function enterCode(event) {
     event.preventDefault();
     const picked = pick.join("");
-    console.log("picked: " + picked);
-    console.log("winCond: " + safePuzzle.winCondition);
     if (picked === safePuzzle.winCondition) {
-      console.log("correct!");
       safeCracked();
     } else {
-      pick = []
-      Swal.fire("Wrong code, try again!")
+      pick = [];
+      Swal.fire("Wrong code, try again!");
     }
   }
 
   function reset(event) {
     event.preventDefault();
     pick = [];
-    console.log("reset");
   }
 
   function safeCracked() {
-    console.log("running API");
     API.solved(userId, { puzzleTitle })
       .then(() => {
-          Swal.fire("Congrats! You've managed to escape with the keys found in the safe!")
-          props.handleSolvedPuzzle('0')
+        Swal.fire(
+          "Congrats! You've managed to escape with the keys found in the safe!"
+        );
+        props.handleSolvedPuzzle("0");
       })
       .catch((err) => console.log(err));
   }
@@ -55,14 +52,29 @@ function Safe(props) {
         position: "relative",
       }}
     >
-      <h1>Crack the safe with a 4 digit code!</h1>
+      <div
+        className="crack"
+        style={{
+          position: "absolute",
+          right: "150px",
+          bottom: "1015px"
+        }}
+      >
+        Crack the safe with a 4 digit code!
+      </div>
       <div>
-            <Route render={() => (
-                safePuzzle.isSolved ? (
-                <Link to="/scoreBoard" className="btn btn-success">You escaped! Now see how you stack up against other users!</Link>
-                ) : ""
-            )}/>
-            </div>
+        <Route
+          render={() =>
+            safePuzzle.isSolved ? (
+              <Link to="/scoreBoard" className="btn btn-success">
+                You escaped! Now see how you stack up against other users!
+              </Link>
+            ) : (
+              ""
+            )
+          }
+        />
+      </div>
       <div
         className="box"
         style={{
@@ -118,13 +130,22 @@ function Safe(props) {
             </button>
           </Row>
         </div>
-        <div className="note"
-         style={{
-          position: "absolute",
-          right: 0,
-        }}
+        <div
+          className="note"
+          style={{
+            position: "absolute",
+            right: 0,
+          }}
         >
-          <div className="postIt">Dad</div>
+          <div
+            className="postIt"
+            style={{
+              position: "absolute",
+              right: "-76px",
+            }}
+          >
+            Dad
+          </div>
         </div>
       </div>
     </div>
