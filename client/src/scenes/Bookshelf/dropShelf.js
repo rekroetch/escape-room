@@ -14,6 +14,8 @@ import API from "../../utils/API";
 
     }
 
+    // logic for dropping the correct book on the shelf
+    
     dropped = (e) => {
         e.containerElem.style.visibility="hidden";
 
@@ -21,15 +23,15 @@ import API from "../../utils/API";
  
         const Swal = require("sweetalert2");
 
+        // if both correct books dropped, then puzzle won
         if(this.state.howManyBooks > 1)
         {
-            const bookShelfPuzzle = this.props.puzzle[1];
+            const puzzleTitle = this.props.puzzle[1].title;
             const userId = this.props.user.id;
-            const puzzleTitle = bookShelfPuzzle.title;
-                
+   
             API.solved(userId, {puzzleTitle}).then(() => {
                 this.props.handleSolvedPuzzle('1')
-                Swal.fire("A: Day and Night\nYou found a key in one of the books!")
+                Swal.fire("Answer: Day and Night\nYou found a key in one of the books!")
             })
             .catch((err) => console.log(err));
         }
@@ -44,7 +46,6 @@ import API from "../../utils/API";
         >
 
             <div className='bookshelfPuzzle'>
-          
                 {this.props.children}
                 </div>
             

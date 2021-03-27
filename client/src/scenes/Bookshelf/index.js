@@ -13,7 +13,7 @@ export default class BookShelf extends React.Component {
   
   render() {
 
-
+// Books at top of shelf along with draggable and drop containers with two books having matching keys to the shelf "Day and Night"
 return (
   <div className="books" style={{
     display: "flex", flexDirection: "column", alignItems: "center",
@@ -24,7 +24,7 @@ return (
     <div className="droppableBooks" style={{ display: "flex" }}>
 
 
-      <DragDropContainer>
+<DragDropContainer>
 <Draggable
   axis="both"
   handle=".handle"
