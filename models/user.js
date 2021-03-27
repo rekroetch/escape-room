@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 // Requiring bcrypt for password hashing. Using the bcryptjs version as the regular bcrypt module sometimes causes errors on Windows machines
 const bcrypt = require("bcrypt");
 
+// user object, includes array for game puzzles 
 const userSchema = new Schema({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
@@ -38,6 +39,6 @@ userSchema.pre(
     return compare;
   }
   
-  const User = mongoose.model("user", userSchema);
+const User = mongoose.model("user", userSchema);
 
 module.exports = User;

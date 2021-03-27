@@ -12,7 +12,7 @@ import Navbar from './components/Navbar'
 import StartPage from "./scenes/StartPage";
 import "./App.css";
 
-
+// entry point for application
 function App() {
     const storedJwt = localStorage.getItem('token');
     const [jwt, setJwt] = useState(storedJwt || null);
@@ -39,6 +39,7 @@ function App() {
         isSolved: false
       }
     ];
+
 
     useEffect(() => {
         jwt && API.validateUser(jwt)
