@@ -67,7 +67,6 @@ function App() {
     // When the form is submitted, use the API.saveUser method to save the User data
     function handleSignUpSubmit(event) {
         event.preventDefault();
-        console.log(puzzleSeed);
         API.createUser({
             firstName: formObject.firstName,
             lastName: formObject.lastName,

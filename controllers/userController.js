@@ -64,7 +64,6 @@ module.exports = {
   },
 
   update: function(req, res) {
-    console.log("update route " , req.body)
     db.User
       .findOneAndUpdate(
         { 

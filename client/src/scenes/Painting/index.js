@@ -100,8 +100,8 @@ class Painting extends Component {
                 if(i >= 11)
                 {
 
-                const userId = this.props.user.id;
-                const puzzleTitle = this.props.puzzle[2].title;
+                // const userId = this.props.user.id;
+                // const puzzleTitle = this.props.puzzle[2].title;
                     
                 API.solved(this.props.user.id, this.props.puzzle[2].title)
                 .then(() => {

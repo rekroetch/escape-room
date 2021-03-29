@@ -7,9 +7,9 @@ import  Shelf  from './dropShelf'
 
 export default class BookShelf extends React.Component {
   
-  constructor(props) {
-    super(props)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
   
   render() {
 
@@ -51,7 +51,7 @@ return (
   onStop={this.handleStop}
   >
   <div>
-    <img className="handle" src={require('./images/blueBookSmall.png')}></img>
+    <img className="handle" src={require('./images/blueBookSmall.png')} alt="Blue book with wave symbol"></img>
   </div>
 </Draggable>
 
