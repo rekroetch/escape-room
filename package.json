@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "escape-room",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "virtual escape room made with MERN stack",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",

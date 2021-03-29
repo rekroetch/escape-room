@@ -6,7 +6,7 @@ Rachel Kroetch, Will Tham, Nicholas Werner, Pirooz Wallace, Paolo Rafael
 
 ## Deployed Site
 
-![Heroku Link](....)
+https://react-escape-room.herokuapp.com/
 
 ## Table of Contents
 * [Description](#description)
@@ -27,11 +27,11 @@ A virtual escape room where users will have to piece together clues and riddles 
 
 ![Login Screen](escapeSample1.png)
 
-![Login Screen](escapeSample2.png)
+![Office](escapeSample2.png)
 
-![Login Screen](escapeSample3.png)
+![Painting](escapeSample3.png)
 
-![Login Screen](escapeSample4.png)
+![Bookshelf](escapeSample4.png)
 
 ## Installation
 
@@ -61,7 +61,7 @@ paolorafaelyap@gmail.com
 
 ncwerner@gmail.com
 
-rekroetch@ucdavis.edu
+rkroetch8@gmail.com
 
 PiroozWallace@outlook.com
 
