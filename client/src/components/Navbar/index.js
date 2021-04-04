@@ -27,7 +27,7 @@ function Navbar(props) {
                   : "nav-link"
               }
             >
-              Game Info
+              Intro
             </Link>
           </li>
           <li className="nav-item">
@@ -60,7 +60,7 @@ function Navbar(props) {
               Leader Board
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-item logout">
           <Route render={() => (
             props.user ? (
               <Link to="/" exact="true" className="nav-link" onClick={props.logout}>Logout</Link>

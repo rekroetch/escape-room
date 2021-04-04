@@ -88,10 +88,11 @@ function Welcome (props) {
                         <div className="wheel wheel01" ></div>
                         <div className="wheel wheel02" ></div>
                     </div>
-  {/* <!-- combi-container end --> */}
-  
+                    {/* <!-- combi-container end --> */}
+                    
                 </div>
-{/* <!-- forest end --> */}
+                {/* <!-- forest end --> */}
+
                 <div className="forest-background"></div>
                 <div className="road"></div>
             </div>

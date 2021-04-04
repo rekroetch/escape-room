@@ -26,20 +26,47 @@ function ScoreBoard () {
     }
 
     return (
-
+        <div>
         <div className="leader-background">
-
-        <div className="container">
-            {/* Plan for future development: this page will show each user in order of the time it took for them to finish the game.*/}
-            <div className="winner">
-                WINNERS!
-            </div>
-            <div className="userEmail">
-                <ul className="list-group">
-                    {winners.length ===0 ? "No one has escaped yet!" : winners}
-                </ul>
+            <div className="container">
+                {/* Plan for future development: this page will show each user in order of the time it took for them to finish the game.*/}
+                <div className="winner">
+                    WINNERS!
+                </div>
+                <div className="userEmail">
+                    <ul className="list-group">
+                        {winners.length ===0 ? "No one has escaped yet!" : winners}
+                    </ul>
+                </div>
             </div>
         </div>
+        <div className="animated-background">
+                <div className="forest">
+  
+                    <div className="bird-container">
+                        <div className="bird"></div>
+                    </div>
+  
+                    <div className="sun"></div>
+                    <div className="tree01"></div>
+  	                <div className="tree02"></div>
+  	                <div className="tree03"></div>
+                    <div className="tree04"></div>
+  
+                    <div className="combi-container">
+                        <div className="combi"></div>
+                        <div className="wheelshadow"></div>
+                        <div className="wheel wheel01" ></div>
+                        <div className="wheel wheel02" ></div>
+                    </div>
+                    {/* <!-- combi-container end --> */}
+                    
+                </div>
+                {/* <!-- forest end --> */}
+
+                <div className="forest-background"></div>
+                <div className="road"></div>
+            </div>
         </div>
     )
 }
