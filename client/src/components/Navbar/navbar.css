@@ -1,16 +1,10 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
-/* ==========================================================================
-   Responsive images and box padding
-   ========================================================================== */
 
-.navImg,
-object {
-  display: block;
-  border: 0;
-  max-width: 50%;
-  height: auto;
+.navImg {
+  height: 125px;
+  margin: 0 20px;
 }
 
 .navbar{
@@ -19,15 +13,6 @@ object {
     background-color: darkcyan;
     z-index:2;
 }
-
-/* * {
-  -moz-box-sizing: border-box;
-  -webkit-kit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-} */
 
 .nav-item {
   font-family: "Poppins", sans-serif;
@@ -41,48 +26,8 @@ object {
   z-index:2;
  
 }
+
 h1 {
   font-size: 3em;
   font-weight: 600;
 }
-/* Show the dropdown menu when the user moves the mouse over the dropdown button */
-/* .dropdown:hover .dropdown-content {
-    display: block;
-  } */
-
-  /* Dropdown content (hidden by default) */
-/* .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: -100;
-  }
-
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  } */
-
-  /* Dropdown button */
-/* .dropdown .dropbtn { */
-    /* font-size: 16px; */
-    /* border: none;
-    outline: none;
-    color: blueviolet;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    /* margin: 0; Important for vertical align on mobile phones
-  } */
-
-  /* Links inside the dropdown */
-/* .dropdown-content div {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  } */ 
