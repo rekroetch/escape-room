@@ -4,7 +4,6 @@
 .background-startpage {
     background: rgba(43, 3, 88, 0.568);
     height: 1000px;
-    /* background-position: 0px 0px; */
     z-index:0;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,40 +26,50 @@
 .start {
     font-size: 20px;
     text-align: center;
-    border-radius: 30px;
+    border-radius: 15px;
     color: black;
     font-family:courier;
+    background-color: rgb(252, 152, 105);
+    width: fit-content;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    box-shadow: 2px 2px #666;
 }
 
-.title {
-    text-align: center;
-}
-
-.info {
-    width: 90%;
-    margin-top: 30px;
-    height:fit-content;
-
+.start:hover {
+    border: 2px inset #333;
+    background-color: rgb(255, 101, 29);
 }
 
 .info-card{
-    background-color: white;
-    border-radius:3%;
-    width: 370px;
-    height:360px;
+    background-image: url("../../images/signpost.png");
+    background-size: 100% 100%;
+    height: 639px;
+    width: 640px; 
+    margin-top: 25px;
     left:50%;
     right:50%;
     position:absolute;
-}
-.resume-start{
-    font-family: "Poppins", "sans-serif";
+    z-index: 0;
+    color: black;
 }
 
-/* .creepy-forest{
-    background: url('https://image.freepik.com/free-photo/old-deep-forest-scary-trees-mystic-grunge-background_8457-93.jpg') no-repeat;
-    background-position: 0px 0px;
-    z-index:0;
-} */
+.card-body {
+    margin: 120px 85px 100px 70px;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 20px;
+}
+
+.card-text {
+    font-size: 17px;
+}
 
 /* moving background code copied, but only using the forest without animations  */
 .night-background{
@@ -162,74 +171,3 @@ body {
     width: 100%;
     z-index: 0;
   }
-  
-  /* .combi-container {
-    height: 232px;
-    margin: 0 auto;
-    position: relative;
-    top: 75%;
-    width: 450px;
-    z-index: 1;
-  }
-  
-  .combi, .wheelshadow {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .combi {
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/combi-b.svg') no-repeat;
-    height: 232px;
-    width: 450px;
-    z-index: 1;
-  }
-  
-  .wheelshadow {
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/wheel-shadow-b.svg') no-repeat;
-    height: 232px;
-    width: 450px;
-    z-index: 1;
-  }
-  
-  .wheel {
-    animation: spin 1s linear infinite both;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/wheel-b.svg') no-repeat;
-    height: 67px;
-    position: absolute;
-    top: 165px;
-    width: 67px;
-    z-index: 1;
-  }
-  
-  .wheel01 {
-    left: 314px;
-  }
-  
-  .wheel02 {
-    left: 70px;
-  } */
-  
-  /* @keyframes animatedBackground {
-      from { background-position: 0 0; }
-      to { background-position: 100% 0; }
-  }
-  
-  @keyframes bird-flying {
-    0% {background-position: 0 0;}
-    100% {background-position: -600px 0;}
-  }
-  
-  @keyframes treesmoving {
-    from {transform: translateX(-400px);}
-    to {transform: translateX(1450px);}
-  }
-  
-  @keyframes birdmoving {
-    from {transform: translateX(-100px);}
-    to {transform: translateX(1350px);}
-  }
-  
-  @keyframes spin {
-      100% { transform: rotate(360deg); }
-  } */
