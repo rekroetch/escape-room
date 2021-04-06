@@ -13,18 +13,15 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "author": "",
+  "author": "Rachel Kroetch, Pirooz Wallace, Nicholas Werner, Paolo Rafael",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.7"
   },
   "dependencies": {
-    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.6.0",
-    "cookie-parser": "^1.4.5",
-    "cors": "^2.8.5",
     "express": "^4.16.3",
     "express-jwt": "^6.0.0",
     "if-env": "^1.0.4",

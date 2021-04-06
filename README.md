@@ -1,5 +1,5 @@
 # Escape Room
-Rachel Kroetch, Will Tham, Nicholas Werner, Pirooz Wallace, Paolo Rafael
+Rachel Kroetch, Nicholas Werner, Pirooz Wallace, Paolo Rafael
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](#license)
 
@@ -42,7 +42,7 @@ Heroku deployed site requires no installation. If you would like to install on y
 
 * React
 * Mongoose / Mongo DB
-* Bcrypt
+* Bcryptjs
 * Bootstrap / React-Bootstrap
 * Express
 * JWT
@@ -50,8 +50,6 @@ Heroku deployed site requires no installation. If you would like to install on y
 * React-drag-drop-container
 * Sweet Alert 2
 * Heroku
-* Cors
-* Cookie Parser
 
 ## Questions
 
@@ -65,7 +63,6 @@ rkroetch8@gmail.com
 
 PiroozWallace@outlook.com
 
-tham.will11@gmail.com
 
 ## Credits
 
@@ -77,11 +74,10 @@ tham.will11@gmail.com
 
 [Paolo Rafael](https://github.com/paolorafaelyap)
 
-[Will Tham](https://github.com/willtham1)
 
 ## License 
 
-Copyright <2021> <Will Tham, Rachel Kroetch, Nicholas Werner, Paolo Rafael, Pirooz Wallace>
+Copyright <2021> <Rachel Kroetch, Nicholas Werner, Paolo Rafael, Pirooz Wallace>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

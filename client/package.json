@@ -1,5 +1,5 @@
 {
-  "name": "mern",
+  "name": "escape",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
@@ -9,11 +9,8 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-draggable": "^4.4.3",
-    "react-responsive-animate-navbar": "^1.1.8",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^2.1.1",
-    "react-vfx": "^0.4.1",
-    "styled-components": "^5.2.1"
+    "react-scripts": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

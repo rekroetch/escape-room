@@ -45,7 +45,7 @@ function StartPage (props) {
                 </p>
                 <br></br>
                 <p className="card-text">
-                  You wake up, and you're tied up in the killer's office. He's about to deliver the killing blow, until he hears noise outside. It's your friends. This is your chance..
+                  You wake up, and you're tied up in the killer's office. He's about to deliver the killing blow, until he hears a noise outside. It's your friends. This is your chance..
 
                 </p>
                 <br></br>
@@ -54,7 +54,7 @@ function StartPage (props) {
                 </p>
                 <br></br>
                 <p className="card-text">
-                  ESCAPE! Before it's too late..
+                  ESCAPE! Before it's too late!
                 </p>
                 <div className="startBtn">
                     <Link

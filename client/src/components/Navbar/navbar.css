@@ -21,7 +21,6 @@
 
 .container-nav {
   width:100%;
-  /* margin: 5px auto; */
   background-color:darkcyan;
   z-index:2;
   border-top: 2px ridge #333;
