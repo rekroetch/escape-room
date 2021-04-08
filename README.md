@@ -45,7 +45,7 @@ Heroku deployed site requires no installation. If you would like to install on y
 * Bcryptjs
 * Bootstrap / React-Bootstrap
 * Express
-* JWT
+* JSON Web Token
 * Passport
 * React-drag-drop-container
 * Sweet Alert 2

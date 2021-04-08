@@ -82,3 +82,11 @@
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
+
+.next {
+    position: relative;
+    margin-top: 10px;
+    left: 33%;
+    font-size: 20px;
+    border: 1px solid #333;
+}

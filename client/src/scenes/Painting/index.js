@@ -131,7 +131,7 @@ class Painting extends Component {
                 <div>
                 <Route render={() => (
                     this.state.winCondition ? (
-                    <Link to="/safe" className="btn btn-success">Check out the safe</Link>
+                    <Link to="/safe" className="btn btn-warning toSafe">Check out the safe</Link>
                     ) : ""
                 )}/>
                 </div>

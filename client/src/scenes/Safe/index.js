@@ -64,7 +64,7 @@ function Safe(props) {
         <Route
           render={() =>
             safePuzzle.isSolved ? (
-              <Link to="/scoreBoard" className="btn btn-success">
+              <Link to="/scoreBoard" className="btn btn-warning next">
                 You escaped! Now see how you stack up against other users!
               </Link>
             ) : (
