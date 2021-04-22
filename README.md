@@ -25,13 +25,19 @@ A virtual escape room where users will have to piece together clues and riddles 
 
 ## Screenshots
 
-![Login Screen](escapeSample1.png)
+![Login Screen](screenshots/escapeLogin.png)
 
-![Office](escapeSample2.png)
+![Game Info Screen](screenshots/escapeGameInfo.png)
 
-![Painting](escapeSample3.png)
+![Office](screenshots/escapeOffice.png)
 
-![Bookshelf](escapeSample4.png)
+![Painting](screenshots/escapePainting.png)
+
+![Bookshelf](screenshots/escapeBookshelf.png)
+
+![Safe](screenshots/escapeSafe.png)
+
+![LeaderBoard](screenshots/escapeLeaderBoard.png)
 
 ## Installation
 
