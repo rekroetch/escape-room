@@ -23,6 +23,20 @@ https://react-escape-room.herokuapp.com/
 ## Description
 A virtual escape room where users will have to piece together clues and riddles in order to find a key and escape before the killer gets home.  Made using the MERN Stack. 2D game played by clicking / dragging on images to find clues and figure out puzzles and riddles. App has user authentication and stores save file with progress in Mongo database.
 
+## Credits
+
+[Rachel Kroetch](https://github.com/rekroetch)
+Contributions: App idea and general plan/user flow, all things back-end (database, models, API routes, server connection, user authentication, password encryption), React front-end (app navigation: BrowserRouter routes including protected routes, axios to connect the front and back, state management of users and puzzles), the safe puzzle (styling, concept, and execution), the leader board (styling, functional concept, and execution), logic and final styling of the progress bar and the sign on the game info page, app logo, and general styling contributions throughout.
+
+[Pirooz Wallace](https://github.com/attack-theoRy)
+Contributions: Funtionality and styling of the bookshelf and painting puzzles.
+
+[Nicholas Werner](https://github.com/ncwerner85)
+Contributions: Styling of the office and the desk.
+
+[Paolo Rafael](https://github.com/paolorafaelyap)
+Contributions: Styling of the login page and the game info page backgrounds.  Game story author. 
+
 ## Screenshots
 
 ![Login Screen](screenshots/escapeLogin.png)
@@ -68,21 +82,6 @@ ncwerner@gmail.com
 rkroetch8@gmail.com
 
 PiroozWallace@outlook.com
-
-
-## Credits
-
-[Rachel Kroetch](https://github.com/rekroetch)
-Contributions: App idea and general plan/user flow, all things back-end (database, models, API routes, server connection, user authentication, password encryption), React front-end (app navigation: BrowserRouter routes including protected routes, axios to connect the front and back, state management of users and puzzles), the safe puzzle (styling, concept, and execution), the leader board (styling, functional concept, and execution), logic and final styling of the progress bar and the sign on the game info page, app logo, and general styling contributions throughout.
-
-[Pirooz Wallace](https://github.com/attack-theoRy)
-Contributions: Funtionality and styling of the bookshelf and painting puzzles.
-
-[Nicholas Werner](https://github.com/ncwerner85)
-Contributions: Styling of the office and the desk.
-
-[Paolo Rafael](https://github.com/paolorafaelyap)
-Contributions: Styling of the login page and the game info page backgrounds.  Game story author. 
 
 
 ## License 
