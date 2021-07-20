@@ -45,7 +45,7 @@ function App() {
         jwt && API.validateUser(jwt)
         .then(res => {
           setUser({
-            email: res.data.email, 
+            username: res.data.username, 
             id: res.data._id,
           })
           setPuzzles(res.data.puzzles)
@@ -70,13 +70,13 @@ function App() {
         API.createUser({
             firstName: formObject.firstName,
             lastName: formObject.lastName,
-            email: formObject.email,
+            username: formObject.username,
             password: formObject.password,
             puzzles: puzzleSeed
         })
         .then(() => {
           API.checkUser({
-            email: formObject.email,
+            username: formObject.username,
             password: formObject.password
           })
           .then(res => {
@@ -90,7 +90,7 @@ function App() {
     function handleLogInSubmit(event) {
         event.preventDefault();
         API.checkUser({
-            email: formObject.email,
+            username: formObject.username,
             password: formObject.password
         })
         .then(res => {

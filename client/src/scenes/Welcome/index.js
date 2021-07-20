@@ -11,7 +11,7 @@ function Welcome (props) {
         <div className="background-login">
             <header className="welcome">
                 Welcome to the Escape Room!
-                <h2 className="login">{props.user ? props.user.email : "Log In or Sign Up"}</h2>
+                <h2 className="login">{props.user ? props.user.username : "Log In or Sign Up"}</h2>
             </header>
             <div className="container">
                 <Row>
@@ -33,7 +33,7 @@ function Welcome (props) {
                                         <input onChange={props.handleInputChange} name="lastName" type="text" className="form-control" placeholder="Last Name" aria-label="Last Name"/>
                                     </div>
                                     <div className="input-group mb-3">
-                                        <input onChange={props.handleInputChange} name="email" type="text" className="form-control" placeholder="Email" aria-label="Email"/>
+                                        <input onChange={props.handleInputChange} name="username" type="text" className="form-control" placeholder="Username" aria-label="Username"/>
                                     </div>
                                     <div className="input-group mb-3">
                                         <input onChange={props.handleInputChange} name="password" type="password" className="form-control" placeholder="Password" aria-label="Password"/>
@@ -51,7 +51,7 @@ function Welcome (props) {
                                 <div className="form-group">
                                     <div className="formTitle">Log In</div>
                                     <div className="input-group mb-3">
-                                        <input onChange={props.handleInputChange} name="email" type="text" className="form-control" placeholder="Email" aria-label="Email"/>
+                                        <input onChange={props.handleInputChange} name="username" type="text" className="form-control" placeholder="Username" aria-label="Username"/>
                                     </div>
                                     <div className="input-group mb-3">
                                         <input onChange={props.handleInputChange} name="password" type="password" className="form-control" placeholder="Password" aria-label="Password"/>

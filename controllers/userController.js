@@ -27,7 +27,7 @@ module.exports = {
             async (error) => {
               if (error) return next(error);
               
-              const body = { _id: user._id, email: user.email, puzzles: user.puzzles };
+              const body = { _id: user._id, username: user.username, puzzles: user.puzzles };
               const token = jwt.sign({ user: body }, 'TOP_SECRET');
               
               return res.json({ token });
@@ -45,7 +45,7 @@ module.exports = {
     db.User.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      email: req.body.email,
+      username: req.body.username,
       password: req.body.password,
       puzzles: req.body.puzzles
   })

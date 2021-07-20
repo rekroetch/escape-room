@@ -33,14 +33,14 @@ const userSeed = [
   {
     firstName: "Bob",
     lastName: "Test",
-    email: "bob@test.com",
+    username: "bobbyTest10",
     password: "password",
     puzzles: puzzleSeed
   },
   {
     firstName: "Charlie",
     lastName: "Test",
-    email: "charlie@test.com",
+    username: "charlieTest123.com",
     password: "password",
     puzzles: puzzleSeed
   },

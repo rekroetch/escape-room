@@ -9,12 +9,12 @@ passport.use(
     'signup',
     new localStrategy(
       {
-        usernameField: 'email',
+        usernameField: 'username',
         passwordField: 'password'
       },
-      async (email, password, done) => {
+      async (username, password, done) => {
         try {
-          const user = await User.create({ email, password });
+          const user = await User.create({ username, password });
   
           return done(null, user);
         } catch (error) {
@@ -25,17 +25,17 @@ passport.use(
 );
 
 
-// This code finds one user associated with the email provided.
+// This code finds one user associated with the username provided.
 passport.use(
     'login',
     new localStrategy(
       {
-        usernameField: 'email',
+        usernameField: 'username',
         passwordField: 'password'
       },
-      async (email, password, done) => {
+      async (username, password, done) => {
         try {
-          const user = await db.User.findOne({ email });
+          const user = await db.User.findOne({ username });
   
           if (!user) {
             return done(null, false, { message: 'User not found' });

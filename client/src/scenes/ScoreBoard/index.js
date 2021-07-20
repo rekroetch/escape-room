@@ -21,7 +21,7 @@ function ScoreBoard () {
 
     function findWinners(users) {
         const winnerList = users.filter(user => user.puzzles[0].isSolved)
-        const winnerNames = winnerList.map(winner => <li className="list-group-item">{winner.firstName}</li>)
+        const winnerNames = winnerList.map(winner => <li className="list-group-item">{winner.username}</li>)
         setWinners(winnerNames)
     }
 
@@ -33,7 +33,7 @@ function ScoreBoard () {
                 <div className="winner">
                     WINNERS!
                 </div>
-                <div className="userEmail">
+                <div className="userName">
                     <ul className="list-group">
                         {winners.length ===0 ? "No one has escaped yet!" : winners}
                     </ul>

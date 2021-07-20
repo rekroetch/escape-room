@@ -27,7 +27,7 @@ router.route("/validate")
     if (req.user) {
       res.json(req.user)
     } else {
-      res.json({email: "no user"})
+      res.json({username: "no user"})
     }
   }) 
 

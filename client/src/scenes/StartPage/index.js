@@ -21,7 +21,7 @@ function StartPage (props) {
   return (
     <div className="background-startpage">
       <header className="greeting">
-        Try to escape, {props.user ? props.user.email : "not logged in"}!
+        Try to escape, {props.user ? props.user.username : "not logged in"}!
       </header>
       <div className="progress">
         <div
