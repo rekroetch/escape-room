@@ -134,6 +134,7 @@ class Painting extends Component {
                     <Link to="/safe" className="btn btn-warning toSafe">Check out the safe</Link>
                     ) : ""
                 )}/>
+                <div style={{fontSize: "20px", color: "white", padding: "10px"}}>Drag the puzzle pieces to the correct boxes below to solve the puzzle.</div>
                 </div>
                 {/* List of images for the shuffled board at top */}
                 <ul className = "puzzle_shuffled-board" >
@@ -148,7 +149,7 @@ class Painting extends Component {
                     }
                 </ol>
                 <div>
-                    <input type = "submit" onClick = {this.onClickHandler.bind(this)}/>
+                    <button type="submit" onClick={this.onClickHandler.bind(this)} className="btn btn-warning">Submit</button>
                 </div>
             </div>
         );
