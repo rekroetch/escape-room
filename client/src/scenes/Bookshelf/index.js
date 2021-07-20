@@ -20,7 +20,7 @@ return (
     margin: "15px"
   }}>
     <h1 style={{ fontSize: "30px", margin: "15px", color:"white" }}>What breaks yet never falls, and what falls yet never breaks?</h1>
-    <h3 style={{ margin: "15px", color:"white" }}>Drag the correct books onto the shelf</h3>
+    <h3 style={{ margin: "15px", color:"white" }}>Two books display images corresponding to the riddle's answer.  Drag them both onto the the bookshelf to solve this puzzle.</h3>
     <div className="droppableBooks" style={{ display: "flex" }}>
 
 
