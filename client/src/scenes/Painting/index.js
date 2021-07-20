@@ -97,22 +97,21 @@ class Painting extends Component {
             if (this.state.solved[index].order === index) {
                
                 i++
-                if(i >= 11)
-                {
+                if(i >= 11) {
 
-                // const userId = this.props.user.id;
-                // const puzzleTitle = this.props.puzzle[2].title;
-                    
-                API.solved(this.props.user.id, this.props.puzzle[2].title)
-                .then(() => {
-                    Swal.fire("The painting moved and a safe appeared")
-                    this.props.handleSolvedPuzzle('2')
-                })
-                .catch((err) => console.log(err));
-                this.setState({
-                    winCondition: true,
-                })
-            }
+                    // const userId = this.props.user.id;
+                    const puzzleTitle = this.props.puzzle[2].title;
+                        
+                    API.solved(this.props.user.id, {puzzleTitle})
+                    .then(() => {
+                        Swal.fire("The painting moved and a safe appeared")
+                        this.props.handleSolvedPuzzle('2')
+                    })
+                    .catch((err) => console.log(err));
+                    this.setState({
+                        winCondition: true,
+                    })
+                }
             } else {
                 Swal.fire("Should be some kind of animal, not there yet.")
                 this.setState({
